@@ -8,6 +8,7 @@
     min-height: 100px;
     @include flex-between-center;
     padding: 0 30px;
+    @include glass-effect;
 }
 
 .header__logo {
