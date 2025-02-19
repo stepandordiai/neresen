@@ -1,0 +1,51 @@
+@use "./../../mixins" as *;
+
+.footer {
+    min-height: 100svh;
+    background: #000;
+    margin-top: auto;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.footer__custom-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.footer__bottom {
+    height: 100px;
+    @include flex-between-center;
+}
+
+.creator__link {
+    position: relative;
+    color: #fff;
+}
+
+.creator__link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.creator__link:hover::before {
+    transform: scaleX(1);
+}
+
+@media (width <= 900px) {
+    .footer {
+        padding: 0 15px;
+    }
+}

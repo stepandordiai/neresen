@@ -1,7 +1,10 @@
 @use "./../../mixins" as *;
 
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     min-height: 100px;
     @include flex-between-center;
     padding: 0 30px;
@@ -17,6 +20,8 @@
 
 .header__logo-name {
     font-size: 2rem;
+    font-weight: 200;
+    color: #ffffff;
 }
 
 .custom-divider {
@@ -24,5 +29,15 @@
     bottom: 0;
     height: 1px;
     width: calc(100% - 60px);
-    background: #000000;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (width <= 900px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .custom-divider {
+        width: calc(100% - 30px);
+    }
 }

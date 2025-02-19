@@ -1,5 +1,6 @@
 @use "reset" as *;
 @use "fonts" as *;
+@use "variables" as *;
 
 body {
     font-family: "Montserrat", serif;
@@ -7,6 +8,13 @@ body {
     color: #000000;
 }
 
+#root {
+    height: 3000px;
+
+    display: flex;
+    flex-direction: column;
+}
+
 a {
-    color: #000000;
+    // color: #000000;
 }
