@@ -3,6 +3,7 @@ import logoIconWhite from "./../../assets/logo/mountain-white.png";
 import logoIconBlack from "./../../assets/logo/mountain-black.png";
 import "./Header.scss";
 import { useEffect } from "react";
+import BurgerBtn from "../BurgerBtn/BurgerBtn";
 
 const Header = () => {
     useEffect(() => {
@@ -13,16 +14,19 @@ const Header = () => {
                     document.documentElement.scrollHeight -
                         (document.documentElement.clientHeight + 100)
             ) {
-                document.querySelector(".header__logo-name").style.color =
-                    "black";
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--header-clr-mode", "#000");
+
                 document.querySelector(
                     ".custom-divider"
                 ).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
                 document.querySelector(".header__logo-icon").src =
                     logoIconBlack;
             } else if (window.scrollY < window.innerHeight - 100) {
-                document.querySelector(".header__logo-name").style.color =
-                    "white";
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--header-clr-mode", "#fff");
                 document.querySelector(
                     ".custom-divider"
                 ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
@@ -33,8 +37,9 @@ const Header = () => {
                 document.documentElement.scrollHeight -
                     (document.documentElement.clientHeight + 100)
             ) {
-                document.querySelector(".header__logo-name").style.color =
-                    "white";
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--header-clr-mode", "#fff");
                 document.querySelector(
                     ".custom-divider"
                 ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
@@ -55,6 +60,13 @@ const Header = () => {
                     />
                     <span className="header__logo-name">Neresen</span>
                 </NavLink>
+                <nav className="nav">
+                    <NavLink className={"nav__link"}>Úvodní stránka</NavLink>
+                    <NavLink className={"nav__link"}>Realizace</NavLink>
+                    <NavLink className={"nav__link"}>Kariéra</NavLink>
+                    <NavLink className={"nav__link"}>Kontakty</NavLink>
+                </nav>
+                <BurgerBtn />
                 <div className="custom-divider"></div>
             </header>
         </>

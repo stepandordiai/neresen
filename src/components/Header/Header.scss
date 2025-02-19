@@ -21,7 +21,36 @@
 .header__logo-name {
     font-size: 2rem;
     font-weight: 200;
-    color: #ffffff;
+    color: var(--header-clr-mode);
+}
+
+.nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    position: relative;
+    color: var(--header-clr-mode);
+}
+
+.nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--header-clr-mode);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.nav__link:hover::before {
+    transform: scaleX(1);
 }
 
 .custom-divider {
@@ -39,5 +68,11 @@
 
     .custom-divider {
         width: calc(100% - 30px);
+    }
+}
+
+@media (width <= 750px) {
+    .nav {
+        display: none;
     }
 }
