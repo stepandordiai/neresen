@@ -1,0 +1,28 @@
+@use "./../../mixins" as *;
+
+.header {
+    position: relative;
+    min-height: 100px;
+    @include flex-between-center;
+    padding: 0 30px;
+}
+
+.header__logo {
+    @include flex-center;
+}
+
+.header__logo-icon {
+    width: 75px;
+}
+
+.header__logo-name {
+    font-size: 2rem;
+}
+
+.custom-divider {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 60px);
+    background: #000000;
+}
