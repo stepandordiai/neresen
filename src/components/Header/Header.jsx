@@ -8,6 +8,16 @@ import BurgerBtn from "../BurgerBtn/BurgerBtn";
 const Header = () => {
     useEffect(() => {
         document.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                document.querySelector(".header").classList.add("header--blur");
+            } else {
+                document
+                    .querySelector(".header")
+                    .classList.remove("header--blur");
+            }
+
+            //
+
             if (
                 window.scrollY > window.innerHeight - 100 &&
                 window.scrollY <

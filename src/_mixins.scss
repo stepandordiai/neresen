@@ -4,13 +4,43 @@
     align-items: center;
 }
 
+@mixin flex-center-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin flex-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+@mixin flex-around-start {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+@mixin flex-evenly-start {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
 @mixin glass-effect {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+}
+
+@mixin bg-clr-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
