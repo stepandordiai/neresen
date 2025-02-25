@@ -86,69 +86,20 @@ const ProjectOne = () => {
                     </Swiper>
                 </div>
                 <div className="project1-info">
-                    <div>
-                        {`Bytový dům`.split(` `).map((word, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className="text-line-container"
-                                >
-                                    <div className="text-line">
-                                        <p
-                                            style={{
-                                                marginRight: "5px",
-                                            }}
-                                        >
-                                            {word}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p>Bytový dům</p>
+                        </div>
                     </div>
-                    <div>
-                        {`Slatiňany – ul.Medunova`
-                            .split(` `)
-                            .map((word, index) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className="text-line-container"
-                                    >
-                                        <div className="text-line">
-                                            <p
-                                                style={{
-                                                    marginRight: "5px",
-                                                }}
-                                            >
-                                                {word}
-                                            </p>
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p>Slatiňany – ul.Medunova</p>
+                        </div>
                     </div>
-                    <div>
-                        {`Výstavba bytových domů.`
-                            .split(` `)
-                            .map((word, index) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className="text-line-container"
-                                    >
-                                        <div className="text-line">
-                                            <p
-                                                style={{
-                                                    marginRight: "5px",
-                                                }}
-                                            >
-                                                {word}
-                                            </p>
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p>Výstavba bytových domů.</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,132 @@
+@use "./../../mixins" as *;
+
 .contacts {
-    height: 3000px;
+}
+
+.contacts-wrapper {
+    height: 100svh;
+    width: 100%;
+    @include flex-center-start;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 30px;
+    color: #fff;
+}
+
+.contacts-wrapper::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    z-index: -10;
+    background: url("./../../assets/2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    animation: animateHomeWrapper 100s linear infinite;
+}
+
+.form-wrapper {
+    padding-top: 130px;
+    background: #fff;
+    min-height: 100lvh;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.label-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    font-size: 1rem;
+    padding: 10px;
+    // border-bottom: 1px solid black;
+}
+
+.input-border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
     background: #000;
+    animation-timing-function: var(--cstm-cubic-bezier);
+}
+
+@keyframes animateInputBorderWidth {
+    100% {
+        width: 100%;
+    }
+}
+
+textarea {
+    font-size: 1rem;
+    resize: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-btn {
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+    padding: 10px 50px;
+    border: 1px solid #000;
+    transition: color 0.3s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.form-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 0;
+    background: #000;
+    transition: width 0.3s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.form-btn:hover {
+    color: #fff;
+}
+
+.form-btn:hover::before {
+    width: 100%;
+}
+
+@media (width <= 600px) {
+    .input-container {
+        flex-direction: column;
+    }
 }

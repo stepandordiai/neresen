@@ -28,49 +28,17 @@ const Home = () => {
         <section className="home">
             <div className="home-wrapper">
                 <div>
-                    <div>
-                        {`Vítejte na stránkách společnosti`
-                            .split(` `)
-                            .map((word, index) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className="text-line-container"
-                                    >
-                                        <div className="text-line">
-                                            <p
-                                                className="home__secondary-title"
-                                                style={{
-                                                    marginRight: "5px",
-                                                }}
-                                            >
-                                                {word}
-                                            </p>
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p className="home__secondary-title">
+                                Vítejte na stránkách společnosti
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        {`Neresen a.s.`.split(` `).map((word, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className="text-line-container"
-                                >
-                                    <div className="text-line">
-                                        <p
-                                            className="home__title"
-                                            style={{
-                                                marginRight: "20px",
-                                            }}
-                                        >
-                                            {word}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p className="home__title">Neresen a.s.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="home__btn">
@@ -83,45 +51,22 @@ const Home = () => {
             </div>
             <div className="projects" id="projects">
                 <div className="projects__title-wrapper">
-                    {`Realizované projekty`.split(` `).map((word, index) => {
-                        return (
-                            <div key={index} className="text-line-container">
-                                <div className="text-line">
-                                    <p
-                                        className="projects__title"
-                                        style={{
-                                            marginRight: "5px",
-                                        }}
-                                    >
-                                        {word}
-                                    </p>
-                                </div>
-                            </div>
-                        );
-                    })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p className="projects__title">
+                                Realizované projekty
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className="projects__title-wrapper">
-                    {`Hotová stavba k pohodlnému bydlení`
-                        .split(` `)
-                        .map((word, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className="text-line-container"
-                                >
-                                    <div className="text-line">
-                                        <p
-                                            className="projects__secondary-title"
-                                            style={{
-                                                marginRight: "5px",
-                                            }}
-                                        >
-                                            {word}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <p className="projects__secondary-title">
+                                Hotová stavba k pohodlnému bydlení
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className="projects-grid">
                     <div className="project-card">

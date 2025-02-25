@@ -53,3 +53,17 @@
 .mySwiper .swiper-slide-thumb-active {
     opacity: 1;
 }
+
+@media (width <= 900px) {
+    .project1 {
+        flex-direction: column;
+    }
+
+    .project1-swiper {
+        width: 100%;
+    }
+
+    .project1-info {
+        width: 100%;
+    }
+}
