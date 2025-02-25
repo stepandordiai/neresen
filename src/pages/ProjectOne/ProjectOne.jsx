@@ -17,6 +17,7 @@ import img3 from "./../../assets/projects-img/project1/3.jpg";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const ProjectOne = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -41,8 +42,12 @@ const ProjectOne = () => {
 
     return (
         <>
-            <div className="project1-wrapper"></div>
-            <div className="project1">
+            <PageTitle
+                title={"Project 1"}
+                hashPath={"#project1"}
+                previousTitle={"Projects"}
+            />
+            <div className="project1" id="project1">
                 <div className="project1-swiper">
                     <Swiper
                         style={{

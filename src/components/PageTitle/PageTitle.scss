@@ -1,0 +1,28 @@
+@use "./../../mixins" as *;
+
+.page-title {
+    height: 100svh;
+    width: 100%;
+    @include flex-center-start;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 0 30px;
+    color: #fff;
+}
+
+.page-title::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    display: block;
+    width: 100%;
+    height: inherit;
+    background: url("./../../assets/2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    animation: animateHomeWrapper 200s linear infinite;
+}

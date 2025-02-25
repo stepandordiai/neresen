@@ -3,32 +3,32 @@
 .contacts {
 }
 
-.contacts-wrapper {
-    height: 100svh;
-    width: 100%;
-    @include flex-center-start;
-    flex-direction: column;
-    gap: 50px;
-    padding: 0 30px;
-    color: #fff;
-}
+// .contacts-wrapper {
+//     height: 100svh;
+//     width: 100%;
+//     @include flex-center-start;
+//     flex-direction: column;
+//     gap: 50px;
+//     padding: 0 30px;
+//     color: #fff;
+// }
 
-.contacts-wrapper::before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100svh;
-    z-index: -10;
-    background: url("./../../assets/2.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    animation: animateHomeWrapper 100s linear infinite;
-}
+// .contacts-wrapper::before {
+//     content: "";
+//     display: block;
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100svh;
+//     z-index: -10;
+//     background: url("./../../assets/2.jpg") no-repeat center center;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     animation: animateHomeWrapper 100s linear infinite;
+// }
 
 .form-wrapper {
     padding-top: 130px;

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { HashLink } from "react-router-hash-link";
 import "./Contacts.scss";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const Contacts = () => {
     useEffect(() => {
@@ -39,31 +39,7 @@ const Contacts = () => {
     return (
         <>
             <div className="contacts">
-                <div className="contacts-wrapper">
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p
-                                style={{
-                                    fontSize: "6rem",
-                                }}
-                            >
-                                Contacts
-                            </p>
-                        </div>
-                    </div>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p>Home / Contacts</p>
-                        </div>
-                    </div>
-                    <HashLink className="home__btn" to={"#form-wrapper"} smooth>
-                        <div className="btn-border-top"></div>
-                        <div className="btn-border-right"></div>
-                        <div className="btn-border-bottom"></div>
-                        <div className="btn-border-left"></div>
-                        Read more
-                    </HashLink>
-                </div>
+                <PageTitle title="Contacts" hashPath={"#form-wrapper"} />
                 <div className="form-wrapper" id="form-wrapper">
                     <div>
                         <div className="text-line-container">
