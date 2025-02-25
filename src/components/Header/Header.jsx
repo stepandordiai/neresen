@@ -4,6 +4,7 @@ import logoIconBlack from "./../../assets/logo/mountain-black.png";
 import "./Header.scss";
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
     useEffect(() => {
@@ -71,10 +72,16 @@ const Header = () => {
                     <span className="header__logo-name">Neresen</span>
                 </NavLink>
                 <nav className="nav">
-                    <NavLink className={"nav__link"}>Úvodní stránka</NavLink>
-                    <NavLink className={"nav__link"}>Realizace</NavLink>
+                    <NavLink className={"nav__link"} to={"/"}>
+                        Úvodní stránka
+                    </NavLink>
+                    <HashLink className={"nav__link"} to="/#projects" smooth>
+                        Realizace
+                    </HashLink>
                     <NavLink className={"nav__link"}>Kariéra</NavLink>
-                    <NavLink className={"nav__link"}>Kontakty</NavLink>
+                    <NavLink className={"nav__link"} to={"/contacts"}>
+                        Kontakty
+                    </NavLink>
                 </nav>
                 <BurgerBtn />
                 <div className="custom-divider"></div>

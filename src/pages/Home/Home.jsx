@@ -1,23 +1,17 @@
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import img1 from "./../../assets/projects-img/project1/1.jpg";
+import img2 from "./../../assets/projects-img/project1/2.jpg";
+import img3 from "./../../assets/projects-img/project1/3.jpg";
 import "./Home.scss";
 
 const Home = () => {
-    // useEffect(() => {
-    //     document.querySelectorAll(".text-line").forEach((el, index) => {
-    //         setTimeout(() => {
-    //             el.style.animation = "revealTextLine 1s forwards";
-    //         }, 100 * index);
-    //     });
-    // }, []);
-
     useEffect(() => {
         document.querySelectorAll(".text-line").forEach((el, index) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
                 if (serviceRect < window.innerHeight - 100) {
-                    // setTimeout(() => {
                     el.style.animation = "revealTextLine 1s forwards";
-                    // }, 100 * index);
                 }
             });
 
@@ -25,9 +19,7 @@ const Home = () => {
 
             const serviceRect = el.getBoundingClientRect().top;
             if (serviceRect < window.innerHeight - 100) {
-                // setTimeout(() => {
                 el.style.animation = "revealTextLine 1s forwards";
-                // }, 100 * index);
             }
         });
     });
@@ -59,7 +51,6 @@ const Home = () => {
                                 );
                             })}
                     </div>
-                    {/* <h1 className="home__title">Neresen a.s.</h1> */}
                     <div>
                         {`Neresen a.s.`.split(` `).map((word, index) => {
                             return (
@@ -71,7 +62,7 @@ const Home = () => {
                                         <p
                                             className="home__title"
                                             style={{
-                                                marginRight: "5px",
+                                                marginRight: "20px",
                                             }}
                                         >
                                             {word}
@@ -90,7 +81,7 @@ const Home = () => {
                     Kontaktujte nás
                 </div>
             </div>
-            <div className="projects">
+            <div className="projects" id="projects">
                 <div className="projects__title-wrapper">
                     {`Realizované projekty`.split(` `).map((word, index) => {
                         return (
@@ -131,6 +122,32 @@ const Home = () => {
                                 </div>
                             );
                         })}
+                </div>
+                <div className="projects-grid">
+                    <div className="project-card">
+                        <img src={img1} alt="" />
+                        <NavLink
+                            className="project-card-bottom"
+                            to={"/project-one"}
+                        >
+                            <p>Slatiňany</p>
+                            <p>Adresa: ul.Medunova</p>
+                        </NavLink>
+                    </div>
+                    <div className="project-card">
+                        <img src={img2} alt="" />
+                        <div className="project-card-bottom">
+                            <p>Slatiňany</p>
+                            <p>Adresa: ul.Medunova</p>
+                        </div>
+                    </div>
+                    <div className="project-card">
+                        <img src={img3} alt="" />
+                        <div className="project-card-bottom">
+                            <p>Slatiňany</p>
+                            <p>Adresa: ul.Medunova</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
