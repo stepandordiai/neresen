@@ -40,14 +40,22 @@ const Contacts = () => {
                             <label htmlFor="first-name">
                                 <TextLine>Jméno</TextLine>
                             </label>
-                            <input type="text" id="first-name" name="Jméno" />
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="First name"
+                            />
                             <div className="input-border-bottom"></div>
                         </div>
                         <div className="label-container">
                             <label htmlFor="last-name">
                                 <TextLine>Příjmení</TextLine>
                             </label>
-                            <input type="text" id="last-name" name="Příjmení" />
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="Last name"
+                            />
                             <div className="input-border-bottom"></div>
                         </div>
                     </div>
@@ -59,7 +67,7 @@ const Contacts = () => {
                             <input
                                 type="tel"
                                 id="phone-number"
-                                name="Telefonní číslo"
+                                name="Phone number"
                             />
                             <div className="input-border-bottom"></div>
                         </div>
@@ -75,14 +83,14 @@ const Contacts = () => {
                         <label htmlFor="subject">
                             <TextLine>Předmět zprávy</TextLine>
                         </label>
-                        <input type="text" id="subject" name="Předmět zprávy" />
+                        <input type="text" id="subject" name="Subject" />
                         <div className="input-border-bottom"></div>
                     </div>
                     <div className="label-container">
                         <label htmlFor="message">
                             <TextLine>Zpráva</TextLine>
                         </label>
-                        <textarea name="Zpráva" id="message"></textarea>
+                        <textarea name="Message" id="message"></textarea>
                         <div className="input-border-bottom"></div>
                     </div>
                     <button className="form__btn" type="submit">

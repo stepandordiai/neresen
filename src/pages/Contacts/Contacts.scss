@@ -75,6 +75,7 @@ textarea {
     align-self: flex-end;
     padding: 10px 50px;
     border: 1px solid #000;
+    font-family: inherit;
     transition: color 0.3s;
     transition-timing-function: var(--cstm-cubic-bezier);
 }
