@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import TextLine from "../../components/TextLine/TextLine";
 import img1 from "./../../assets/projects-img/project1/1.jpg";
 import img2 from "./../../assets/projects-img/project1/2.jpg";
 import img3 from "./../../assets/projects-img/project1/3.jpg";
@@ -9,18 +10,14 @@ const Home = () => {
         <section className="home">
             <div className="home-wrapper">
                 <div>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p className="home__secondary-title">
-                                Vítejte na stránkách společnosti
-                            </p>
-                        </div>
-                    </div>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p className="home__title">Neresen a.s.</p>
-                        </div>
-                    </div>
+                    <TextLine>
+                        <p className="home__secondary-title">
+                            Vítejte na stránkách společnosti
+                        </p>
+                    </TextLine>
+                    <TextLine>
+                        <p className="home__title">Neresen a.s.</p>
+                    </TextLine>
                 </div>
                 <div className="home__btn">
                     <div className="btn-border-top"></div>
@@ -32,22 +29,16 @@ const Home = () => {
             </div>
             <div className="projects" id="projects">
                 <div className="projects__title-wrapper">
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p className="projects__title">
-                                Realizované projekty
-                            </p>
-                        </div>
-                    </div>
+                    <TextLine>
+                        <p className="projects__title">Realizované projekty</p>
+                    </TextLine>
                 </div>
                 <div className="projects__title-wrapper">
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p className="projects__secondary-title">
-                                Hotová stavba k pohodlnému bydlení
-                            </p>
-                        </div>
-                    </div>
+                    <TextLine>
+                        <p className="projects__secondary-title">
+                            Hotová stavba k pohodlnému bydlení
+                        </p>
+                    </TextLine>
                 </div>
                 <div className="projects-grid">
                     <div className="project-card">

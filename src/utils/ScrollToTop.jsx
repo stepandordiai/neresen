@@ -5,12 +5,9 @@ export default function ScrollToTop() {
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
-        if (
-            pathname === "/contacts" ||
-            // TODO: Condition to scroll restoration when path has no hash
+        // TODO: Condition to scroll restoration when path has no hash
 
-            (pathname && !hash)
-        ) {
+        if (pathname && !hash) {
             window.scrollTo(0, 0);
         } else {
             return;

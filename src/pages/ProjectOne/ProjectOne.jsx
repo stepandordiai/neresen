@@ -18,6 +18,7 @@ import img3 from "./../../assets/projects-img/project1/3.jpg";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import TextLine from "../../components/TextLine/TextLine";
 
 const ProjectOne = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -73,21 +74,15 @@ const ProjectOne = () => {
                     </Swiper>
                 </div>
                 <div className="project1-info">
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p>Bytový dům</p>
-                        </div>
-                    </div>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p>Slatiňany – ul.Medunova</p>
-                        </div>
-                    </div>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <p>Výstavba bytových domů.</p>
-                        </div>
-                    </div>
+                    <TextLine>
+                        <p>Bytový dům</p>
+                    </TextLine>
+                    <TextLine>
+                        <p>Slatiňany – ul.Medunova</p>
+                    </TextLine>
+                    <TextLine>
+                        <p>Výstavba bytových domů.</p>
+                    </TextLine>
                 </div>
             </div>
         </>

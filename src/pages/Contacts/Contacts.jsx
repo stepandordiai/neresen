@@ -21,71 +21,74 @@ const Contacts = () => {
             }
         });
     });
+
     return (
         <>
-            <div className="contacts">
-                <PageTitle title="Contacts" hashPath={"#form-wrapper"} />
-                <div className="form-wrapper" id="form-wrapper">
-                    <TextLine>
-                        <p className="form-title">Contact us</p>
-                    </TextLine>
-                    <form className="form" action="">
-                        <div className="input-container">
-                            <div className="label-container">
-                                <label htmlFor="first-name">
-                                    <TextLine>First name</TextLine>
-                                </label>
-                                <input type="text" id="first-name" />
-                                <div className="input-border-bottom"></div>
-                            </div>
-                            <div className="label-container">
-                                <label htmlFor="last-name">
-                                    <TextLine>Last name</TextLine>
-                                </label>
-                                <input type="text" id="last-name" />
-                                <div className="input-border-bottom"></div>
-                            </div>
-                        </div>
-                        <div className="input-container">
-                            <div className="label-container">
-                                <label htmlFor="phone-number">
-                                    <TextLine>Phone number</TextLine>
-                                </label>
-                                <input type="text" id="phone-number" />
-                                <div className="input-border-bottom"></div>
-                            </div>
-                            <div className="label-container">
-                                <label htmlFor="e-mail">
-                                    <TextLine>E-mail</TextLine>
-                                </label>
-                                <input type="text" id="e-mail" />
-                                <div className="input-border-bottom"></div>
-                            </div>
-                        </div>
+            <PageTitle title="Contacts" hashPath={"#form-wrapper"} />
+            <div className="form-wrapper" id="form-wrapper">
+                <TextLine>
+                    <p className="form-title">Contact us</p>
+                </TextLine>
+                <form
+                    className="form"
+                    action="mailto:stepandordiai@gmail.com"
+                    method="post"
+                    encType="text/plain"
+                >
+                    <div className="input-container">
                         <div className="label-container">
-                            <label htmlFor="subject">
-                                <TextLine>Subject</TextLine>
+                            <label htmlFor="first-name">
+                                <TextLine>Jméno</TextLine>
                             </label>
-                            <input type="text" id="subject" />
+                            <input type="text" id="first-name" name="Jméno" />
                             <div className="input-border-bottom"></div>
                         </div>
                         <div className="label-container">
-                            <label htmlFor="message">
-                                <TextLine>Message</TextLine>
+                            <label htmlFor="last-name">
+                                <TextLine>Příjmení</TextLine>
                             </label>
-                            <textarea
-                                name=""
-                                id="message"
-                                // cols="30"
-                                // rows="10"
-                            ></textarea>
+                            <input type="text" id="last-name" name="Příjmení" />
                             <div className="input-border-bottom"></div>
                         </div>
-                        <button className="form-btn" type="submit">
-                            Send
-                        </button>
-                    </form>
-                </div>
+                    </div>
+                    <div className="input-container">
+                        <div className="label-container">
+                            <label htmlFor="phone-number">
+                                <TextLine>Telefonní číslo</TextLine>
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone-number"
+                                name="Telefonní číslo"
+                            />
+                            <div className="input-border-bottom"></div>
+                        </div>
+                        <div className="label-container">
+                            <label htmlFor="e-mail">
+                                <TextLine>E-mail</TextLine>
+                            </label>
+                            <input type="email" id="e-mail" name="E-mail" />
+                            <div className="input-border-bottom"></div>
+                        </div>
+                    </div>
+                    <div className="label-container">
+                        <label htmlFor="subject">
+                            <TextLine>Předmět zprávy</TextLine>
+                        </label>
+                        <input type="text" id="subject" name="Předmět zprávy" />
+                        <div className="input-border-bottom"></div>
+                    </div>
+                    <div className="label-container">
+                        <label htmlFor="message">
+                            <TextLine>Zpráva</TextLine>
+                        </label>
+                        <textarea name="Zpráva" id="message"></textarea>
+                        <div className="input-border-bottom"></div>
+                    </div>
+                    <button className="form__btn" type="submit">
+                        Odeslat
+                    </button>
+                </form>
             </div>
         </>
     );
