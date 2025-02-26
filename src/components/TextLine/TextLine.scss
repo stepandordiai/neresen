@@ -1,0 +1,13 @@
+.text-line-container {
+    overflow: hidden;
+}
+
+.text-line {
+    transform: translateY(100%);
+}
+
+@keyframes translateTextLine {
+    100% {
+        transform: translateY(0);
+    }
+}

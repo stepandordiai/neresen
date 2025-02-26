@@ -1,6 +1,7 @@
 @use "./../../mixins" as *;
 
 .page-title {
+    position: relative;
     height: 100svh;
     width: 100%;
     @include flex-center-start;
@@ -8,6 +9,10 @@
     row-gap: 30px;
     padding: 0 30px;
     color: #fff;
+
+    span {
+        opacity: 0.5;
+    }
 }
 
 .page-title::before {
@@ -25,4 +30,64 @@
     -o-background-size: cover;
     background-size: cover;
     animation: animateHomeWrapper 200s linear infinite;
+}
+
+.title {
+    font-size: clamp(4rem, 10vw, 8rem);
+}
+
+.link-title {
+    opacity: 0.5;
+    color: #fff;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.page-title__btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 0;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.5s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.page-title__btn:hover {
+    color: #000;
+}
+
+.page-title__btn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s;
+    transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.page-title__btn:hover::before {
+    transform: scaleX(1);
+}
+
+@media (width <= 900px) {
+    .page-title {
+        padding: 0 15px;
+    }
+
+    .page-title__btn {
+        bottom: 15px;
+        left: 15px;
+    }
 }

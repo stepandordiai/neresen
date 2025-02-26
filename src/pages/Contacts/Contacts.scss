@@ -1,52 +1,24 @@
 @use "./../../mixins" as *;
 
-.contacts {
-}
-
-// .contacts-wrapper {
-//     height: 100svh;
-//     width: 100%;
-//     @include flex-center-start;
-//     flex-direction: column;
-//     gap: 50px;
-//     padding: 0 30px;
-//     color: #fff;
-// }
-
-// .contacts-wrapper::before {
-//     content: "";
-//     display: block;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100svh;
-//     z-index: -10;
-//     background: url("./../../assets/2.jpg") no-repeat center center;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//     animation: animateHomeWrapper 100s linear infinite;
-// }
-
 .form-wrapper {
-    padding-top: 130px;
     background: #fff;
     min-height: 100lvh;
     display: flex;
     justify-content: flex-start;
-    gap: 30px;
-    align-items: center;
+    row-gap: 30px;
+    padding: 130px 30px 30px;
     flex-direction: column;
     width: 100%;
+}
+
+.form-title {
+    font-size: clamp(2rem, 8vw, 4rem);
 }
 
 .form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 30px;
     width: 100%;
 }
 
@@ -63,10 +35,13 @@
     width: 100%;
 }
 
+label {
+    padding-left: 7.5px;
+}
+
 input {
     font-size: 1rem;
-    padding: 10px;
-    // border-bottom: 1px solid black;
+    padding: 7.5px;
 }
 
 .input-border-bottom {
@@ -88,6 +63,7 @@ input {
 textarea {
     font-size: 1rem;
     resize: none;
+    padding: 7.5px;
 
     &:focus {
         outline: none;
@@ -123,6 +99,13 @@ textarea {
 
 .form-btn:hover::before {
     width: 100%;
+}
+
+@media (width <= 900px) {
+    .form-wrapper {
+        padding: 115px 15px 15px;
+        row-gap: 15px;
+    }
 }
 
 @media (width <= 600px) {

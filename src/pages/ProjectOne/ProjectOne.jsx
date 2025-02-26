@@ -22,30 +22,12 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 const ProjectOne = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    useEffect(() => {
-        document.querySelectorAll(".text-line").forEach((el, index) => {
-            document.addEventListener("scroll", () => {
-                const serviceRect = el.getBoundingClientRect().top;
-                if (serviceRect < window.innerHeight - 100) {
-                    el.style.animation = "revealTextLine 1s forwards";
-                }
-            });
-
-            // On load page
-
-            const serviceRect = el.getBoundingClientRect().top;
-            if (serviceRect < window.innerHeight - 100) {
-                el.style.animation = "revealTextLine 1s forwards";
-            }
-        });
-    });
-
     return (
         <>
             <PageTitle
                 title={"Project 1"}
                 hashPath={"#project1"}
-                previousTitle={"Projects"}
+                previousLinkTitle={"Projects"}
             />
             <div className="project1" id="project1">
                 <div className="project1-swiper">

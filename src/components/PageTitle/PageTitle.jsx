@@ -1,45 +1,37 @@
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import "./PageTitle.scss";
+import TextLine from "../TextLine/TextLine";
 
-const PageTitle = ({ title, hashPath, previousTitle }) => {
+const PageTitle = ({ title, hashPath, previousLinkTitle }) => {
     return (
         <>
             <div className="page-title">
-                <div className="text-line-container">
-                    <div className="text-line">
-                        <p
-                            style={{
-                                fontSize: "6rem",
-                            }}
-                        >
-                            {title}
-                        </p>
-                    </div>
-                </div>
-                <div className="text-line-container">
-                    <div className="text-line">
-                        <NavLink style={{ color: "white" }} to={"/"}>
-                            Home
-                        </NavLink>
-                        {previousTitle && (
-                            <>
-                                <span style={{ opacity: 0.5 }}> | </span>
-                                <HashLink
-                                    style={{ color: "white" }}
-                                    to={"/#projects"}
-                                    smooth
-                                >
-                                    {previousTitle}
-                                </HashLink>
-                            </>
-                        )}
+                <TextLine>
+                    <h3 className="title">{title}</h3>
+                </TextLine>
+                <TextLine>
+                    <NavLink className={"link-title"} to={"/"}>
+                        Home
+                    </NavLink>
+                    {previousLinkTitle && (
+                        <>
+                            <span> | </span>
+                            <HashLink
+                                className="link-title"
+                                to={"/#projects"}
+                                smooth
+                            >
+                                {previousLinkTitle}
+                            </HashLink>
+                        </>
+                    )}
 
-                        <span style={{ opacity: 0.5 }}> | </span>
-                        <span style={{ opacity: 0.5 }}>{title}</span>
-                    </div>
-                </div>
-                <HashLink className="home__btn" to={hashPath} smooth>
+                    <span> | </span>
+                    <span>{title}</span>
+                </TextLine>
+
+                <HashLink className="page-title__btn" to={hashPath} smooth>
                     <div className="btn-border-top"></div>
                     <div className="btn-border-right"></div>
                     <div className="btn-border-bottom"></div>

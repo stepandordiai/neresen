@@ -1,25 +1,10 @@
 import { useEffect } from "react";
-import "./Contacts.scss";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import TextLine from "../../components/TextLine/TextLine";
+import "./Contacts.scss";
 
 const Contacts = () => {
     useEffect(() => {
-        document.querySelectorAll(".text-line").forEach((el) => {
-            document.addEventListener("scroll", () => {
-                const serviceRect = el.getBoundingClientRect().top;
-                if (serviceRect < window.innerHeight - 100) {
-                    el.style.animation = "revealTextLine 1s forwards";
-                }
-            });
-
-            // On load page
-
-            const serviceRect = el.getBoundingClientRect().top;
-            if (serviceRect < window.innerHeight - 100) {
-                el.style.animation = "revealTextLine 1s forwards";
-            }
-        });
-
         document.querySelectorAll(".input-border-bottom").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const textRect = el.getBoundingClientRect().top;
@@ -41,39 +26,21 @@ const Contacts = () => {
             <div className="contacts">
                 <PageTitle title="Contacts" hashPath={"#form-wrapper"} />
                 <div className="form-wrapper" id="form-wrapper">
-                    <div>
-                        <div className="text-line-container">
-                            <div className="text-line">
-                                <div
-                                    style={{
-                                        fontSize: "3rem",
-                                    }}
-                                >
-                                    Contact us
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <TextLine>
+                        <p className="form-title">Contact us</p>
+                    </TextLine>
                     <form className="form" action="">
                         <div className="input-container">
                             <div className="label-container">
                                 <label htmlFor="first-name">
-                                    <div className="text-line-container">
-                                        <div className="text-line">
-                                            <p>First name</p>
-                                        </div>
-                                    </div>
+                                    <TextLine>First name</TextLine>
                                 </label>
                                 <input type="text" id="first-name" />
                                 <div className="input-border-bottom"></div>
                             </div>
                             <div className="label-container">
                                 <label htmlFor="last-name">
-                                    <div className="text-line-container">
-                                        <div className="text-line">
-                                            <p>Last name</p>
-                                        </div>
-                                    </div>
+                                    <TextLine>Last name</TextLine>
                                 </label>
                                 <input type="text" id="last-name" />
                                 <div className="input-border-bottom"></div>
@@ -82,22 +49,14 @@ const Contacts = () => {
                         <div className="input-container">
                             <div className="label-container">
                                 <label htmlFor="phone-number">
-                                    <div className="text-line-container">
-                                        <div className="text-line">
-                                            <p>Phone number</p>
-                                        </div>
-                                    </div>
+                                    <TextLine>Phone number</TextLine>
                                 </label>
                                 <input type="text" id="phone-number" />
                                 <div className="input-border-bottom"></div>
                             </div>
                             <div className="label-container">
                                 <label htmlFor="e-mail">
-                                    <div className="text-line-container">
-                                        <div className="text-line">
-                                            <p>E-mail</p>
-                                        </div>
-                                    </div>
+                                    <TextLine>E-mail</TextLine>
                                 </label>
                                 <input type="text" id="e-mail" />
                                 <div className="input-border-bottom"></div>
@@ -105,22 +64,14 @@ const Contacts = () => {
                         </div>
                         <div className="label-container">
                             <label htmlFor="subject">
-                                <div className="text-line-container">
-                                    <div className="text-line">
-                                        <p>Subject</p>
-                                    </div>
-                                </div>
+                                <TextLine>Subject</TextLine>
                             </label>
                             <input type="text" id="subject" />
                             <div className="input-border-bottom"></div>
                         </div>
                         <div className="label-container">
                             <label htmlFor="message">
-                                <div className="text-line-container">
-                                    <div className="text-line">
-                                        <p>Message</p>
-                                    </div>
-                                </div>
+                                <TextLine>Message</TextLine>
                             </label>
                             <textarea
                                 name=""

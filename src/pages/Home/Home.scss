@@ -137,20 +137,6 @@
     }
 }
 
-.text-line-container {
-    overflow: hidden;
-}
-
-.text-line {
-    transform: translateY(100%);
-}
-
-@keyframes revealTextLine {
-    to {
-        transform: translateY(0);
-    }
-}
-
 .projects {
     padding-top: 120px;
 }

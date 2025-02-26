@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import img1 from "./../../assets/projects-img/project1/1.jpg";
 import img2 from "./../../assets/projects-img/project1/2.jpg";
@@ -6,24 +5,6 @@ import img3 from "./../../assets/projects-img/project1/3.jpg";
 import "./Home.scss";
 
 const Home = () => {
-    useEffect(() => {
-        document.querySelectorAll(".text-line").forEach((el, index) => {
-            document.addEventListener("scroll", () => {
-                const serviceRect = el.getBoundingClientRect().top;
-                if (serviceRect < window.innerHeight - 100) {
-                    el.style.animation = "revealTextLine 1s forwards";
-                }
-            });
-
-            // On load page
-
-            const serviceRect = el.getBoundingClientRect().top;
-            if (serviceRect < window.innerHeight - 100) {
-                el.style.animation = "revealTextLine 1s forwards";
-            }
-        });
-    });
-
     return (
         <section className="home">
             <div className="home-wrapper">
