@@ -6,12 +6,14 @@ import Footer from "./components/Footer/Footer";
 import ProjectOne from "./pages/ProjectOne/ProjectOne";
 import ScrollToTop from "./utils/ScrollToTop";
 import Contacts from "./pages/Contacts/Contacts";
+import Menu from "./components/Menu/Menu";
 
 function App() {
     return (
         <Router>
             <ScrollToTop />
             <Header />
+            <Menu />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/project-one" element={<ProjectOne />} />

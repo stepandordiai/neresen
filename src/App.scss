@@ -8,6 +8,10 @@ body {
     color: #000000;
 }
 
+.body--hidden {
+    overflow: hidden;
+}
+
 #root {
     display: flex;
     flex-direction: column;

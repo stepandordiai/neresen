@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import logoIconWhite from "./../../assets/logo/mountain-white.png";
 import logoIconBlack from "./../../assets/logo/mountain-black.png";
-import "./Header.scss";
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { HashLink } from "react-router-hash-link";
+import "./Header.scss";
 
 const Header = () => {
     useEffect(() => {
@@ -28,6 +28,9 @@ const Header = () => {
                 document
                     .querySelector(":root")
                     .style.setProperty("--header-clr-mode", "#000");
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--menu-clr-mode", "#fff");
 
                 document.querySelector(
                     ".custom-divider"
@@ -38,6 +41,9 @@ const Header = () => {
                 document
                     .querySelector(":root")
                     .style.setProperty("--header-clr-mode", "#fff");
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--menu-clr-mode", "#000");
                 document.querySelector(
                     ".custom-divider"
                 ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
@@ -51,6 +57,9 @@ const Header = () => {
                 document
                     .querySelector(":root")
                     .style.setProperty("--header-clr-mode", "#fff");
+                document
+                    .querySelector(":root")
+                    .style.setProperty("--menu-clr-mode", "#000");
                 document.querySelector(
                     ".custom-divider"
                 ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";

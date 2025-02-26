@@ -19,13 +19,13 @@ const Home = () => {
                         <p className="home__title">Neresen a.s.</p>
                     </TextLine>
                 </div>
-                <div className="home__btn">
+                <NavLink className="home__btn" to={"/contacts"}>
                     <div className="btn-border-top"></div>
                     <div className="btn-border-right"></div>
                     <div className="btn-border-bottom"></div>
                     <div className="btn-border-left"></div>
                     Kontaktujte nás
-                </div>
+                </NavLink>
             </div>
             <div className="projects" id="projects">
                 <div className="projects__title-wrapper">

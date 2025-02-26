@@ -8,7 +8,14 @@ const BurgerBtn = () => {
         document
             .querySelector(".burger-14__center-line")
             .classList.toggle("burger-14__center-line--active");
+
+        // Menu
+
+        document.querySelector(".menu").classList.toggle("menu--active");
+
+        document.body.classList.toggle("body--hidden");
     }
+
     return (
         <>
             <div onClick={toggleBurger14} className="burger-14">
