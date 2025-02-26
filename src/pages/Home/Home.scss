@@ -3,9 +3,7 @@
 .home-wrapper {
     height: 100svh;
     width: 100%;
-    @include flex-center-start;
-    flex-direction: column;
-    gap: 50px;
+    @include flex-start-center;
     padding: 0 30px;
 }
 
@@ -47,11 +45,13 @@
 
 .home__title {
     color: #fff;
-    font-size: clamp(4rem, 12vw, 6rem);
+    font-size: clamp(4rem, 10vw, 8rem);
 }
 
 .home__btn {
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
     z-index: 0;
     padding: 15px;
     color: #fff;
@@ -177,9 +177,6 @@
 .project-card-bottom {
     position: absolute;
     color: #fff;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     top: 0;
     right: 0;
     bottom: 0;
@@ -212,6 +209,11 @@
 @media (width <= 900px) {
     .home-wrapper {
         padding: 0 15px;
+    }
+
+    .home__btn {
+        bottom: 15px;
+        left: 15px;
     }
 
     .projects-grid {
