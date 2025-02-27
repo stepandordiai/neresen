@@ -10,7 +10,7 @@ const TextLine = (props) => {
         document.querySelectorAll(".text-line").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
-                if (serviceRect < window.innerHeight - 100) {
+                if (serviceRect < window.innerHeight - 75) {
                     el.style.animation = "translateTextLine 1s forwards";
                 }
             });
@@ -18,7 +18,7 @@ const TextLine = (props) => {
             // Animate on load page
 
             const serviceRect = el.getBoundingClientRect().top;
-            if (serviceRect < window.innerHeight - 100) {
+            if (serviceRect < window.innerHeight - 75) {
                 el.style.animation = "translateTextLine 1s forwards";
             }
         });

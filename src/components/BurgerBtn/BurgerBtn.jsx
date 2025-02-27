@@ -14,6 +14,18 @@ const BurgerBtn = () => {
         document.querySelector(".menu").classList.toggle("menu--active");
 
         document.body.classList.toggle("body--hidden");
+
+        document.querySelectorAll(".menu__link").forEach((link, index) => {
+            setTimeout(() => {
+                link.classList.toggle("menu__link--active");
+            }, 100 * index);
+        });
+
+        document.querySelectorAll(".text-line-opac").forEach((link, index) => {
+            setTimeout(() => {
+                link.classList.toggle("text-line-opac--active");
+            }, 100 * index);
+        });
     }
 
     return (
