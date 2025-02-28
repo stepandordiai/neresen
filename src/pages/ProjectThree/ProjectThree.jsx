@@ -10,10 +10,10 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import img1 from "./../assets/projects-img/project3/1.jpg";
-import img2 from "./../assets/projects-img/project3/2.jpg";
-import img3 from "./../assets/projects-img/project3/3.jpg";
-import img4 from "./../assets/projects-img/project3/4.jpg";
+import img1 from "./../../assets/projects-img/project3/1.jpg";
+import img2 from "./../../assets/projects-img/project3/2.jpg";
+import img3 from "./../../assets/projects-img/project3/3.jpg";
+import img4 from "./../../assets/projects-img/project3/4.jpg";
 
 // import "./styles.css";
 
@@ -21,8 +21,8 @@ import img4 from "./../assets/projects-img/project3/4.jpg";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 // import PageTitle from "../../components/PageTitle/PageTitle";
 // import TextLine from "../../components/TextLine/TextLine";
-import PageTitle from "../components/PageTitle/PageTitle";
-import TextLine from "../components/TextLine/TextLine";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import TextLine from "../../components/TextLine/TextLine";
 
 const ProjectThree = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);

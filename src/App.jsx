@@ -6,8 +6,8 @@ import ProjectOne from "./pages/ProjectOne/ProjectOne";
 import ScrollToTop from "./utils/ScrollToTop";
 import Contacts from "./pages/Contacts/Contacts";
 import Menu from "./components/Menu/Menu";
-import ProjectTwo from "./ProjectTwo/ProjectTwo";
-import ProjectThree from "./ProjectThree/ProjectThree";
+import ProjectTwo from "./pages/ProjectTwo/ProjectTwo";
+import ProjectThree from "./pages/ProjectThree/ProjectThree";
 import "./App.scss";
 
 function App() {

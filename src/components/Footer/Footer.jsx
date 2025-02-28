@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import TextLine from "../TextLine/TextLine";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -10,7 +11,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__top">
                 <div className="footer__nav-wrapper">
-                    <p className="footer__nav-title">Navigation</p>
+                    <p className="footer__nav-title">
+                        <TextLine>Navigation</TextLine>
+                    </p>
                     <div className="footer__nav">
                         <NavLink
                             className={({ isActive }) =>
@@ -18,14 +21,14 @@ const Footer = () => {
                             }
                             to={"/"}
                         >
-                            Úvodní stránka
+                            <TextLine>Úvodní stránka</TextLine>
                         </NavLink>
                         <HashLink
                             className={"footer__nav-link"}
                             to="/#projects"
                             smooth
                         >
-                            Realizace
+                            <TextLine>Realizace</TextLine>
                         </HashLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -33,7 +36,7 @@ const Footer = () => {
                             }
                             to="/carrera"
                         >
-                            Kariéra
+                            <TextLine>Kariéra</TextLine>
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -41,12 +44,14 @@ const Footer = () => {
                             }
                             to={"/contacts"}
                         >
-                            Kontakty
+                            <TextLine>Kontakty</TextLine>
                         </NavLink>
                     </div>
                 </div>
                 <div className="footer__nav-wrapper">
-                    <p className="footer__nav-title">Realizace</p>
+                    <p className="footer__nav-title">
+                        <TextLine>Realizace</TextLine>
+                    </p>
                     <div className="footer__nav">
                         <NavLink
                             className={({ isActive }) =>
@@ -54,7 +59,7 @@ const Footer = () => {
                             }
                             to={"/project-one"}
                         >
-                            Bytový dům
+                            <TextLine>Bytový dům</TextLine>
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -62,7 +67,7 @@ const Footer = () => {
                             }
                             to="/project-two"
                         >
-                            Rekonstrukce
+                            <TextLine>Rekonstrukce</TextLine>
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -70,24 +75,28 @@ const Footer = () => {
                             }
                             to="/project-three"
                         >
-                            Domov pro seniory
+                            <TextLine>Domov pro seniory</TextLine>
                         </NavLink>
                     </div>
                 </div>
             </div>
             <div className="footer__custom-divider"></div>
             <div className="footer__bottom">
-                <p className="copyright">&copy; 2025 Neresen</p>
-                <p>
-                    <span className="creator__info">Site by </span>
-                    <a
-                        className="creator__link"
-                        href="https://heeeyooo-studio.netlify.app"
-                        target="_blank"
-                    >
-                        heeeyooo.studio
-                    </a>
-                </p>
+                <TextLine>
+                    <p className="copyright">&copy; 2025 Neresen</p>
+                </TextLine>
+                <TextLine>
+                    <p>
+                        <span className="creator__info">Site by </span>
+                        <a
+                            className="creator__link"
+                            href="https://heeeyooo-studio.netlify.app"
+                            target="_blank"
+                        >
+                            heeeyooo.studio
+                        </a>
+                    </p>
+                </TextLine>
             </div>
         </footer>
     );
