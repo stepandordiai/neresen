@@ -77,9 +77,9 @@ const Footer = () => {
             </div>
             <div className="footer__custom-divider"></div>
             <div className="footer__bottom">
-                <div className="copyright">&copy; 2025 Neresen</div>
-                <div className="creator">
-                    Designed and developed by{" "}
+                <p className="copyright">&copy; 2025 Neresen</p>
+                <p>
+                    <span className="creator__info">Site by </span>
                     <a
                         className="creator__link"
                         href="https://heeeyooo-studio.netlify.app"
@@ -87,7 +87,7 @@ const Footer = () => {
                     >
                         heeeyooo.studio
                     </a>
-                </div>
+                </p>
             </div>
         </footer>
     );
