@@ -27,7 +27,7 @@
 .header__logo-name {
     font-size: 2rem;
     font-weight: 200;
-    color: var(--header-clr-mode);
+    color: var(--scroll-clr);
 }
 
 .nav {
@@ -38,7 +38,7 @@
 
 .nav__link {
     position: relative;
-    color: var(--header-clr-mode);
+    color: var(--scroll-clr);
 }
 
 .nav__link::before {
@@ -48,7 +48,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background: var(--header-clr-mode);
+    background: var(--scroll-clr);
     transform: scaleX(0);
     transform-origin: bottom left;
     transition: transform 0.5s;

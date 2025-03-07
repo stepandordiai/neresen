@@ -36,7 +36,7 @@
 .home__bottom {
     background-color: #fff;
     // height: 2000px;
-    padding: 30px;
+    // padding: 30px;
 }
 
 .about-us {
@@ -168,6 +168,16 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    background: #000;
+    color: #fff;
+    padding: 30px;
+}
+
+.projects__title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .projects__title {
@@ -177,13 +187,6 @@
 .projects__secondary-title {
     font-size: clamp(1rem, 4vw, 1.5rem);
     opacity: 0.5;
-}
-
-.projects__title-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
 }
 
 .projects-grid {
@@ -260,6 +263,47 @@ img {
     font-size: 1.5rem;
 }
 
+.projects-map {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projects-map__title {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#map {
+    width: 70%;
+    height: 100%;
+}
+
+.container {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-container {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
 @media (width <= 900px) {
     .home-wrapper {
         padding: 0 15px;
@@ -268,10 +312,6 @@ img {
     .home__btn {
         bottom: 15px;
         left: 15px;
-    }
-
-    .home__bottom {
-        padding: 15px;
     }
 
     .projects-grid {
@@ -283,5 +323,13 @@ img {
 @media (width <= 600px) {
     .projects-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    .container {
+        display: none;
     }
 }

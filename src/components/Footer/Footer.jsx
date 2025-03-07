@@ -8,12 +8,12 @@ const Footer = () => {
     const activeLink = "footer__nav-link footer__nav-link--active";
 
     return (
-        <footer className="footer">
+        <footer className="footer js-footer">
             <div className="footer__top">
                 <div className="footer__nav-wrapper">
-                    <p className="footer__nav-title">
+                    <div className="footer__nav-title">
                         <TextLine>Navigation</TextLine>
-                    </p>
+                    </div>
                     <div className="footer__nav">
                         <NavLink
                             className={({ isActive }) =>
@@ -49,9 +49,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer__nav-wrapper">
-                    <p className="footer__nav-title">
+                    <div className="footer__nav-title">
                         <TextLine>Realizace</TextLine>
-                    </p>
+                    </div>
                     <div className="footer__nav">
                         <NavLink
                             className={({ isActive }) =>

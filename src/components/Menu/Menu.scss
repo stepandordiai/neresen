@@ -10,7 +10,7 @@
     flex-direction: column;
     gap: 30px;
     padding: 105px 15px 15px;
-    background: var(--menu-clr-mode);
+    background: var(--scroll-bg-clr);
     transform: translateX(-100%);
     transition: transform 0.6s 0.6s var(--cstm-cubic-bezier);
 }
@@ -43,13 +43,13 @@
 
 .menu__contacts-title {
     font-weight: 600;
-    color: var(--header-clr-mode);
+    color: var(--scroll-clr);
 }
 
 .menu__contacts-link {
     position: relative;
     display: inline-block;
-    color: var(--header-clr-mode);
+    color: var(--scroll-clr);
 }
 
 .menu__contacts-link::before {
@@ -59,7 +59,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background: var(--header-clr-mode);
+    background: var(--scroll-clr);
     transform: scaleX(0);
     transform-origin: bottom left;
     transition: transform 0.5s;
