@@ -79,10 +79,6 @@ function App() {
         };
 
         document.addEventListener("scroll", handleHeaderMode);
-
-        // FIXME:
-
-        document.addEventListener("load", handleHeaderMode);
     }, []);
 
     return (
