@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
 import TextLine from "../../components/TextLine/TextLine";
-import { Helmet } from "react-helmet";
-import { MarkerWithLabel } from "@googlemaps/markerwithlabel";
 import img1 from "./../../assets/projects-img/project1/1.jpg";
 import img2 from "./../../assets/projects-img/project2/1.jpg";
 import img3 from "./../../assets/projects-img/project3/1.jpg";
-import "./Home.scss";
+
 import { useEffect } from "react";
+import "./Home.scss";
 
 const Home = () => {
     function initMap() {

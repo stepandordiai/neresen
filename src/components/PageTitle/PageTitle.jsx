@@ -6,7 +6,7 @@ import TextLine from "../TextLine/TextLine";
 const PageTitle = ({ title, hashPath, previousLinkTitle }) => {
     return (
         <>
-            <div className="page-title">
+            <div className="page-title js-page-title">
                 <TextLine>
                     <h3 className="title">{title}</h3>
                 </TextLine>

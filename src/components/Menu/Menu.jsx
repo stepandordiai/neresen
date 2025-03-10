@@ -25,6 +25,12 @@ const Menu = () => {
                 link.classList.remove("menu__link--active");
             }, 100 * index);
         });
+
+        document.querySelectorAll(".text-line-opac").forEach((link, index) => {
+            setTimeout(() => {
+                link.classList.remove("text-line-opac--active");
+            }, 100 * index);
+        });
     };
 
     const inactiveLink = "nav__link menu__link";
