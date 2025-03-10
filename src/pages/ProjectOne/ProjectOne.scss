@@ -1,44 +1,19 @@
-@use "./../../mixins" as *;
-
 .project1 {
     background-color: #fff;
-    z-index: 0;
     padding: 130px 30px 30px;
     display: flex;
     gap: 30px;
 }
 
-.project1-swiper {
-    width: 50%;
-}
-
 .project1-info {
     width: 50%;
-    font-size: 2rem;
-}
-
-.mySwiper {
-    margin-top: 7.5px;
-}
-
-.mySwiper .swiper-slide {
-    width: 25%;
-    height: 100px;
-    opacity: 0.4;
-    transition: all 0.3s;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-    opacity: 1;
+    font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 @media (width <= 900px) {
     .project1 {
         flex-direction: column;
-    }
-
-    .project1-swiper {
-        width: 100%;
+        padding: 115px 15px 30px;
     }
 
     .project1-info {

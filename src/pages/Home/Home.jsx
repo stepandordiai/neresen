@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import TextLine from "../../components/TextLine/TextLine";
+import { projectsData } from "../../data/projectsData";
 import img1 from "./../../assets/projects-img/project1/1.jpg";
 import img2 from "./../../assets/projects-img/project2/1.jpg";
 import img3 from "./../../assets/projects-img/project3/1.jpg";
@@ -8,6 +9,10 @@ import { useEffect } from "react";
 import "./Home.scss";
 
 const Home = () => {
+    const projectImages = projectsData.map((project) => {
+        return project.img;
+    });
+
     function initMap() {
         const position = { lat: 50.02425240479898, lng: 15.214482108227289 };
 
@@ -19,19 +24,19 @@ const Home = () => {
             [
                 50.024232977043376,
                 15.214370875067454,
-                "<img width='100%' src='http://localhost:5173/src/assets/projects-img/project2/1.jpg' /><br /><br /><strong>Rekonstrukce Kolín</strong><br /><p>ul. Pod Hroby</p><br /><p>Czechia</p>",
+                `<img width='100%' src='${projectImages[0][0]}' /><br /><br /><strong>Rekonstrukce Kolín</strong><br /><p>ul. Pod Hroby</p><br /><p>Czechia</p>`,
                 "Rekonstrukce",
             ],
             [
                 49.92194413662426,
                 15.809526706791234,
-                "<img width='100%' src='http://localhost:5173/src/assets/projects-img/project1/2.jpg' /><br /><br /><strong>Bytový dům Slatiňany</strong><br /><p>ul.Medunova</p><br /><p>Czechia</p>",
+                `<img width='100%' src='${projectImages[1][0]}' /><br /><br /><strong>Bytový dům Slatiňany</strong><br /><p>ul.Medunova</p><br /><p>Czechia</p>`,
                 "Bytový dům",
             ],
             [
                 49.33463068006648,
                 13.206888596683491,
-                "<img width='100%' src='http://localhost:5173/src/assets/projects-img/project3/1.jpg' /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>",
+                `<img width='100%' src='${projectImages[2][0]}' /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
                 "Domov pro seniory",
             ],
         ];
@@ -161,7 +166,7 @@ const Home = () => {
                     <div className="projects-grid">
                         <div className="project-card-wrapper">
                             <div className="project-card">
-                                <img src={img1} alt="" />
+                                <img src={projectImages[0][0]} alt="" />
                                 <NavLink
                                     className="project-card-bottom"
                                     to={"/project-one"}
@@ -177,7 +182,7 @@ const Home = () => {
                         </div>
                         <div className="project-card-wrapper">
                             <div className="project-card">
-                                <img src={img2} alt="" />
+                                <img src={projectImages[1][0]} alt="" />
                                 <NavLink
                                     className="project-card-bottom"
                                     to={"/project-two"}
@@ -193,7 +198,7 @@ const Home = () => {
                         </div>
                         <div className="project-card-wrapper">
                             <div className="project-card">
-                                <img src={img3} alt="" />
+                                <img src={projectImages[2][0]} alt="" />
                                 <NavLink
                                     className="project-card-bottom"
                                     to={"/project-three"}
@@ -222,7 +227,7 @@ const Home = () => {
                             >
                                 <img
                                     style={{ height: "100px" }}
-                                    src="http://localhost:5173/src/assets/projects-img/project2/1.jpg"
+                                    src={projectImages[0][0]}
                                     alt=""
                                 />
                                 <p>Rekonstrukce</p>
@@ -233,7 +238,7 @@ const Home = () => {
                             >
                                 <img
                                     style={{ height: "100px" }}
-                                    src="http://localhost:5173/src/assets/projects-img/project1/1.jpg"
+                                    src={projectImages[1][0]}
                                     alt=""
                                 />
                                 <p>Bytový dům</p>
@@ -243,7 +248,7 @@ const Home = () => {
                                 data-title="Domov pro seniory"
                             >
                                 <img
-                                    src="http://localhost:5173/src/assets/projects-img/project3/1.jpg"
+                                    src={projectImages[2][0]}
                                     style={{ height: "100px" }}
                                     alt=""
                                 />
