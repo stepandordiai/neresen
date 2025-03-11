@@ -22,11 +22,9 @@
 }
 
 .footer__nav {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex-center-start;
     flex-direction: column;
-    gap: 7.5px;
+    row-gap: 7.5px;
 }
 
 .footer__nav-link {
@@ -59,15 +57,12 @@
 .footer__custom-divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
+    margin-top: auto;
+    margin-bottom: 30px;
 }
 
 .footer__bottom {
-    // height: 100px;
     @include flex-between-center;
-}
-
-.creator__info {
-    color: #fff;
 }
 
 .creator__link {
@@ -96,5 +91,9 @@
 @media (width <= 900px) {
     .footer {
         padding: 105px 15px 15px;
+    }
+
+    .footer__custom-divider {
+        margin-bottom: 15px;
     }
 }

@@ -1,0 +1,93 @@
+@use "./../../mixins" as *;
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: #000;
+    color: #fff;
+    padding: 120px 30px;
+}
+
+.projects__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.projects__title {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.projects__secondary-title {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    opacity: 0.5;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+
+.project-card__title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.6s;
+    }
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 500;
+    @include grid-center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+}
+
+.project-card:hover .project-card-link {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media (width <= 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width <= 600px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

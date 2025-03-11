@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}
+
 @mixin flex-center-start {
     display: flex;
     justify-content: center;

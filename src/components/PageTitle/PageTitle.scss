@@ -4,7 +4,8 @@
     position: relative;
     height: 100svh;
     width: 100%;
-    @include flex-center-start;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     row-gap: 30px;
     padding: 0 30px;
@@ -24,7 +25,7 @@
     display: block;
     width: 100%;
     height: inherit;
-    background: url("./../../assets/3.jpg") no-repeat center center;
+    background: url("./../../assets/img/4.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

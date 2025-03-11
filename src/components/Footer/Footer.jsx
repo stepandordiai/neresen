@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer className="footer js-footer">
             <div className="footer__top">
-                <div className="footer__nav-wrapper">
+                <div>
                     <div className="footer__nav-title">
                         <TextLine>Navigation</TextLine>
                     </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                         </NavLink>
                     </div>
                 </div>
-                <div className="footer__nav-wrapper">
+                <div>
                     <div className="footer__nav-title">
                         <TextLine>Realizace</TextLine>
                     </div>
@@ -83,11 +83,11 @@ const Footer = () => {
             <div className="footer__custom-divider"></div>
             <div className="footer__bottom">
                 <TextLine>
-                    <p className="copyright">&copy; 2025 Neresen</p>
+                    <p>&copy; 2025 Neresen</p>
                 </TextLine>
                 <TextLine>
                     <p>
-                        <span className="creator__info">Site by </span>
+                        <span>Site by </span>
                         <a
                             className="creator__link"
                             href="https://heeeyooo-studio.netlify.app"
