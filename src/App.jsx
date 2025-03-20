@@ -9,6 +9,11 @@ import Menu from "./components/Menu/Menu";
 import ProjectOne from "./pages/ProjectOne/ProjectOne";
 import ProjectTwo from "./pages/ProjectTwo/ProjectTwo";
 import ProjectThree from "./pages/ProjectThree/ProjectThree";
+import ProjectFour from "./pages/ProjectFour/ProjectFour";
+import ProjectFive from "./pages/ProjectFive/ProjectFive";
+import ProjectSix from "./pages/ProjectSix/ProjectSix";
+import ProjectSeven from "./pages/ProjectSeven/ProjectSeven";
+import ProjectEight from "./pages/ProjectEight/ProjectEight";
 import logoIconWhite from "./assets/logo/mountain-white.png";
 import logoIconBlack from "./assets/logo/mountain-black.png";
 import "./App.scss";
@@ -91,6 +96,11 @@ function App() {
                 <Route path="/project-one" element={<ProjectOne />} />
                 <Route path="/project-two" element={<ProjectTwo />} />
                 <Route path="/project-three" element={<ProjectThree />} />
+                <Route path="/project-three" element={<ProjectFour />} />
+                <Route path="/project-three" element={<ProjectFive />} />
+                <Route path="/project-three" element={<ProjectSix />} />
+                <Route path="/project-three" element={<ProjectSeven />} />
+                <Route path="/project-three" element={<ProjectEight />} />
                 <Route path="/contacts" element={<Contacts />} />
             </Routes>
             <Footer />

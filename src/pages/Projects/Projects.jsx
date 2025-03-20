@@ -63,6 +63,76 @@ const Projects = () => {
                         <p className="project-card__title">Domov pro seniory</p>
                     </TextLine>
                 </div>
+                <div className="project-card-wrapper">
+                    <div className="project-card">
+                        <img src={projectImages[3][0]} alt="" loading="lazy" />
+                        <NavLink
+                            className="project-card-link"
+                            to={"/project-four"}
+                        >
+                            <p>Holice</p>
+                        </NavLink>
+                    </div>
+                    <TextLine>
+                        <p className="project-card__title">Holice</p>
+                    </TextLine>
+                </div>
+                <div className="project-card-wrapper">
+                    <div className="project-card">
+                        <img src={projectImages[4][0]} alt="" loading="lazy" />
+                        <NavLink
+                            className="project-card-link"
+                            to={"/project-five"}
+                        >
+                            <p>Vizovice</p>
+                        </NavLink>
+                    </div>
+                    <TextLine>
+                        <p className="project-card__title">Vizovice</p>
+                    </TextLine>
+                </div>
+                <div className="project-card-wrapper">
+                    <div className="project-card">
+                        <img src={projectImages[5][0]} alt="" loading="lazy" />
+                        <NavLink
+                            className="project-card-link"
+                            to={"/project-six"}
+                        >
+                            <p>Mlekovice</p>
+                        </NavLink>
+                    </div>
+                    <TextLine>
+                        <p className="project-card__title">Mlekovice</p>
+                    </TextLine>
+                </div>
+                <div className="project-card-wrapper">
+                    <div className="project-card">
+                        <img src={projectImages[6][0]} alt="" loading="lazy" />
+                        <NavLink
+                            className="project-card-link"
+                            to={"/project-seven"}
+                        >
+                            <p>Chrudim</p>
+                        </NavLink>
+                    </div>
+                    <TextLine>
+                        <p className="project-card__title">Chrudim</p>
+                    </TextLine>
+                </div>
+                <div className="project-card-wrapper">
+                    <div className="project-card">
+                        <img src={projectImages[7][0]} alt="" loading="lazy" />
+                        <NavLink
+                            className="project-card-link"
+                            to={"/project-eight"}
+                        >
+                            <p>Lázně Bohdaneč</p>
+                        </NavLink>
+                    </div>
+                    <TextLine>
+                        <p className="project-card__title">Lázně Bohdaneč</p>
+                    </TextLine>
+                </div>
             </div>
         </div>
     );
