@@ -1,23 +1,26 @@
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import TextLine from "../TextLine/TextLine";
-// import img1 from "./../../assets/img/1.jpg";
-// import img2 from "./../../assets/img/2.jpg";
-// import img3 from "./../../assets/img/3.jpg";
-// import img4 from "./../../assets/img/4.jpg";
-// import img5 from "./../../assets/img/5.jpg";
 import "./PageTitle.scss";
 
 const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
+    function revealImg() {
+        document
+            .querySelector(".page-title-bg-img")
+            .classList.add("page-title-bg-img--active");
+    }
     return (
         <>
-            <div className="page-title js-page-title">
+            <div className="page-title-bg-img-wrapper">
                 <img
-                    className="page-title-bg"
+                    onLoad={revealImg}
+                    className="page-title-bg-img"
                     src={image}
                     alt=""
                     loading="lazy"
                 />
+            </div>
+            <div className="page-title js-page-title">
                 <TextLine>
                     <h3 className="title">{title}</h3>
                 </TextLine>

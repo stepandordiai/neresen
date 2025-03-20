@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import TextLine from "../TextLine/TextLine";
 import "./Footer.scss";
 
 const Footer = () => {
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         document.querySelector(".footer").style.display = "initial";
+    //     }, 500);
+    // }, []);
+
     const inactiveLink = "footer__nav-link";
     const activeLink = "footer__nav-link footer__nav-link--active";
 
