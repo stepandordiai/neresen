@@ -3,12 +3,19 @@ import TextLine from "../../components/TextLine/TextLine";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import ProjectsMap from "../ProjectsMap/ProjectsMap";
+import bgImg from "./../../assets/img/3.jpg";
 import "./Home.scss";
 
 const Home = () => {
     return (
         <section className="home">
             <div className="home-wrapper js-home-wrapper">
+                <img
+                    className="home-wrapper-bg"
+                    src={bgImg}
+                    alt=""
+                    // loading="lazy"
+                />
                 <div>
                     <TextLine>
                         <p className="home__secondary-title">

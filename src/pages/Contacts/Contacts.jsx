@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
+import img1 from "./../../assets/img/1.jpg";
 import "./Contacts.scss";
 
 const Contacts = () => {
@@ -24,7 +25,11 @@ const Contacts = () => {
 
     return (
         <>
-            <PageTitle title="Contacts" hashPath={"#form-wrapper"} />
+            <PageTitle
+                title="Contacts"
+                hashPath={"#form-wrapper"}
+                image={img1}
+            />
             <div className="form-wrapper" id="form-wrapper">
                 <div>
                     <TextLine>

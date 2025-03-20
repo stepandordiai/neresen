@@ -1,6 +1,7 @@
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
+import img from "./../../assets/img/5.jpg";
 import "./ProjectThree.scss";
 
 const ProjectThree = () => {
@@ -10,6 +11,7 @@ const ProjectThree = () => {
                 title={"Domov pro seniory"}
                 previousLinkTitle={"Projects"}
                 hashPath={"#project3"}
+                image={img}
             />
             <div className="project3" id="project3">
                 <ProjectSwiper projectName={"projectThree"} />

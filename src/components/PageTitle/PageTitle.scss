@@ -16,21 +16,33 @@
     }
 }
 
-.page-title::before {
-    content: "";
+// .page-title::before {
+//     content: "";
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     z-index: -10;
+//     display: block;
+//     width: 100%;
+//     height: inherit;
+//     background: url("./../../assets/img/4.jpg") no-repeat center center;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     animation: animateHomeWrapper 200s linear infinite;
+// }
+
+.page-title-bg {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: -10;
-    display: block;
     width: 100%;
-    height: inherit;
-    background: url("./../../assets/img/4.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    animation: animateHomeWrapper 200s linear infinite;
+    height: 100svh;
+    z-index: -10;
+    object-fit: cover;
+    object-position: center;
+    animation: animateHomeWrapper 100s linear infinite;
 }
 
 .title {
