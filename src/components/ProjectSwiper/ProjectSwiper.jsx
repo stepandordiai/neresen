@@ -98,6 +98,7 @@ const ProjectSwiper = ({ projectName }) => {
                                 <img
                                     onClick={() => showSlider(index + 1)}
                                     src={img}
+                                    loading="lazy"
                                 />
                             </SwiperSlide>
                         );
@@ -115,7 +116,7 @@ const ProjectSwiper = ({ projectName }) => {
                     {project[0].img.map((img, index) => {
                         return (
                             <SwiperSlide key={index}>
-                                <img src={img} />
+                                <img src={img} loading="lazy" />
                             </SwiperSlide>
                         );
                     })}
@@ -132,7 +133,11 @@ const ProjectSwiper = ({ projectName }) => {
                 {project[0].img.map((img, index) => {
                     return (
                         <div className="slide" key={index}>
-                            <img className="slide-img" src={img} />
+                            <img
+                                className="slide-img"
+                                src={img}
+                                loading="lazy"
+                            />
                         </div>
                     );
                 })}

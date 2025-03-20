@@ -19,20 +19,20 @@ const ProjectsMap = () => {
             [
                 49.92194413662426,
                 15.809526706791234,
-                `<img width='100%' src='${projectImages[0][0]}' /><br /><br /><strong>Bytový dům Slatiňany</strong><br /><p>ul.Medunova</p><br /><p>Czechia</p>`,
+                `<img width='100%' src='${projectImages[0][0]}' loading="lazy" /><br /><br /><strong>Bytový dům Slatiňany</strong><br /><p>ul.Medunova</p><br /><p>Czechia</p>`,
                 "Bytový dům",
             ],
             [
                 50.024232977043376,
                 15.214370875067454,
-                `<img width='100%' src='${projectImages[1][0]}' /><br /><br /><strong>Rekonstrukce Kolín</strong><br /><p>ul. Pod Hroby</p><br /><p>Czechia</p>`,
+                `<img width='100%' src='${projectImages[1][0]}' loading="lazy" /><br /><br /><strong>Rekonstrukce Kolín</strong><br /><p>ul. Pod Hroby</p><br /><p>Czechia</p>`,
                 "Rekonstrukce",
             ],
 
             [
                 49.33463068006648,
                 13.206888596683491,
-                `<img width='100%' src='${projectImages[2][0]}' /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
                 "Domov pro seniory",
             ],
         ];
@@ -106,6 +106,7 @@ const ProjectsMap = () => {
                                 style={{ height: "100px" }}
                                 src={projectImages[0][0]}
                                 alt=""
+                                loading="lazy"
                             />
                             <div>
                                 <p>Bytový dům Slatiňany</p>
@@ -118,6 +119,7 @@ const ProjectsMap = () => {
                                 style={{ height: "100px" }}
                                 src={projectImages[1][0]}
                                 alt=""
+                                loading="lazy"
                             />
                             <div>
                                 <p>Rekonstrukce Kolín</p>
@@ -133,6 +135,7 @@ const ProjectsMap = () => {
                                 src={projectImages[2][0]}
                                 style={{ height: "100px" }}
                                 alt=""
+                                loading="lazy"
                             />
                             <div>
                                 <p>Domov pro seniory Janovice nad Úhlavou</p>

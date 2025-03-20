@@ -23,7 +23,7 @@ const Projects = () => {
             <div className="projects-grid">
                 <div className="project-card-wrapper">
                     <div className="project-card">
-                        <img src={projectImages[0][0]} alt="" />
+                        <img src={projectImages[0][0]} alt="" loading="lazy" />
                         <NavLink
                             className="project-card-link"
                             to={"/project-one"}
@@ -37,7 +37,7 @@ const Projects = () => {
                 </div>
                 <div className="project-card-wrapper">
                     <div className="project-card">
-                        <img src={projectImages[1][0]} alt="" />
+                        <img src={projectImages[1][0]} alt="" loading="lazy" />
                         <NavLink
                             className="project-card-link"
                             to={"/project-two"}
@@ -51,7 +51,7 @@ const Projects = () => {
                 </div>
                 <div className="project-card-wrapper">
                     <div className="project-card">
-                        <img src={projectImages[2][0]} alt="" />
+                        <img src={projectImages[2][0]} alt="" loading="lazy" />
                         <NavLink
                             className="project-card-link"
                             to={"/project-three"}
