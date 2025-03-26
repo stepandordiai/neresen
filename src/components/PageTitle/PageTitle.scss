@@ -11,34 +11,13 @@
     padding: 0 30px;
     color: #fff;
 
-    span {
-        opacity: 0.5;
+    span:nth-last-of-type(1) {
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
-// .page-title::before {
-//     content: "";
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     z-index: -10;
-//     display: block;
-//     width: 100%;
-//     height: inherit;
-//     background: url("./../../assets/img/4.jpg") no-repeat center center;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//     animation: animateHomeWrapper 200s linear infinite;
-// }
-
 .page-title-bg-img-wrapper {
     position: fixed;
-    // left: 0;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
     width: 100%;
     height: 100svh;
     z-index: -10;
@@ -52,6 +31,7 @@
     object-position: center;
     animation: animateHomeWrapper 100s linear infinite;
     opacity: 0;
+    filter: brightness(0.7);
     transition: all 1s;
 }
 

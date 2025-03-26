@@ -30,34 +30,57 @@ import img22 from "./../assets/projects-img/project8/14.png";
 
 export const projectsData = [
     {
+        id: 1,
+        name: "Bytovy dum",
+        title: "Slatiňany – ul.Medunova",
+        secTitle: "Výstavba bytových domů.",
         img: [img1, img2, img3],
         projectName: "projectOne",
     },
     {
+        id: 2,
+        name: "Rekonstrukce",
+        title: "Kolín – ul. Pod Hroby",
+        secTitle: "Rekonstrukce stávajícího objektu včetně přístavby.",
         img: [img4, img5, img6],
         projectName: "projectTwo",
     },
     {
+        id: 3,
+        name: "Domov pro seniory",
+        title: "Janovice nad Úhlavou – Rozvojová zóna",
+        secTitle:
+            "Kompletní přestavba stávajícího objektu na domov pro seniory.",
         img: [img7, img8, img9, img10],
         projectName: "projectThree",
     },
     {
+        id: 4,
+        name: "Holice",
         img: [img11, img12, img13],
         projectName: "projectFour",
     },
     {
+        id: 5,
+        name: "Vizovice",
         img: [img14, img15],
         projectName: "projectFive",
     },
     {
+        id: 6,
+        name: "Mlekovice",
         img: [img16, img17, img18],
         projectName: "projectSix",
     },
     {
+        id: 7,
+        name: "Chrudim",
         img: [img19, img20],
         projectName: "projectSeven",
     },
     {
+        id: 8,
+        name: "Lazne Bohdanec",
         img: [img21, img22],
         projectName: "projectEight",
     },

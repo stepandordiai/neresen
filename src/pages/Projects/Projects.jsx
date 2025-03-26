@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import "./Projects.scss";
 
 const Projects = () => {
-    const projectImages = projectsData.map((project) => {
-        return project.img;
-    });
+    // const projectImages = projectsData.map((project) => {
+    //     return project.img;
+    // });
 
     return (
         <div className="projects js-projects" id="projects">
@@ -21,7 +21,31 @@ const Projects = () => {
                 </TextLine>
             </div>
             <div className="projects-grid">
-                <div className="project-card-wrapper">
+                {projectsData.map((project, index) => {
+                    return (
+                        <div key={index} className="project-card-wrapper">
+                            <div className="project-card">
+                                <img
+                                    src={project.img[0]}
+                                    alt=""
+                                    loading="lazy"
+                                />
+                                <NavLink
+                                    className="project-card-link"
+                                    to={`/project-page/${project.id}`}
+                                >
+                                    <p>{project.name}</p>
+                                </NavLink>
+                            </div>
+                            <TextLine>
+                                <p className="project-card__title">
+                                    {project.name}
+                                </p>
+                            </TextLine>
+                        </div>
+                    );
+                })}
+                {/* <div className="project-card-wrapper">
                     <div className="project-card">
                         <img src={projectImages[0][0]} alt="" loading="lazy" />
                         <NavLink
@@ -132,7 +156,7 @@ const Projects = () => {
                     <TextLine>
                         <p className="project-card__title">Lázně Bohdaneč</p>
                     </TextLine>
-                </div>
+                </div> */}
             </div>
         </div>
     );
