@@ -19,10 +19,8 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 import "./ProjectSwiper.scss";
 
-const ProjectSwiper = ({ projectName }) => {
-    const project = projectsData.filter(
-        (project) => project.projectName === projectName
-    );
+const ProjectSwiper = ({ id }) => {
+    const project = projectsData.filter((project) => project.id === id);
 
     function getImgLength() {
         return project[0].img.length;
