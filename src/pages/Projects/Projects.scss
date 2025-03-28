@@ -35,7 +35,7 @@
 .project-card-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 7.5px;
+    gap: 15px;
 }
 
 .project-card__title {
@@ -81,6 +81,10 @@
 }
 
 @media (width <= 900px) {
+    .projects {
+        padding: 120px 15px 30px;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }

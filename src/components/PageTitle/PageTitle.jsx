@@ -22,7 +22,7 @@ const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
             </div>
             <div className="page-title js-page-title">
                 <TextLine>
-                    <h3 className="title">{title}</h3>
+                    <h1 className="title">{title}</h1>
                 </TextLine>
                 <TextLine>
                     <NavLink className={"link-title"} to={"/"}>

@@ -32,7 +32,7 @@ const Home = () => {
                             </p>
                         </TextLine>
                         <TextLine>
-                            <p className="home__title">Neresen a.s.</p>
+                            <h1 className="home__title">Neresen a.s.</h1>
                         </TextLine>
                     </div>
                     <NavLink className="home__btn" to={"/contacts"}>

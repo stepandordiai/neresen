@@ -3,7 +3,6 @@ import { projectsData } from "../../data/projectsData";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
-// import img from "./../../assets/img/2.jpg";
 import "./ProjectPage.scss";
 
 const ProjectPage = () => {
@@ -18,44 +17,58 @@ const ProjectPage = () => {
             <PageTitle
                 title={project[0].name}
                 previousLinkTitle={"Projects"}
-                hashPath={"#project1"}
+                hashPath={"#project-page"}
                 image={project[0].img[0]}
             />
-            <div className="project1" id="project1">
+            <div className="project-page" id="project-page">
                 <ProjectSwiper id={project[0].id} />
-                <div className="project1-info">
-                    <TextLine>
-                        <p>{project[0].name}</p>
-                    </TextLine>
+                <div className="project-page__info">
+                    {/* <TextLine> */}
+                    <p className="project-page__title">{project[0].name}</p>
+                    {/* </TextLine> */}
                     {project[0].title && (
-                        <TextLine>
-                            <p>{project[0].title}</p>
-                        </TextLine>
+                        // <TextLine>
+                        <p>{project[0].title}</p>
+                        // </TextLine>
                     )}
                     {project[0].secTitle && (
-                        <TextLine>
-                            <p>{project[0].secTitle}</p>
-                        </TextLine>
+                        // <TextLine>
+                        <p>{project[0].secTitle}</p>
+                        // </TextLine>
                     )}
                     {project[0].details && (
-                        <TextLine>
+                        // <TextLine>
+                        <>
                             <p>{project[0].details}</p>
-                        </TextLine>
+                        </>
+
+                        // </TextLine>
                     )}
                     {project[0].location && (
-                        <TextLine>
+                        // <TextLine>
+                        <div>
+                            <strong>Lokalita</strong>
                             <p>{project[0].location}</p>
-                        </TextLine>
+                        </div>
+                        // </TextLine>
                     )}
                     {project[0].accommodation && (
-                        <TextLine>
+                        // <TextLine>
+                        <div>
+                            <strong>Ubytování</strong>
                             <p>{project[0].accommodation}</p>
-                        </TextLine>
+                        </div>
+
+                        // </TextLine>
                     )}
                     {project[0].constructionDesign && (
-                        <TextLine>
+                        // <TextLine>
+                        <div>
+                            <strong>Stavební provedení</strong>
                             <p>{project[0].constructionDesign}</p>
-                        </TextLine>
+                        </div>
+
+                        // </TextLine>
                     )}
                 </div>
             </div>

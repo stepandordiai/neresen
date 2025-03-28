@@ -139,6 +139,7 @@ export const projectsData = [
         title: "Slatiňany – ul.Medunova",
         secTitle: "Výstavba bytových domů.",
         img: [p1i1, p1i2, p1i3],
+        type: "building",
     },
     {
         id: 2,
@@ -146,6 +147,7 @@ export const projectsData = [
         title: "Kolín – ul. Pod Hroby",
         secTitle: "Rekonstrukce stávajícího objektu včetně přístavby.",
         img: [p2i1, p2i2, p2i3],
+        type: "building",
     },
     {
         id: 3,
@@ -159,6 +161,7 @@ export const projectsData = [
         constructionDesign:
             "Realizace v roce 2013 zahrnovala přestavbu objektu, technické zázemí, interiéry i úpravu venkovních ploch. Samozřejmostí je bezbariérový přístup a moderní technologie pro maximální komfort.",
         img: [p3i1, p3i2, p3i3, p3i4, p3i5, p3i6],
+        type: "old",
     },
     {
         id: 4,
@@ -172,6 +175,7 @@ export const projectsData = [
         constructionDesign:
             "Budova prošla kompletní přestavbou v roce 2014 a splňuje všechny požadavky na moderní pobytové zařízení pro seniory. Objekt je plně bezbariérový, s důrazem na snadný pohyb klientů i personálu. Dispozice a vybavení odpovídají standardům pro poskytování sociálních a zdravotních služeb.",
         img: [p4i1, p4i2, p4i3, p4i4, p4i5, p4i6, p4i7, p4i8, p4i9, p4i10],
+        type: "old",
     },
     {
         id: 5,
@@ -185,6 +189,7 @@ export const projectsData = [
         constructionDesign:
             "Budova domova byla původně záložní nemocnicí, která prošla v roce 2016 kompletní přestavbou. Modernizace zahrnovala úpravu dispozic pro komfortní ubytování a instalaci nejnovějších technologií pro zajištění bezpečnosti a péče o klienty. Součástí objektu je také vlastní kuchyně a prádelna, které zajišťují vysokou úroveň poskytovaných služeb.",
         img: [p5i1, p5i2, p5i3, p5i4, p5i5, p5i6, p5i7, p5i8],
+        type: "old",
     },
     {
         id: 6,
@@ -198,6 +203,7 @@ export const projectsData = [
         constructionDesign:
             "Přestavba domova byla realizovány v roce 2016 s důrazem na moderní stavební technologie, energetickou úspornost a bezbariérové řešení.",
         img: [p6i1, p6i2, p6i3, p6i4, p6i5, p6i6, p6i7],
+        type: "old",
     },
     {
         id: 7,
@@ -259,6 +265,7 @@ export const projectsData = [
             p8i14,
             p8i15,
         ],
+        type: "old",
     },
     {
         id: 9,
@@ -284,6 +291,7 @@ export const projectsData = [
             p9i10,
             p9i11,
         ],
+        type: "old",
     },
     {
         id: 10,
@@ -297,6 +305,7 @@ export const projectsData = [
         constructionDesign:
             "V roce 2024 prošla budova kompletní přestavbou, při které byla přeměněna z bývalé záložní nemocnice na moderní domov pro seniory. Modernizace budovy zahrnovala zateplení, instalaci výtahů, úpravy interiérů i exteriérů a zavedení nejnovějších technologií pro maximální pohodlí.",
         img: [p10i1, p10i2, p10i3, p10i4, p10i5, p10i6, p10i7],
+        type: "old",
     },
     {
         id: 11,
@@ -310,6 +319,7 @@ export const projectsData = [
         constructionDesign:
             "Tento záměr se nyní aktivně realizuje a probíhá přestavba stávající budovy s důrazem na bezbariérovost pro snadnou dostupnost, moderní technologie, kvalitní materiály pro bezpečné a komfortní prostředí a energeticky úsporné řešení pro efektivní provoz.",
         img: [p11i1, p11i2, p11i3, p11i4, p11i5, p11i6],
+        type: "old",
     },
     {
         id: 12,
@@ -323,5 +333,6 @@ export const projectsData = [
         constructionDesign:
             "Projekt je aktuálně v plné realizaci, přičemž probíhá přestavba stávající budovy s důrazem na bezbariérový přístup, využití moderních technologií, kvalitních materiálů pro bezpečné a komfortní prostředí a energeticky úsporných řešení pro efektivní provoz.",
         img: [p12i1, p12i2, p12i3, p12i4, p12i5, p12i6, p12i7],
+        type: "old",
     },
 ];
