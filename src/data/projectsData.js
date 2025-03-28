@@ -1,14 +1,14 @@
 // Project 1
 
-import p1i1 from "./../assets/projects-img/project1/1.jpg";
-import p1i2 from "./../assets/projects-img/project1/2.jpg";
-import p1i3 from "./../assets/projects-img/project1/3.jpg";
+import p1i1 from "./../assets/projects-img/project1/01.jpg";
+import p1i2 from "./../assets/projects-img/project1/02.jpg";
+import p1i3 from "./../assets/projects-img/project1/03.jpg";
 
 // Project 2
 
-import p2i1 from "./../assets/projects-img/project2/1.jpg";
-import p2i2 from "./../assets/projects-img/project2/2.jpg";
-import p2i3 from "./../assets/projects-img/project2/3.jpg";
+import p2i1 from "./../assets/projects-img/project2/01.jpg";
+import p2i2 from "./../assets/projects-img/project2/02.jpg";
+import p2i3 from "./../assets/projects-img/project2/03.jpg";
 
 // Project 3
 
@@ -21,10 +21,10 @@ import p3i6 from "./../assets/projects-img/project3/06.png";
 
 // Project 4
 
-import p4i1 from "./../assets/projects-img/project4/01.jpg";
-import p4i2 from "./../assets/projects-img/project4/02.png";
-import p4i3 from "./../assets/projects-img/project4/03.webp";
-import p4i4 from "./../assets/projects-img/project4/04.webp";
+import p4i1 from "./../assets/projects-img/project4/01.png";
+import p4i2 from "./../assets/projects-img/project4/02.jpg";
+import p4i3 from "./../assets/projects-img/project4/03.jpg";
+import p4i4 from "./../assets/projects-img/project4/04.jpg";
 import p4i5 from "./../assets/projects-img/project4/05.png";
 import p4i6 from "./../assets/projects-img/project4/06.png";
 import p4i7 from "./../assets/projects-img/project4/07.png";
@@ -34,8 +34,8 @@ import p4i10 from "./../assets/projects-img/project4/10.jpg";
 
 // Project 5
 
-import p5i1 from "./../assets/projects-img/project5/01.jpeg";
-import p5i2 from "./../assets/projects-img/project5/02.png";
+import p5i1 from "./../assets/projects-img/project5/01.png";
+import p5i2 from "./../assets/projects-img/project5/02.jpeg";
 import p5i3 from "./../assets/projects-img/project5/03.png";
 import p5i4 from "./../assets/projects-img/project5/04.png";
 import p5i5 from "./../assets/projects-img/project5/05.png";
@@ -45,12 +45,12 @@ import p5i8 from "./../assets/projects-img/project5/08.png";
 
 // Project 6
 
-import p6i1 from "./../assets/projects-img/project6/01.webp";
-import p6i2 from "./../assets/projects-img/project6/02.webp";
-import p6i3 from "./../assets/projects-img/project6/03.webp";
-import p6i4 from "./../assets/projects-img/project6/04.webp";
-import p6i5 from "./../assets/projects-img/project6/05.webp";
-import p6i6 from "./../assets/projects-img/project6/06.webp";
+import p6i1 from "./../assets/projects-img/project6/01.jpg";
+import p6i2 from "./../assets/projects-img/project6/02.jpg";
+import p6i3 from "./../assets/projects-img/project6/03.jpg";
+import p6i4 from "./../assets/projects-img/project6/04.jpg";
+import p6i5 from "./../assets/projects-img/project6/05.jpg";
+import p6i6 from "./../assets/projects-img/project6/06.jpg";
 import p6i7 from "./../assets/projects-img/project6/07.png";
 
 // Project 7
@@ -58,12 +58,12 @@ import p6i7 from "./../assets/projects-img/project6/07.png";
 import p7i1 from "./../assets/projects-img/project7/01.png";
 import p7i2 from "./../assets/projects-img/project7/02.png";
 import p7i3 from "./../assets/projects-img/project7/03.png";
-import p7i4 from "./../assets/projects-img/project7/04.webp";
-import p7i5 from "./../assets/projects-img/project7/05.webp";
-import p7i6 from "./../assets/projects-img/project7/06.webp";
-import p7i7 from "./../assets/projects-img/project7/07.webp";
-import p7i8 from "./../assets/projects-img/project7/08.webp";
-import p7i9 from "./../assets/projects-img/project7/09.webp";
+import p7i4 from "./../assets/projects-img/project7/04.jpg";
+import p7i5 from "./../assets/projects-img/project7/05.jpg";
+import p7i6 from "./../assets/projects-img/project7/06.jpg";
+import p7i7 from "./../assets/projects-img/project7/07.jpg";
+import p7i8 from "./../assets/projects-img/project7/08.jpg";
+import p7i9 from "./../assets/projects-img/project7/09.jpg";
 import p7i10 from "./../assets/projects-img/project7/10.png";
 import p7i11 from "./../assets/projects-img/project7/11.png";
 import p7i12 from "./../assets/projects-img/project7/12.jpg";
@@ -73,11 +73,11 @@ import p7i15 from "./../assets/projects-img/project7/15.jpg";
 
 // Project 8
 
-import p8i1 from "./../assets/projects-img/project8/01.webp";
+import p8i1 from "./../assets/projects-img/project8/01.jpg";
 import p8i2 from "./../assets/projects-img/project8/02.jpg";
-import p8i3 from "./../assets/projects-img/project8/03.webp";
+import p8i3 from "./../assets/projects-img/project8/03.jpg";
 import p8i4 from "./../assets/projects-img/project8/04.jpg";
-import p8i5 from "./../assets/projects-img/project8/05.webp";
+import p8i5 from "./../assets/projects-img/project8/05.jpg";
 import p8i6 from "./../assets/projects-img/project8/06.jpg";
 import p8i7 from "./../assets/projects-img/project8/07.png";
 import p8i8 from "./../assets/projects-img/project8/08.jpeg";
@@ -91,7 +91,7 @@ import p8i15 from "./../assets/projects-img/project8/15.jpg";
 
 // Project 9
 
-import p9i1 from "./../assets/projects-img/project9/01.jpeg";
+import p9i1 from "./../assets/projects-img/project9/01.png";
 import p9i2 from "./../assets/projects-img/project9/02.jpeg";
 import p9i3 from "./../assets/projects-img/project9/03.jpeg";
 import p9i4 from "./../assets/projects-img/project9/04.jpeg";
@@ -101,7 +101,7 @@ import p9i7 from "./../assets/projects-img/project9/07.jpg";
 import p9i8 from "./../assets/projects-img/project9/08.jpg";
 import p9i9 from "./../assets/projects-img/project9/09.jpg";
 import p9i10 from "./../assets/projects-img/project9/10.jpeg";
-import p9i11 from "./../assets/projects-img/project9/11.png";
+import p9i11 from "./../assets/projects-img/project9/11.jpeg";
 
 // Project 10
 
@@ -112,6 +112,25 @@ import p10i4 from "./../assets/projects-img/project10/04.png";
 import p10i5 from "./../assets/projects-img/project10/05.png";
 import p10i6 from "./../assets/projects-img/project10/06.png";
 import p10i7 from "./../assets/projects-img/project10/07.png";
+
+// Project 11
+
+import p11i1 from "./../assets/projects-img/project11/01.jpg";
+import p11i2 from "./../assets/projects-img/project11/02.jpg";
+import p11i3 from "./../assets/projects-img/project11/03.jpg";
+import p11i4 from "./../assets/projects-img/project11/04.jpg";
+import p11i5 from "./../assets/projects-img/project11/05.jpg";
+import p11i6 from "./../assets/projects-img/project11/06.jpg";
+
+// Project 12
+
+import p12i1 from "./../assets/projects-img/project12/01.png";
+import p12i2 from "./../assets/projects-img/project12/02.png";
+import p12i3 from "./../assets/projects-img/project12/03.png";
+import p12i4 from "./../assets/projects-img/project12/04.png";
+import p12i5 from "./../assets/projects-img/project12/05.jpg";
+import p12i6 from "./../assets/projects-img/project12/06.jpg";
+import p12i7 from "./../assets/projects-img/project12/07.jpg";
 
 export const projectsData = [
     {
@@ -290,7 +309,7 @@ export const projectsData = [
             "Projekt zahrnuje prostorné pokoje s vlastním sociálním zařízením, společenské místnosti pro setkávání, volnočasové aktivity, rekreační zóny a rozsáhlou zahradu pro odpočinek až pro 196 klientů.",
         constructionDesign:
             "Tento záměr se nyní aktivně realizuje a probíhá přestavba stávající budovy s důrazem na bezbariérovost pro snadnou dostupnost, moderní technologie, kvalitní materiály pro bezpečné a komfortní prostředí a energeticky úsporné řešení pro efektivní provoz.",
-        img: [p10i1, p10i2],
+        img: [p11i1, p11i2, p11i3, p11i4, p11i5, p11i6],
     },
     {
         id: 12,
@@ -303,6 +322,6 @@ export const projectsData = [
             "Projekt nabízí prostorné ubytování s vlastními sociálními zařízeními, moderně vybavené společenské místnosti pro setkávání a volnočasové aktivity, relaxační zóny a rozlehlou zahradu pro odpočinek. Celková kapacita zařízení činí až 184 klientů.",
         constructionDesign:
             "Projekt je aktuálně v plné realizaci, přičemž probíhá přestavba stávající budovy s důrazem na bezbariérový přístup, využití moderních technologií, kvalitních materiálů pro bezpečné a komfortní prostředí a energeticky úsporných řešení pro efektivní provoz.",
-        img: [p10i1, p10i2],
+        img: [p12i1, p12i2, p12i3, p12i4, p12i5, p12i6, p12i7],
     },
 ];
