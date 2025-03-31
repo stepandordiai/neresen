@@ -8,8 +8,8 @@ import Contacts from "./pages/Contacts/Contacts";
 import Menu from "./components/Menu/Menu";
 import logoIconWhite from "./assets/logo/mountain-white.png";
 import logoIconBlack from "./assets/logo/mountain-black.png";
-import "./App.scss";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import "./App.scss";
 
 function App() {
     useEffect(() => {

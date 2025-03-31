@@ -26,6 +26,45 @@
     opacity: 0.5;
 }
 
+.filter {
+    position: relative;
+    align-self: flex-start;
+}
+
+.filter__btn {
+    padding: 7.5px;
+    border: 1px solid #fff;
+}
+
+.filter__list {
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    border: 1px solid #fff;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.filter:hover .filter__list {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.filter__option {
+    padding: 7.5px;
+    cursor: pointer;
+
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+.filter__option--active {
+    background: #fff;
+    color: #000;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
