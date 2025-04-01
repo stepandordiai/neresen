@@ -9,11 +9,47 @@ const ProjectsMap = () => {
     });
 
     function initMap() {
-        const position = { lat: 50.02425240479898, lng: 15.214482108227289 };
+        // Coordinates of center of Czech
+        const position = { lat: 49.8175, lng: 15.473 };
 
         // lat
         // lon
         // address
+        // Bytovy dum
+        // 49.92261398650534, 15.809143209445217;
+
+        // Pod Hroby
+        // 50.02478461448177, 15.214500809021489;
+
+        // Holice
+        // 50.069727063689314, 15.98452797964153;
+
+        // Vizovice
+        // 49.2265314500856, 17.849668075231726;
+
+        // Mlekovice
+        // 49.98094429608574, 15.026229965151384;
+
+        // Chrudim
+        // 49.951462502023794, 15.794711040395553;
+
+        // Janovice nad Uhlavou
+        // 49.34624618106399, 13.21744897883078;
+
+        // Lazne Bohdanec
+        // 50.078692615613846, 15.684526089848221;
+
+        // Trnova
+        // 49.9174014166823, 14.356690392676924;
+
+        // Hredle
+        // 49.90399113536922, 13.916828509895227;
+
+        // Most
+        // 50.506548135909384, 13.63496883542187;
+
+        // Luhacovice
+        // 49.10001696870206, 17.757479608695768;
 
         let locations = [
             [
@@ -28,7 +64,60 @@ const ProjectsMap = () => {
                 `<img width='100%' src='${projectImages[1][0]}' loading="lazy" /><br /><br /><strong>Rekonstrukce Kolín</strong><br /><p>ul. Pod Hroby</p><br /><p>Czechia</p>`,
                 "Rekonstrukce",
             ],
-
+            [
+                50.069727063689314,
+                15.98452797964153,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.2265314500856,
+                17.849668075231726,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.98094429608574,
+                15.026229965151384,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.951462502023794,
+                15.794711040395553,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.34624618106399,
+                13.21744897883078,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.33463068006648,
+                13.206888596683491,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.33463068006648,
+                13.206888596683491,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.33463068006648,
+                13.206888596683491,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
+            [
+                49.33463068006648,
+                13.206888596683491,
+                `<img width='100%' src='${projectImages[2][0]}' loading="lazy" /><br /><br /><strong>Domov pro seniory Janovice nad Úhlavou</strong><br /><p>Rozvojová zóna</p><br /><p>Czechia</p>`,
+                "Domov pro seniory",
+            ],
             [
                 49.33463068006648,
                 13.206888596683491,
