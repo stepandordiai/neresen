@@ -139,7 +139,11 @@ export const projectsData = [
         title: "Slatiňany – ul.Medunova",
         secTitle: "Výstavba bytových domů.",
         img: [p1i1, p1i2, p1i3],
-        type: "building",
+        type: "new",
+        position: {
+            lat: 49.92261398650534,
+            lon: 15.809143209445217,
+        },
     },
     {
         id: 2,
@@ -148,6 +152,10 @@ export const projectsData = [
         secTitle: "Rekonstrukce stávajícího objektu včetně přístavby.",
         img: [p2i1, p2i2, p2i3],
         type: "building",
+        position: {
+            lat: 50.02478461448177,
+            lon: 15.214500809021489,
+        },
     },
     {
         id: 3,
@@ -162,6 +170,10 @@ export const projectsData = [
             "Realizace v roce 2013 zahrnovala přestavbu objektu, technické zázemí, interiéry i úpravu venkovních ploch. Samozřejmostí je bezbariérový přístup a moderní technologie pro maximální komfort.",
         img: [p3i1, p3i2, p3i3, p3i4, p3i5, p3i6],
         type: "old",
+        position: {
+            lat: 50.069727063689314,
+            lon: 15.98452797964153,
+        },
     },
     {
         id: 4,
@@ -176,6 +188,10 @@ export const projectsData = [
             "Budova prošla kompletní přestavbou v roce 2014 a splňuje všechny požadavky na moderní pobytové zařízení pro seniory. Objekt je plně bezbariérový, s důrazem na snadný pohyb klientů i personálu. Dispozice a vybavení odpovídají standardům pro poskytování sociálních a zdravotních služeb.",
         img: [p4i1, p4i2, p4i3, p4i4, p4i5, p4i6, p4i7, p4i8, p4i9, p4i10],
         type: "old",
+        position: {
+            lat: 49.2265314500856,
+            lon: 17.849668075231726,
+        },
     },
     {
         id: 5,
@@ -190,6 +206,10 @@ export const projectsData = [
             "Budova domova byla původně záložní nemocnicí, která prošla v roce 2016 kompletní přestavbou. Modernizace zahrnovala úpravu dispozic pro komfortní ubytování a instalaci nejnovějších technologií pro zajištění bezpečnosti a péče o klienty. Součástí objektu je také vlastní kuchyně a prádelna, které zajišťují vysokou úroveň poskytovaných služeb.",
         img: [p5i1, p5i2, p5i3, p5i4, p5i5, p5i6, p5i7, p5i8],
         type: "old",
+        position: {
+            lat: 49.98094429608574,
+            lon: 15.026229965151384,
+        },
     },
     {
         id: 6,
@@ -204,6 +224,10 @@ export const projectsData = [
             "Přestavba domova byla realizovány v roce 2016 s důrazem na moderní stavební technologie, energetickou úspornost a bezbariérové řešení.",
         img: [p6i1, p6i2, p6i3, p6i4, p6i5, p6i6, p6i7],
         type: "old",
+        position: {
+            lat: 49.951462502023794,
+            lon: 15.794711040395553,
+        },
     },
     {
         id: 7,
@@ -236,6 +260,11 @@ export const projectsData = [
             p7i14,
             p7i15,
         ],
+        type: "old",
+        position: {
+            lat: 49.34624618106399,
+            lon: 13.21744897883078,
+        },
     },
     {
         id: 8,
@@ -266,6 +295,10 @@ export const projectsData = [
             p8i15,
         ],
         type: "old",
+        position: {
+            lat: 50.078692615613846,
+            lon: 15.684526089848221,
+        },
     },
     {
         id: 9,
@@ -292,6 +325,10 @@ export const projectsData = [
             p9i11,
         ],
         type: "old",
+        position: {
+            lat: 49.9174014166823,
+            lon: 14.356690392676924,
+        },
     },
     {
         id: 10,
@@ -306,6 +343,10 @@ export const projectsData = [
             "V roce 2024 prošla budova kompletní přestavbou, při které byla přeměněna z bývalé záložní nemocnice na moderní domov pro seniory. Modernizace budovy zahrnovala zateplení, instalaci výtahů, úpravy interiérů i exteriérů a zavedení nejnovějších technologií pro maximální pohodlí.",
         img: [p10i1, p10i2, p10i3, p10i4, p10i5, p10i6, p10i7],
         type: "old",
+        position: {
+            lat: 49.90399113536922,
+            lon: 13.916828509895227,
+        },
     },
     {
         id: 11,
@@ -320,6 +361,10 @@ export const projectsData = [
             "Tento záměr se nyní aktivně realizuje a probíhá přestavba stávající budovy s důrazem na bezbariérovost pro snadnou dostupnost, moderní technologie, kvalitní materiály pro bezpečné a komfortní prostředí a energeticky úsporné řešení pro efektivní provoz.",
         img: [p11i1, p11i2, p11i3, p11i4, p11i5, p11i6],
         type: "old",
+        position: {
+            lat: 50.506548135909384,
+            lon: 13.63496883542187,
+        },
     },
     {
         id: 12,
@@ -334,5 +379,9 @@ export const projectsData = [
             "Projekt je aktuálně v plné realizaci, přičemž probíhá přestavba stávající budovy s důrazem na bezbariérový přístup, využití moderních technologií, kvalitních materiálů pro bezpečné a komfortní prostředí a energeticky úsporných řešení pro efektivní provoz.",
         img: [p12i1, p12i2, p12i3, p12i4, p12i5, p12i6, p12i7],
         type: "old",
+        position: {
+            lat: 49.10001696870206,
+            lon: 17.757479608695768,
+        },
     },
 ];
