@@ -32,8 +32,7 @@
 }
 
 .filter__btn {
-    padding: 7.5px;
-    border: 1px solid #fff;
+    padding: 15px;
 }
 
 .filter__list {
@@ -43,6 +42,7 @@
     border: 1px solid #fff;
     pointer-events: none;
     opacity: 0;
+    white-space: nowrap;
 }
 
 .filter:hover .filter__list {
@@ -51,7 +51,7 @@
 }
 
 .filter__option {
-    padding: 7.5px;
+    padding: 15px;
     cursor: pointer;
 
     &:hover {

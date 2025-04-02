@@ -1,8 +1,8 @@
 import TextLine from "../../components/TextLine/TextLine";
 import { projectsData } from "../../data/projectsData";
 import { NavLink } from "react-router-dom";
-import "./Projects.scss";
 import { useEffect, useState } from "react";
+import "./Projects.scss";
 
 const Projects = () => {
     const [filter, setFilter] = useState("Všechny projekty");
@@ -12,7 +12,7 @@ const Projects = () => {
             return (current = param);
         });
 
-        document.querySelector(".filter__btn").textContent = param;
+        document.querySelector(".filter__btn span").textContent = param;
     }
 
     useEffect(() => {
@@ -36,7 +36,13 @@ const Projects = () => {
                 </TextLine>
             </div>
             <div className="filter">
-                <button className="filter__btn">Všechny projekty</button>
+                <button className="filter__btn">
+                    <span>Všechny projekty</span>
+                    <div className="btn-border-top"></div>
+                    <div className="btn-border-right"></div>
+                    <div className="btn-border-bottom"></div>
+                    <div className="btn-border-left"></div>
+                </button>
                 <ul className="filter__list">
                     <li
                         onClick={() => {
@@ -56,6 +62,14 @@ const Projects = () => {
                     </li>
                     <li
                         onClick={() => {
+                            handleFilter("Nové budovy");
+                        }}
+                        className="filter__option"
+                    >
+                        Nové budovy
+                    </li>
+                    <li
+                        onClick={() => {
                             handleFilter("Rekonstrukce");
                         }}
                         className="filter__option"
@@ -72,6 +86,9 @@ const Projects = () => {
                         }
                         if (filter == "Domov pro seniory") {
                             return project.type == "old";
+                        }
+                        if (filter == "Nové budovy") {
+                            return project.type == "new";
                         }
                         if (filter == "Rekonstrukce") {
                             return project.type == "building";
