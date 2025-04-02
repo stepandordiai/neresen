@@ -3,6 +3,7 @@ import { projectsData } from "../../data/projectsData";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Projects.scss";
+import BtnBorders from "../../components/BtnBorders/BtnBorders";
 
 const Projects = () => {
     const [filter, setFilter] = useState("Všechny projekty");
@@ -38,10 +39,7 @@ const Projects = () => {
             <div className="filter">
                 <button className="filter__btn">
                     <span>Všechny projekty</span>
-                    <div className="btn-border-top"></div>
-                    <div className="btn-border-right"></div>
-                    <div className="btn-border-bottom"></div>
-                    <div className="btn-border-left"></div>
+                    <BtnBorders />
                 </button>
                 <ul className="filter__list">
                     <li

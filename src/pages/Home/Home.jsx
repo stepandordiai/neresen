@@ -5,6 +5,7 @@ import Projects from "../Projects/Projects";
 import ProjectsMap from "../ProjectsMap/ProjectsMap";
 import bgImg from "./../../assets/img/3.jpg";
 import "./Home.scss";
+import BtnBorders from "../../components/BtnBorders/BtnBorders";
 
 const Home = () => {
     function revealImg() {
@@ -36,11 +37,8 @@ const Home = () => {
                         </TextLine>
                     </div>
                     <NavLink className="home__btn" to={"/contacts"}>
-                        <div className="btn-border-top"></div>
-                        <div className="btn-border-right"></div>
-                        <div className="btn-border-bottom"></div>
-                        <div className="btn-border-left"></div>
                         Kontaktujte nás
+                        <BtnBorders />
                     </NavLink>
                 </div>
                 <div className="home__bottom">

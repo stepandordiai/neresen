@@ -2,6 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import TextLine from "../TextLine/TextLine";
 import "./PageTitle.scss";
+import BtnBorders from "../BtnBorders/BtnBorders";
 
 const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
     function revealImg() {
@@ -46,11 +47,8 @@ const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
                 </TextLine>
 
                 <HashLink className="page-title__btn" to={hashPath} smooth>
-                    <div className="btn-border-top"></div>
-                    <div className="btn-border-right"></div>
-                    <div className="btn-border-bottom"></div>
-                    <div className="btn-border-left"></div>
                     Read more
+                    <BtnBorders />
                 </HashLink>
             </div>
         </>
