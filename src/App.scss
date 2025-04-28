@@ -3,16 +3,16 @@
 @use "variables" as *;
 
 body {
-    font-family: "Montserrat", serif;
-    background: #000;
-    color: #000;
+	font-family: "Montserrat", serif;
+	background: #000;
+	color: #000;
 }
 
 .body--hidden {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }

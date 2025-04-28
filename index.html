@@ -1,18 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cz">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="heeeyooo.studio" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="heeeyooo.studio">
-  <title>Neresen</title>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBzLUqCWNklkCcKNCUPP062nse38oOTaDM"></script>
-</head>
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="/favicons/neresen-v1.svg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicons/neresen-v1.png"
+		/>
+		<title>Neresen</title>
+	</head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+	<body>
+		<div id="root"></div>
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzLUqCWNklkCcKNCUPP062nse38oOTaDM&loading=async"
+		></script>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
 </html>

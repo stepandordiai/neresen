@@ -1,12 +1,12 @@
 @use "./../../mixins" as *;
 
 .home-wrapper {
-    height: 100svh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 30px;
+	height: 100svh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 30px;
 }
 
 // .home-wrapper::before {
@@ -28,99 +28,99 @@
 // }
 
 .home-bg-img-wrapper {
-    position: fixed;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    width: 100%;
-    height: 100svh;
-    z-index: -10;
-    overflow: hidden;
+	position: fixed;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
+	// left: 0;
+	width: 100%;
+	height: 100svh;
+	z-index: -10;
+	overflow: hidden;
 }
 
 .home-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    animation: animateHomeWrapper 100s linear infinite;
-    opacity: 0;
-    transition: all 1s;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	animation: animateHomeWrapper 100s linear infinite;
+	opacity: 0;
+	transition: all 1s;
 }
 
 .home-bg-img--active {
-    opacity: 1;
+	opacity: 1;
 }
 
 @keyframes animateHomeWrapper {
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-    }
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 .home__bottom {
-    background-color: #fff;
-    // height: 2000px;
-    // padding: 30px;
+	background-color: #fff;
+	// height: 2000px;
+	// padding: 30px;
 }
 
 .home__secondary-title {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    color: #fff;
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	color: #fff;
 }
 
 .home__title {
-    color: #fff;
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 500;
+	color: #fff;
+	font-size: clamp(3rem, 10vw, 6rem);
+	font-weight: 500;
 }
 
 .home__btn {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    z-index: 0;
-    padding: 15px;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.5s;
-    transition-timing-function: var(--cstm-cubic-bezier);
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	z-index: 0;
+	padding: 15px;
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
 
-    &:hover {
-        color: #000;
-    }
+	&:hover {
+		color: #000;
+	}
 }
 
 .home__btn::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.5s;
-    transition-timing-function: var(--cstm-cubic-bezier);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	transition: transform 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
 }
 
 .home__btn:hover::before {
-    transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 @media (width <= 900px) {
-    .home-wrapper {
-        padding: 0 15px;
-    }
+	.home-wrapper {
+		padding: 0 15px;
+	}
 
-    .home__btn {
-        bottom: 15px;
-        left: 15px;
-    }
+	.home__btn {
+		bottom: 15px;
+		left: 15px;
+	}
 }
