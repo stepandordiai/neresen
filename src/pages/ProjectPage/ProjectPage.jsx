@@ -10,7 +10,7 @@ const ProjectPage = () => {
 	const { id } = useParams();
 
 	const project = projectsData.filter((project) => {
-		return id == project.id;
+		return Number(id) === project.id;
 	});
 
 	return (
@@ -42,12 +42,10 @@ const ProjectPage = () => {
 							<>
 								{project[0].details.split(" ").map((word, index) => {
 									return (
-										<>
-											<React.Fragment key={index}>
-												<TextLine>{word}</TextLine>
-												<span> </span>
-											</React.Fragment>
-										</>
+										<React.Fragment key={index}>
+											<TextLine>{word}</TextLine>
+											<span> </span>
+										</React.Fragment>
 									);
 								})}
 							</>

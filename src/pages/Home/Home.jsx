@@ -3,7 +3,7 @@ import TextLine from "../../components/TextLine/TextLine";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import ProjectsMap from "../ProjectsMap/ProjectsMap";
-import bgImg from "./../../assets/img/3.jpg";
+import bgImg from "/assets/img/3.jpg";
 import "./Home.scss";
 import BtnBorders from "../../components/BtnBorders/BtnBorders";
 

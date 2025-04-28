@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
-import img1 from "./../../assets/img/1.jpg";
+import img1 from "/assets/img/1.jpg";
 import "./Contacts.scss";
 
 const Contacts = () => {
