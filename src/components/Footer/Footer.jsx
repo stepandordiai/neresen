@@ -14,7 +14,7 @@ const Footer = ({ data }) => {
 			<div className="footer__top">
 				<div>
 					<div className="footer__nav-title">
-						<TextLine>Navigation</TextLine>
+						<TextLine>Navigace</TextLine>
 					</div>
 					<div className="footer__nav">
 						<NavLink
@@ -23,7 +23,7 @@ const Footer = ({ data }) => {
 							}
 							to={"/"}
 						>
-							<TextLine>Úvodní stránka</TextLine>
+							<TextLine>Úvod</TextLine>
 						</NavLink>
 						<HashLink className={"footer__nav-link"} to="/#projects" smooth>
 							<TextLine>Realizace</TextLine>
@@ -91,18 +91,16 @@ const Footer = ({ data }) => {
 							<TextLine>Sociální sítě</TextLine>
 						</div>
 						<div className="footer__nav-socials">
-							<a
-								href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
-								target="_blank"
-							>
-								<img width={30} src={facebookIcon} alt="" />
-							</a>
-							<a
-								href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
-								target="_blank"
-							>
-								<img width={30} src={instagramIcon} alt="" />
-							</a>
+							<TextLine>
+								<a title="Facebook" href="#" target="_blank">
+									<img width={30} src={facebookIcon} alt="" />
+								</a>
+							</TextLine>
+							<TextLine>
+								<a title="Instagram" href="#" target="_blank">
+									<img width={30} src={instagramIcon} alt="" />
+								</a>
+							</TextLine>
 						</div>
 					</div>
 				</div>

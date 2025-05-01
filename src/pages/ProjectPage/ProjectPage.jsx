@@ -32,7 +32,7 @@ const ProjectPage = ({ data }) => {
 		<>
 			<PageTitle
 				title={project[0].name}
-				previousLinkTitle={"Projects"}
+				previousLinkTitle={"Realizace"}
 				hashPath={"#project-page"}
 				image={project[0].img[0]}
 			/>

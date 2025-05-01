@@ -28,7 +28,7 @@ const Header = () => {
 			</NavLink>
 			<nav className="nav">
 				<NavLink className={"nav__link"} to={"/"}>
-					Úvodní stránka
+					Úvod
 				</NavLink>
 				<HashLink className={"nav__link"} to="/#projects" smooth>
 					Realizace

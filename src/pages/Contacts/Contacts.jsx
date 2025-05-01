@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
 import img1 from "/assets/img/1.jpg";
+import facebookIcon from "/icons/facebook-black.png";
+import instagramIcon from "/icons/instagram-black.png";
 import "./Contacts.scss";
 
 const Contacts = () => {
@@ -15,7 +17,6 @@ const Contacts = () => {
 			});
 
 			// On load page
-
 			const textRect = el.getBoundingClientRect().top;
 			if (textRect < window.innerHeight - 50) {
 				el.style.animation = "animateInputBorderWidth 2s forwards";
@@ -25,11 +26,11 @@ const Contacts = () => {
 
 	return (
 		<>
-			<PageTitle title="Contacts" hashPath={"#form-wrapper"} image={img1} />
+			<PageTitle title="Kontakty" hashPath={"#form-wrapper"} image={img1} />
 			<div className="form-wrapper" id="form-wrapper">
 				<div>
 					<TextLine>
-						<p className="form__title">Contact us</p>
+						<p className="form__title">Kontaktujte nás</p>
 					</TextLine>
 					<br />
 					<TextLine>
@@ -38,6 +39,17 @@ const Contacts = () => {
 				</div>
 				<div className="form-talk-wrapper">
 					<div className="talk">
+						<div>
+							<TextLine>
+								<p className="form__secondary-title">Telefonní číslo</p>
+							</TextLine>
+							<br />
+							<TextLine>
+								<a className="contacts__link" href="tel:+420773802166">
+									+420 773 802 166
+								</a>
+							</TextLine>
+						</div>
 						<div>
 							<TextLine>
 								<p className="form__secondary-title">E-mail</p>
@@ -49,16 +61,23 @@ const Contacts = () => {
 								</a>
 							</TextLine>
 						</div>
+
 						<div>
 							<TextLine>
-								<p className="form__secondary-title">Phone number</p>
+								<p className="form__secondary-title">Sociální sítě</p>
 							</TextLine>
-							<br />
-							<TextLine>
-								<a className="contacts__link" href="tel:+420773802166">
-									+420 773 802 166
-								</a>
-							</TextLine>
+							<div className="contacts__socials">
+								<TextLine>
+									<a title="Facebook" href="#" target="_blank">
+										<img width={30} src={facebookIcon} alt="" />
+									</a>
+								</TextLine>
+								<TextLine>
+									<a title="Instagram" href="#" target="_blank">
+										<img width={30} src={instagramIcon} alt="" />
+									</a>
+								</TextLine>
+							</div>
 						</div>
 					</div>
 					<form

@@ -27,7 +27,7 @@ const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
 				</TextLine>
 				<TextLine>
 					<NavLink className={"link-title"} to={"/"}>
-						Home
+						Úvod
 					</NavLink>
 					{previousLinkTitle && (
 						<>
@@ -43,7 +43,7 @@ const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
 				</TextLine>
 
 				<HashLink className="page-title__btn" to={hashPath} smooth>
-					Read more
+					Zobrazit více
 					<BtnBorders />
 				</HashLink>
 			</div>
