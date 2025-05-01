@@ -1,17 +1,53 @@
 import { useParams } from "react-router-dom";
 import React from "react";
-import { projectsData } from "../../data/projectsData";
+import { useState } from "react";
+import { useEffect } from "react";
+// import axios from "axios";
+// import { projectsData } from "../../data/projectsData";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
 import "./ProjectPage.scss";
+import { getData } from "../../api/getData";
+import { handleHeaderMode } from "../../global/handleHeaderMode";
+import LoadingData from "../../components/LoadingData/LoadingData";
 
 const ProjectPage = () => {
+	const [loading, setLoading] = useState(true);
+
+	const [data, setData] = useState([]);
+
+	const loadData = async () => {
+		try {
+			const result = await getData();
+			setData(result);
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		loadData();
+	}, []);
+
+	useEffect(() => {
+		handleHeaderMode();
+	}, [loading]);
+
 	const { id } = useParams();
 
-	const project = projectsData.filter((project) => {
-		return Number(id) === project.id;
+	// console.log(id);
+
+	const project = data.filter((project) => {
+		return Number(id) == project.id;
 	});
+
+	// Show loading message
+	if (loading) return <LoadingData />;
 
 	return (
 		<>
@@ -21,8 +57,9 @@ const ProjectPage = () => {
 				hashPath={"#project-page"}
 				image={project[0].img[0]}
 			/>
+
 			<div className="project-page" id="project-page">
-				<ProjectSwiper id={project[0].id} />
+				<ProjectSwiper id={project[0].id} img={project[0].img} />
 				<div className="project-page__info">
 					<TextLine>
 						<p className="project-page__title">{project[0].name}</p>

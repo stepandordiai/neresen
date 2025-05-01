@@ -1,11 +1,36 @@
 import TextLine from "../../components/TextLine/TextLine";
-import { projectsData } from "../../data/projectsData";
+// import { projectsData } from "../../data/projectsData";
+// import data from "/public/projects-data.json";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./Projects.scss";
 import BtnBorders from "../../components/BtnBorders/BtnBorders";
+import "./Projects.scss";
+// import axios from "axios";
+import { getData } from "../../api/getData";
+import LoadingData from "../../components/LoadingData/LoadingData";
 
 const Projects = () => {
+	const [loading, setLoading] = useState(true);
+
+	const [data, setData] = useState([]);
+
+	const loadData = async () => {
+		try {
+			const result = await getData();
+			setData(result);
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		loadData();
+	}, []);
+
 	const [filter, setFilter] = useState("Všechny projekty");
 
 	function handleFilter(param) {
@@ -36,81 +61,87 @@ const Projects = () => {
 					</h3>
 				</TextLine>
 			</div>
-			<div className="filter">
-				<button className="filter__btn">
-					<span>Všechny projekty</span>
-					<BtnBorders />
-				</button>
-				<ul className="filter__list">
-					<li
-						onClick={() => {
-							handleFilter("Všechny projekty");
-						}}
-						className="filter__option"
-					>
-						Všechny projekty
-					</li>
-					<li
-						onClick={() => {
-							handleFilter("Domov pro seniory");
-						}}
-						className="filter__option"
-					>
-						Domov pro seniory
-					</li>
-					<li
-						onClick={() => {
-							handleFilter("Nové budovy");
-						}}
-						className="filter__option"
-					>
-						Nové budovy
-					</li>
-					<li
-						onClick={() => {
-							handleFilter("Rekonstrukce");
-						}}
-						className="filter__option"
-					>
-						Rekonstrukce
-					</li>
-				</ul>
-			</div>
-			<div className="projects-grid">
-				{projectsData
-					.filter((project) => {
-						if (filter == "Všechny projekty") {
-							return project;
-						}
-						if (filter == "Domov pro seniory") {
-							return project.type == "old";
-						}
-						if (filter == "Nové budovy") {
-							return project.type == "new";
-						}
-						if (filter == "Rekonstrukce") {
-							return project.type == "building";
-						}
-					})
-					.map((project, index) => {
-						return (
-							<div key={index} className="project-card-wrapper">
-								<div className="project-card">
-									<img src={project.img[0]} alt="" loading="lazy" />
-									<NavLink
-										className="project-card-link"
-										to={`/project-page/${project.id}`}
-									>
-										<p>{project.name}</p>
-									</NavLink>
-								</div>
-								<TextLine>
-									<p className="project-card__title">{project.name}</p>
-								</TextLine>
-							</div>
-						);
-					})}
-			</div>
+			{loading ? (
+				<LoadingData />
+			) : (
+				<>
+					<div className="filter">
+						<button className="filter__btn">
+							<span>Všechny projekty</span>
+							<BtnBorders />
+						</button>
+						<ul className="filter__list">
+							<li
+								onClick={() => {
+									handleFilter("Všechny projekty");
+								}}
+								className="filter__option"
+							>
+								Všechny projekty
+							</li>
+							<li
+								onClick={() => {
+									handleFilter("Domov pro seniory");
+								}}
+								className="filter__option"
+							>
+								Domov pro seniory
+							</li>
+							<li
+								onClick={() => {
+									handleFilter("Nové budovy");
+								}}
+								className="filter__option"
+							>
+								Nové budovy
+							</li>
+							<li
+								onClick={() => {
+									handleFilter("Rekonstrukce");
+								}}
+								className="filter__option"
+							>
+								Rekonstrukce
+							</li>
+						</ul>
+					</div>
+					<div className="projects-grid">
+						{data
+							.filter((project) => {
+								if (filter == "Všechny projekty") {
+									return project;
+								}
+								if (filter == "Domov pro seniory") {
+									return project.type == "old";
+								}
+								if (filter == "Nové budovy") {
+									return project.type == "new";
+								}
+								if (filter == "Rekonstrukce") {
+									return project.type == "building";
+								}
+							})
+							.map((project, index) => {
+								return (
+									<div key={index} className="project-card-wrapper">
+										<div className="project-card">
+											<img src={project.img[0]} alt="" loading="lazy" />
+											<NavLink
+												className="project-card-link"
+												to={`/project-page/${project.id}`}
+											>
+												<p>{project.name}</p>
+											</NavLink>
+										</div>
+										<TextLine>
+											<p className="project-card__title">{project.name}</p>
+										</TextLine>
+									</div>
+								);
+							})}
+					</div>
+				</>
+			)}
 		</div>
 	);
 };

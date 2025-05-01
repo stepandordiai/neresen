@@ -1,136 +1,146 @@
 @use "./../../mixins" as *;
 
+.load {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	color: #fff !important;
+	height: 100svh;
+	background: black;
+}
+
 .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background: #000;
-    color: #fff;
-    padding: 120px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	background: #000;
+	color: #fff;
+	padding: 120px 30px;
 }
 
 .projects__title-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	text-align: center;
 }
 
 .projects__title {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 500;
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 500;
 }
 
 .projects__secondary-title {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    opacity: 0.5;
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	opacity: 0.5;
 }
 
 .filter {
-    position: relative;
-    align-self: flex-start;
+	position: relative;
+	align-self: flex-start;
 }
 
 .filter__btn {
-    padding: 15px;
+	padding: 15px;
 }
 
 .filter__list {
-    position: absolute;
-    z-index: 1;
-    background: #000;
-    border: 1px solid #fff;
-    pointer-events: none;
-    opacity: 0;
-    white-space: nowrap;
+	position: absolute;
+	z-index: 1;
+	background: #000;
+	border: 1px solid #fff;
+	pointer-events: none;
+	opacity: 0;
+	white-space: nowrap;
 }
 
 .filter:hover .filter__list {
-    pointer-events: all;
-    opacity: 1;
+	pointer-events: all;
+	opacity: 1;
 }
 
 .filter__option {
-    padding: 15px;
-    cursor: pointer;
+	padding: 15px;
+	cursor: pointer;
 
-    &:hover {
-        background: #fff;
-        color: #000;
-    }
+	&:hover {
+		background: #fff;
+		color: #000;
+	}
 }
 
 .filter__option--active {
-    background: #fff;
-    color: #000;
+	background: #fff;
+	color: #000;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
 }
 
 .project-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .project-card__title {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
+	font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
 .project-card {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-    img {
-        width: 100%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        object-position: center;
-        transition: transform 0.6s;
-    }
+	img {
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		object-position: center;
+		transition: transform 0.6s;
+	}
 }
 
 .project-card:hover img {
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .project-card-link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 500;
-    @include grid-center;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.6s;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-weight: 500;
+	@include grid-center;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.6s;
 }
 
 .project-card:hover .project-card-link {
-    opacity: 1;
-    pointer-events: all;
+	opacity: 1;
+	pointer-events: all;
 }
 
 @media (width <= 900px) {
-    .projects {
-        padding: 120px 15px 30px;
-    }
+	.projects {
+		padding: 120px 15px 30px;
+	}
 
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.projects-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (width <= 600px) {
-    .projects-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+	.projects-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

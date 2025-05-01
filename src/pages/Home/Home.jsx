@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import TextLine from "../../components/TextLine/TextLine";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
-import ProjectsMap from "../ProjectsMap/ProjectsMap";
+// import ProjectsMap from "../ProjectsMap/ProjectsMap";
 import bgImg from "/assets/img/3.jpg";
 import "./Home.scss";
 import BtnBorders from "../../components/BtnBorders/BtnBorders";
@@ -39,7 +39,7 @@ const Home = () => {
 				<div className="home__bottom">
 					<About />
 					<Projects />
-					<ProjectsMap />
+					{/* <ProjectsMap /> */}
 				</div>
 			</section>
 		</>
