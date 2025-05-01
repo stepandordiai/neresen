@@ -66,6 +66,12 @@ const Footer = () => {
 						>
 							<TextLine>Kontakty</TextLine>
 						</NavLink>
+						<HashLink className={"footer__nav-link"} to="/#about" smooth>
+							<TextLine>O společnosti</TextLine>
+						</HashLink>
+						<HashLink className={"footer__nav-link"} to="/#projects-map" smooth>
+							<TextLine>Mapa</TextLine>
+						</HashLink>
 					</div>
 				</div>
 				<div>

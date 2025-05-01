@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet";
-import { projectsData } from "../../data/projectsData";
 import { useEffect } from "react";
-import TextLine from "../../components/TextLine/TextLine";
+import TextLine from "../TextLine/TextLine";
 import "./ProjectsMap.scss";
 
-const ProjectsMap = () => {
+const ProjectsMap = ({ data }) => {
 	// const projectImages = projectsData.map((project) => {
 	// 	return project.img;
 	// });
@@ -14,13 +13,13 @@ const ProjectsMap = () => {
 		const centerPosition = { lat: 49.8175, lng: 15.473 };
 
 		const map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 7,
+			zoom: 6.5,
 			center: centerPosition,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 		});
 
-		for (let i = 0; i < projectsData.length; i++) {
-			const project = projectsData[i];
+		for (let i = 0; i < data.length; i++) {
+			const project = data[i];
 
 			let marker = new google.maps.Marker({
 				map: map,
@@ -73,14 +72,14 @@ const ProjectsMap = () => {
 			<Helmet>
 				<script></script>
 			</Helmet>
-			<div className="projects-map">
+			<div className="projects-map" id="projects-map">
 				<TextLine>
 					<h2 className="projects-map__title">Realizované projekty na mapě</h2>
 				</TextLine>
 				<div className="map-container">
 					<div id="map"></div>
 					<div className="container">
-						{projectsData.map((project, index) => {
+						{data.map((project, index) => {
 							return (
 								<div
 									key={index}
