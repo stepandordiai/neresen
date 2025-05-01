@@ -1,52 +1,31 @@
-import { useParams } from "react-router-dom";
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-// import axios from "axios";
-// import { projectsData } from "../../data/projectsData";
+import { useParams, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
-import "./ProjectPage.scss";
-import { getData } from "../../api/getData";
 import { handleHeaderMode } from "../../global/handleHeaderMode";
 import LoadingData from "../../components/LoadingData/LoadingData";
+import "./ProjectPage.scss";
 
-const ProjectPage = () => {
-	const [loading, setLoading] = useState(true);
+const ProjectPage = ({ data }) => {
+	const [loading, setLoading] = useState(false);
 
-	const [data, setData] = useState([]);
+	const { id } = useParams();
 
-	const loadData = async () => {
-		try {
-			const result = await getData();
-			setData(result);
-			setTimeout(() => {
-				setLoading(false);
-			}, 2000);
-		} catch (error) {
-			console.log(error);
-			setLoading(false);
-		}
-	};
+	const project = data.filter((project) => id == project.id);
+	const { pathname } = useLocation();
 
 	useEffect(() => {
-		loadData();
-	}, []);
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, [pathname]);
 
 	useEffect(() => {
 		handleHeaderMode();
 	}, [loading]);
 
-	const { id } = useParams();
-
-	// console.log(id);
-
-	const project = data.filter((project) => {
-		return Number(id) == project.id;
-	});
-
-	// Show loading message
 	if (loading) return <LoadingData />;
 
 	return (

@@ -5,7 +5,8 @@ import TextLine from "../TextLine/TextLine";
 import facebookIcon from "/icons/facebook.png";
 import instagramIcon from "/icons/instagram.png";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import { getData } from "../../api/getData";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -13,11 +14,13 @@ const Footer = () => {
 
 	const [data, setData] = useState([]);
 
-	const getData = async () => {
+	const loadData = async () => {
 		try {
-			const response = await axios.get("/projects-data.json");
-			setData(response.data);
-			setLoading(false);
+			const result = await getData();
+			setData(result);
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
 		} catch (error) {
 			console.log(error);
 			setLoading(false);
@@ -25,8 +28,26 @@ const Footer = () => {
 	};
 
 	useEffect(() => {
-		getData();
+		loadData();
 	}, []);
+	// const [loading, setLoading] = useState(true);
+
+	// const [data, setData] = useState([]);
+
+	// const getData = async () => {
+	// 	try {
+	// 		const response = await axios.get("/projects-data.json");
+	// 		setData(response.data);
+	// 		setLoading(false);
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 		setLoading(false);
+	// 	}
+	// };
+
+	// useEffect(() => {
+	// 	getData();
+	// }, []);
 
 	const inactiveLink = "footer__nav-link";
 	const activeLink = "footer__nav-link footer__nav-link--active";

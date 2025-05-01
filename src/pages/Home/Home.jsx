@@ -5,32 +5,10 @@ import Projects from "../../components/Projects/Projects";
 import ProjectsMap from "../../components/ProjectsMap/ProjectsMap";
 import bgImg from "/assets/img/3.jpg";
 import BtnBorders from "../../components/BtnBorders/BtnBorders";
-import { getData } from "../../api/getData";
-import { useEffect, useState } from "react";
+
 import "./Home.scss";
 
-const Home = () => {
-	const [loading, setLoading] = useState(true);
-
-	const [data, setData] = useState([]);
-
-	const loadData = async () => {
-		try {
-			const result = await getData();
-			setData(result);
-			setTimeout(() => {
-				setLoading(false);
-			}, 2000);
-		} catch (error) {
-			console.log(error);
-			setLoading(false);
-		}
-	};
-
-	useEffect(() => {
-		loadData();
-	}, []);
-
+const Home = ({ data }) => {
 	function revealImg() {
 		document.querySelector(".home-bg-img").classList.add("home-bg-img--active");
 	}
@@ -61,12 +39,8 @@ const Home = () => {
 				</div>
 				<div className="home__bottom">
 					<About />
-					{!loading && (
-						<>
-							<Projects data={data} />
-							<ProjectsMap data={data} />
-						</>
-					)}
+					<Projects data={data} />
+					<ProjectsMap data={data} />
 				</div>
 			</section>
 		</>
