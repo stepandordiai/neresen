@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
 import TextLine from "../../components/TextLine/TextLine";
 import About from "../../components/About/About";
@@ -14,10 +15,14 @@ const Home = ({ data }) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Neresen | Vítejte na stránkách společnosti Neresen a.s.</title>
+				<link rel="canonical" href="https://neresen.cz/" />
+			</Helmet>
 			<div className="home-bg-img-wrapper">
 				<img onLoad={revealImg} className="home-bg-img" src={bgImg} alt="" />
 			</div>
-			<section className="home">
+			<div className="home">
 				<div className="home-wrapper js-home-wrapper">
 					<div>
 						<TextLine>
@@ -41,7 +46,7 @@ const Home = ({ data }) => {
 					<Projects data={data} />
 					<ProjectsMap data={data} />
 				</div>
-			</section>
+			</div>
 		</>
 	);
 };

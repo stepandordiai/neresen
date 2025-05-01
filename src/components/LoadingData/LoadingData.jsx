@@ -1,5 +1,5 @@
 import styles from "./LoadingData.module.scss";
-import logo from "/assets/logo/mountain-white.png";
+import logo from "/logo/mountain-white.png";
 
 const LoadingData = () => {
 	return (

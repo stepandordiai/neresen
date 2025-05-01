@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
@@ -26,6 +27,10 @@ const Contacts = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Neresen | Kontakty</title>
+				<link rel="canonical" href="https://neresen.cz/contacts" />
+			</Helmet>
 			<PageTitle title="Kontakty" hashPath={"#form-wrapper"} image={img1} />
 			<div className="form-wrapper" id="form-wrapper">
 				<div>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useParams, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
@@ -30,6 +31,10 @@ const ProjectPage = ({ data }) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Neresen | {project[0].name}</title>
+				<link rel="canonical" href={`https://neresen.cz/project-page/${id}`} />
+			</Helmet>
 			<PageTitle
 				title={project[0].name}
 				previousLinkTitle={"Realizace"}
@@ -67,7 +72,6 @@ const ProjectPage = ({ data }) => {
 							</>
 						)}
 					</div>
-
 					{project[0].location && (
 						<div>
 							<TextLine>
