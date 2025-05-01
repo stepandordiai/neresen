@@ -1,5 +1,5 @@
-import logoIconWhite from "/assets/logo/mountain-white.png";
-import logoIconBlack from "/assets/logo/mountain-black.png";
+import logoIconWhite from "/logo/mountain-white.png";
+import logoIconBlack from "/logo/mountain-black.png";
 
 export const handleHeaderMode = () => {
 	const homeWrapper = document.querySelector(".js-home-wrapper");

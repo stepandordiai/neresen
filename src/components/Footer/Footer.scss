@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .footer {
-	height: 100vh;
+	min-height: 100vh;
 	background: #000;
 	margin-top: auto;
 	color: #fff;
@@ -17,6 +17,7 @@
 	align-items: flex-start;
 	gap: 30px;
 	flex-wrap: wrap;
+	margin-bottom: 15px;
 }
 
 .footer-top__container {

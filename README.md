@@ -1,3 +1,3 @@
 # Neresen
 
-<img src='./public/assets/screenshot/neresen-screenshot.png' />
+<img src='./public/screenshot/neresen-screenshot.png' />

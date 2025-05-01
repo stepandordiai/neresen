@@ -3,9 +3,8 @@ import TextLine from "../../components/TextLine/TextLine";
 import About from "../../components/About/About";
 import Projects from "../../components/Projects/Projects";
 import ProjectsMap from "../../components/ProjectsMap/ProjectsMap";
-import bgImg from "/assets/img/3.jpg";
 import BtnBorders from "../../components/BtnBorders/BtnBorders";
-
+import bgImg from "/img/3.jpg";
 import "./Home.scss";
 
 const Home = ({ data }) => {

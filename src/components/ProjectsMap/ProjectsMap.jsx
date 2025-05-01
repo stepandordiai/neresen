@@ -82,15 +82,9 @@ const ProjectsMap = ({ data }) => {
 									className="info-container"
 									data-title={project.name}
 								>
-									<img
-										style={{ height: "100px" }}
-										src={project.img[0]}
-										alt=""
-										loading="lazy"
-									/>
-									<div>
+									<img src={project.img[0]} alt="" loading="lazy" />
+									<div className="info-container__details">
 										<p>{project.name}</p>
-										<p>ul.Medunova</p>
 										<p>Czechia</p>
 									</div>
 								</div>

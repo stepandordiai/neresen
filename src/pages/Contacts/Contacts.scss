@@ -54,10 +54,9 @@
 }
 
 .contacts__socials {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 30px;
+	@include flex-start-center;
+	column-gap: 15px;
+	margin-top: 15px;
 }
 
 .form {

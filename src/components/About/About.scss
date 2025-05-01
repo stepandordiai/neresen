@@ -1,28 +1,22 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    text-align: center;
-    padding: 120px 30px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+	text-align: center;
+	padding: 120px 30px;
 }
 
 .about__title {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 500;
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 500;
 }
 
 .about__details {
-    display: flex;
-    flex-direction: column;
-    row-gap: 7.5px;
-
-    p {
-        font-size: clamp(1rem, 2vw, 1.5rem);
-    }
+	font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 @media (width <= 900px) {
-    .about {
-        padding: 105px 15px;
-    }
+	.about {
+		padding: 105px 15px;
+	}
 }

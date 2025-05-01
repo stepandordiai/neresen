@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { HashLink } from "react-router-hash-link";
-import logoIconWhite from "/assets/logo/mountain-white.png";
+import logoIconWhite from "/logo/mountain-white.png";
 import "./Header.scss";
 
 const Header = () => {
