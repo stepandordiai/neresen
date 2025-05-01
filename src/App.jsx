@@ -55,7 +55,7 @@ function App() {
 						/>
 						<Route path="/contacts" element={<Contacts />} />
 					</Routes>
-					<Footer />
+					<Footer data={data} />
 				</>
 			)}
 		</Router>

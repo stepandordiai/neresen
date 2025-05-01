@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import axios from "axios";
-// import { projectsData } from "../../data/projectsData";
-
 // Import Swiper React components
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,7 +17,7 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 import "./ProjectSwiper.scss";
 
-const ProjectSwiper = ({ id, img }) => {
+const ProjectSwiper = ({ img }) => {
 	function getImgLength() {
 		return img.length;
 	}

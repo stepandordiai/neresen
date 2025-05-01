@@ -4,10 +4,6 @@ import TextLine from "../TextLine/TextLine";
 import "./ProjectsMap.scss";
 
 const ProjectsMap = ({ data }) => {
-	// const projectImages = projectsData.map((project) => {
-	// 	return project.img;
-	// });
-
 	async function initMap() {
 		// Coordinates of center of Czech
 		const centerPosition = { lat: 49.8175, lng: 15.473 };

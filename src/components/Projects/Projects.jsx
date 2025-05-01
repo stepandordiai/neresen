@@ -1,6 +1,6 @@
-import TextLine from "../TextLine/TextLine";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import TextLine from "../TextLine/TextLine";
 import BtnBorders from "../BtnBorders/BtnBorders";
 import "./Projects.scss";
 

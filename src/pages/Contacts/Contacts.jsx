@@ -63,39 +63,53 @@ const Contacts = () => {
 					</div>
 					<form
 						className="form"
-						action="mailto:stepandordiai@gmail.com"
+						action="https://formsubmit.co/info@neresen.cz"
 						method="post"
-						encType="text/plain"
 					>
 						<div className="input-container">
 							<div className="label-container">
 								<label htmlFor="first-name">
 									<TextLine>Jméno</TextLine>
 								</label>
-								<input type="text" id="first-name" name="First name" />
+								<input
+									type="text"
+									id="first-name"
+									name="firstName"
+									autoComplete="given-name"
+								/>
 								<div className="input-border-bottom"></div>
 							</div>
 							<div className="label-container">
 								<label htmlFor="last-name">
 									<TextLine>Příjmení</TextLine>
 								</label>
-								<input type="text" id="last-name" name="Last name" />
+								<input
+									type="text"
+									id="last-name"
+									name="lastName"
+									autoComplete="family-name"
+								/>
 								<div className="input-border-bottom"></div>
 							</div>
 						</div>
 						<div className="input-container">
 							<div className="label-container">
-								<label htmlFor="phone-number">
+								<label htmlFor="tel">
 									<TextLine>Telefonní číslo</TextLine>
 								</label>
-								<input type="tel" id="phone-number" name="Phone number" />
+								<input type="tel" id="tel" name="tel" autoComplete="tel" />
 								<div className="input-border-bottom"></div>
 							</div>
 							<div className="label-container">
-								<label htmlFor="e-mail">
+								<label htmlFor="email">
 									<TextLine>E-mail</TextLine>
 								</label>
-								<input type="email" id="e-mail" name="E-mail" />
+								<input
+									type="email"
+									id="email"
+									name="email"
+									autoComplete="email"
+								/>
 								<div className="input-border-bottom"></div>
 							</div>
 						</div>
@@ -103,14 +117,23 @@ const Contacts = () => {
 							<label htmlFor="subject">
 								<TextLine>Předmět zprávy</TextLine>
 							</label>
-							<input type="text" id="subject" name="Subject" />
+							<input
+								type="text"
+								id="subject"
+								name="subject"
+								autoComplete="on"
+							/>
 							<div className="input-border-bottom"></div>
 						</div>
 						<div className="label-container">
 							<label htmlFor="message">
 								<TextLine>Zpráva</TextLine>
 							</label>
-							<textarea name="Message" id="message"></textarea>
+							<textarea
+								name="message"
+								id="message"
+								autoComplete="on"
+							></textarea>
 							<div className="input-border-bottom"></div>
 						</div>
 						<button className="form__btn" type="submit">
