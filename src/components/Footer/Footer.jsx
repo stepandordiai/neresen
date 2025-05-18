@@ -5,7 +5,7 @@ import facebookIcon from "/icons/facebook.png";
 import instagramIcon from "/icons/instagram.png";
 import "./Footer.scss";
 
-const Footer = ({ data }) => {
+const Footer = ({ projectsData }) => {
 	const inactiveLink = "footer__nav-link";
 	const activeLink = "footer__nav-link footer__nav-link--active";
 
@@ -25,17 +25,16 @@ const Footer = ({ data }) => {
 						>
 							<TextLine>Úvod</TextLine>
 						</NavLink>
+
+						<HashLink className={"footer__nav-link"} to="/#about" smooth>
+							<TextLine>O nás</TextLine>
+						</HashLink>
 						<HashLink className={"footer__nav-link"} to="/#projects" smooth>
 							<TextLine>Realizace</TextLine>
 						</HashLink>
-						<NavLink
-							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
-							}
-							to="/carrera"
-						>
-							<TextLine>Kariéra</TextLine>
-						</NavLink>
+						<HashLink className={"footer__nav-link"} to="/#projects-map" smooth>
+							<TextLine>Mapa</TextLine>
+						</HashLink>
 						<NavLink
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
@@ -44,12 +43,6 @@ const Footer = ({ data }) => {
 						>
 							<TextLine>Kontakty</TextLine>
 						</NavLink>
-						<HashLink className={"footer__nav-link"} to="/#about" smooth>
-							<TextLine>O společnosti</TextLine>
-						</HashLink>
-						<HashLink className={"footer__nav-link"} to="/#projects-map" smooth>
-							<TextLine>Mapa</TextLine>
-						</HashLink>
 					</div>
 				</div>
 				<div>
@@ -57,7 +50,7 @@ const Footer = ({ data }) => {
 						<TextLine>Realizace</TextLine>
 					</div>
 					<div className="footer__nav">
-						{data.map(({ name, id }, index) => {
+						{projectsData.map(({ name, id }, index) => {
 							return (
 								<NavLink
 									key={index}
@@ -108,17 +101,17 @@ const Footer = ({ data }) => {
 			<div className="footer__custom-divider"></div>
 			<div className="footer__bottom">
 				<TextLine>
-					<p>&copy; 2025 Neresen</p>
+					<p>&copy; 2025 Neresen a.s.</p>
 				</TextLine>
 				<TextLine>
 					<p>
 						<span>Site by </span>
 						<a
 							className="creator__link"
-							href="https://heeeyooo-studio.netlify.app"
+							href="https://heeeyooo.studio/"
 							target="_blank"
 						>
-							heeeyooo.studio
+							heeeyooo studio
 						</a>
 					</p>
 				</TextLine>

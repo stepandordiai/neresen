@@ -4,13 +4,11 @@ import TextLine from "../TextLine/TextLine";
 import BtnBorders from "../BtnBorders/BtnBorders";
 import "./Projects.scss";
 
-const Projects = ({ data }) => {
+const Projects = ({ projectsData }) => {
 	const [filter, setFilter] = useState("Všechny projekty");
 
 	function handleFilter(param) {
-		setFilter((current) => {
-			return (current = param);
-		});
+		setFilter((current) => (current = param));
 
 		document.querySelector(".filter__btn span").textContent = param;
 	}
@@ -77,7 +75,7 @@ const Projects = ({ data }) => {
 				</ul>
 			</div>
 			<div className="projects-grid">
-				{data
+				{projectsData
 					.filter((project) => {
 						if (filter == "Všechny projekty") {
 							return project;

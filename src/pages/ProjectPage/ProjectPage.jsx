@@ -1,123 +1,62 @@
 import { Helmet } from "react-helmet";
-import { useParams, useLocation } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import TextLine from "../../components/TextLine/TextLine";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
-import { handleHeaderMode } from "../../global/handleHeaderMode";
-import LoadingData from "../../components/LoadingData/LoadingData";
 import "./ProjectPage.scss";
 
-const ProjectPage = ({ data }) => {
-	const [loading, setLoading] = useState(false);
-
+const ProjectPage = ({ projectsData }) => {
 	const { id } = useParams();
 
-	const project = data.filter((project) => id == project.id);
-	const { pathname } = useLocation();
+	// useParams id is a string so i compare data id without types (==)
+	const project = projectsData.find((projectData) => projectData.id == id);
 
-	useEffect(() => {
-		setLoading(true);
-		setTimeout(() => {
-			setLoading(false);
-		}, 2000);
-	}, [pathname]);
-
-	useEffect(() => {
-		handleHeaderMode();
-	}, [loading]);
-
-	if (loading) return <LoadingData />;
+	const {
+		name,
+		img,
+		title,
+		secTitle,
+		details,
+		location,
+		accommodation,
+		constructionDesign,
+	} = project;
 
 	return (
 		<>
 			<Helmet>
-				<title>Neresen | {project[0].name}</title>
+				<title>Neresen | {name}</title>
 				<link rel="canonical" href={`https://neresen.cz/project-page/${id}`} />
 			</Helmet>
 			<PageTitle
-				title={project[0].name}
+				title={name}
 				previousLinkTitle={"Realizace"}
 				hashPath={"#project-page"}
-				image={project[0].img[0]}
+				image={img[0]}
 			/>
 
 			<div className="project-page" id="project-page">
-				<ProjectSwiper id={project[0].id} img={project[0].img} />
+				<ProjectSwiper img={img} />
 				<div className="project-page__info">
-					<TextLine>
-						<p className="project-page__title">{project[0].name}</p>
-					</TextLine>
-					{project[0].title && (
-						<TextLine>
-							<p>{project[0].title}</p>
-						</TextLine>
-					)}
-					{project[0].secTitle && (
-						<TextLine>
-							<p>{project[0].secTitle}</p>
-						</TextLine>
-					)}
-					<div>
-						{project[0].details && (
-							<>
-								{project[0].details.split(" ").map((word, index) => {
-									return (
-										<React.Fragment key={index}>
-											<TextLine>{word}</TextLine>
-											<span> </span>
-										</React.Fragment>
-									);
-								})}
-							</>
-						)}
-					</div>
-					{project[0].location && (
+					<p className="project-page__title">{name}</p>
+					{title && <p>{title}</p>}
+					{secTitle && <p>{secTitle}</p>}
+					{details && <p>{details}</p>}
+					{location && (
 						<div>
-							<TextLine>
-								<strong>Lokalita</strong>
-							</TextLine>
-							<br />
-							{project[0].location.split(" ").map((word, index) => {
-								return (
-									<React.Fragment key={index}>
-										<TextLine>{word}</TextLine>
-										<span> </span>
-									</React.Fragment>
-								);
-							})}
+							<strong>Lokalita</strong>
+							<p>{location}</p>
 						</div>
 					)}
-					{project[0].accommodation && (
+					{accommodation && (
 						<div>
-							<TextLine>
-								<strong>Ubytování</strong>
-							</TextLine>
-							<br />
-							{project[0].accommodation.split(" ").map((word, index) => {
-								return (
-									<React.Fragment key={index}>
-										<TextLine>{word}</TextLine>
-										<span> </span>
-									</React.Fragment>
-								);
-							})}
+							<strong>Ubytování</strong>
+							<p>{accommodation}</p>
 						</div>
 					)}
-					{project[0].constructionDesign && (
+					{constructionDesign && (
 						<div>
-							<TextLine>
-								<strong>Stavební provedení</strong>
-							</TextLine>
-							<br />
-							{project[0].constructionDesign.split(" ").map((word, index) => {
-								return (
-									<React.Fragment key={index}>
-										<TextLine>{word}</TextLine>
-										<span> </span>
-									</React.Fragment>
-								);
-							})}
+							<strong>Stavební provedení</strong>
+							<p>{constructionDesign}</p>
 						</div>
 					)}
 				</div>

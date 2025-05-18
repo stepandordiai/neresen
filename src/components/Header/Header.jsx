@@ -30,10 +30,15 @@ const Header = () => {
 				<NavLink className={"nav__link"} to={"/"}>
 					Úvod
 				</NavLink>
+				<HashLink className={"nav__link"} to="/#about" smooth>
+					O nás
+				</HashLink>
 				<HashLink className={"nav__link"} to="/#projects" smooth>
 					Realizace
 				</HashLink>
-				<NavLink className={"nav__link"}>Kariéra</NavLink>
+				<HashLink className={"nav__link"} to="/#projects-map" smooth>
+					Mapa
+				</HashLink>
 				<NavLink className={"nav__link"} to={"/contacts"}>
 					Kontakty
 				</NavLink>

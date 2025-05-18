@@ -8,7 +8,7 @@ import BtnBorders from "../../components/BtnBorders/BtnBorders";
 import bgImg from "/img/3.jpg";
 import "./Home.scss";
 
-const Home = ({ data }) => {
+const Home = ({ projectsData }) => {
 	function revealImg() {
 		document.querySelector(".home-bg-img").classList.add("home-bg-img--active");
 	}
@@ -43,8 +43,8 @@ const Home = ({ data }) => {
 				</div>
 				<div className="home__bottom">
 					<About />
-					<Projects data={data} />
-					<ProjectsMap data={data} />
+					<Projects projectsData={projectsData} />
+					<ProjectsMap projectsData={projectsData} />
 				</div>
 			</div>
 		</>

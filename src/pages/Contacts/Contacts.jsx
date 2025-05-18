@@ -2,27 +2,32 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import TextLine from "../../components/TextLine/TextLine";
-import img1 from "/img/4.jpg";
+import img from "/img/4.jpg";
 import facebookIcon from "/icons/facebook-black.png";
 import instagramIcon from "/icons/instagram-black.png";
 import "./Contacts.scss";
 
 const Contacts = () => {
 	useEffect(() => {
-		document.querySelectorAll(".input-border-bottom").forEach((el) => {
-			document.addEventListener("scroll", () => {
+		const inputBorderBottom = document.querySelectorAll(".input-border-bottom");
+
+		const handleBorderBottomOnScroll = () => {
+			inputBorderBottom.forEach((el) => {
 				const textRect = el.getBoundingClientRect().top;
 				if (textRect < window.innerHeight - 50) {
 					el.style.animation = "animateInputBorderWidth 2s forwards";
 				}
 			});
+		};
 
-			// On load page
-			const textRect = el.getBoundingClientRect().top;
-			if (textRect < window.innerHeight - 50) {
-				el.style.animation = "animateInputBorderWidth 2s forwards";
-			}
-		});
+		// Initial check
+		handleBorderBottomOnScroll();
+
+		document.addEventListener("scroll", handleBorderBottomOnScroll);
+
+		return () => {
+			document.removeEventListener("scroll", handleBorderBottomOnScroll);
+		};
 	});
 
 	return (
@@ -31,7 +36,7 @@ const Contacts = () => {
 				<title>Neresen | Kontakty</title>
 				<link rel="canonical" href="https://neresen.cz/contacts" />
 			</Helmet>
-			<PageTitle title="Kontakty" hashPath={"#form-wrapper"} image={img1} />
+			<PageTitle title="Kontakty" hashPath={"#form-wrapper"} image={img} />
 			<div className="form-wrapper" id="form-wrapper">
 				<div>
 					<TextLine>

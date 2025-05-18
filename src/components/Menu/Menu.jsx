@@ -5,14 +5,12 @@ import "./Menu.scss";
 const Menu = () => {
 	const hideMenu = () => {
 		// BurgerBtn
-
 		document.querySelector(".burger-14").classList.remove("burger-14--active");
 		document
 			.querySelector(".burger-14__center-line")
 			.classList.remove("burger-14__center-line--active");
 
 		// Menu
-
 		document.querySelector(".menu").classList.remove("menu--active");
 
 		document.body.classList.remove("body--hidden");
@@ -46,18 +44,24 @@ const Menu = () => {
 				<HashLink
 					className="nav__link menu__link"
 					onClick={hideMenu}
+					to="/#about"
+				>
+					O nás
+				</HashLink>
+				<HashLink
+					className="nav__link menu__link"
+					onClick={hideMenu}
 					to="/#projects"
-					smooth
 				>
 					Realizace
 				</HashLink>
-				<NavLink
+				<HashLink
+					className="nav__link menu__link"
 					onClick={hideMenu}
-					to="/carrera"
-					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+					to="/#projects-map"
 				>
-					Kariéra
-				</NavLink>
+					Mapa
+				</HashLink>
 				<NavLink
 					onClick={hideMenu}
 					className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

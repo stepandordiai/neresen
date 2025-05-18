@@ -123,7 +123,7 @@ const ProjectSwiper = ({ img }) => {
 					<span className="current-index"></span> / {img.length}
 				</div>
 				<button onClick={closeSlide} className="close-slide-btn">
-					Close
+					Zavřít
 				</button>
 				{img.map((img, index) => {
 					return (
