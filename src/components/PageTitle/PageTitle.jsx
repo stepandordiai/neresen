@@ -41,7 +41,6 @@ const PageTitle = ({ title, hashPath, previousLinkTitle, image }) => {
 					<span> | </span>
 					<span>{title}</span>
 				</TextLine>
-
 				<HashLink className="page-title__btn" to={hashPath} smooth>
 					Zobrazit více
 					<BtnBorders />

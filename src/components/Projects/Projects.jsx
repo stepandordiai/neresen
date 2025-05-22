@@ -77,17 +77,17 @@ const Projects = ({ projectsData }) => {
 			<div className="projects-grid">
 				{projectsData
 					.filter((project) => {
-						if (filter == "Všechny projekty") {
+						if (filter === "Všechny projekty") {
 							return project;
 						}
-						if (filter == "Domov pro seniory") {
-							return project.type == "old";
+						if (filter === "Domov pro seniory") {
+							return project.type === "old";
 						}
-						if (filter == "Nové budovy") {
-							return project.type == "new";
+						if (filter === "Nové budovy") {
+							return project.type === "new";
 						}
-						if (filter == "Rekonstrukce") {
-							return project.type == "building";
+						if (filter === "Rekonstrukce") {
+							return project.type === "building";
 						}
 					})
 					.map((project, index) => {

@@ -71,12 +71,16 @@ const Footer = ({ projectsData }) => {
 							<TextLine>Kontakty</TextLine>
 						</div>
 						<div className="footer__nav">
-							<a className="footer__nav-link" href="tel:+420773802166">
-								+420 773 802 166
-							</a>
-							<a className="footer__nav-link" href="mailto:info@neresen.cz">
-								info@neresen.cz
-							</a>
+							<TextLine>
+								<a className="footer__nav-link" href="tel:+420773802166">
+									+420 773 802 166
+								</a>
+							</TextLine>
+							<TextLine>
+								<a className="footer__nav-link" href="mailto:info@neresen.cz">
+									info@neresen.cz
+								</a>
+							</TextLine>
 						</div>
 					</div>
 					<div>

@@ -7,8 +7,7 @@ import "./ProjectPage.scss";
 const ProjectPage = ({ projectsData }) => {
 	const { id } = useParams();
 
-	// useParams id is a string so i compare data id without types (==)
-	const project = projectsData.find((projectData) => projectData.id == id);
+	const project = projectsData.filter((project) => project.id == id);
 
 	const {
 		name,
@@ -19,7 +18,7 @@ const ProjectPage = ({ projectsData }) => {
 		location,
 		accommodation,
 		constructionDesign,
-	} = project;
+	} = project[0];
 
 	return (
 		<>
@@ -59,6 +58,9 @@ const ProjectPage = ({ projectsData }) => {
 							<p>{constructionDesign}</p>
 						</div>
 					)}
+					<a className="project-page__link" href="tel:+420773802166">
+						Kontaktujte nás
+					</a>
 				</div>
 			</div>
 		</>

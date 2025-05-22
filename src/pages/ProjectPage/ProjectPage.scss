@@ -25,6 +25,38 @@
 	font-size: clamp(2rem, 6vw, 3rem);
 }
 
+.project-page__link {
+	color: #000;
+	position: relative;
+	z-index: 0;
+	align-self: flex-end;
+	padding: 15px;
+	border: 1px solid #000;
+	transition: color 0.3s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.project-page__link:hover {
+	color: #fff;
+}
+
+.project-page__link::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	background: #000;
+	height: 100%;
+	width: 0;
+	transition: width 0.3s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.project-page__link:hover::before {
+	width: 100%;
+}
+
 @media (width <= 900px) {
 	.project-page {
 		flex-direction: column;
