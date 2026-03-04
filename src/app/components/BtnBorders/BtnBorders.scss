@@ -1,0 +1,47 @@
+.btn-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.btn-border-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: #fff;
+}
+
+.btn-border-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: #fff;
+}
+
+.btn-border-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    background: #fff;
+}
+
+@keyframes animateBtnBorderWidth {
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animateBtnBorderHeight {
+    100% {
+        height: 100%;
+    }
+}

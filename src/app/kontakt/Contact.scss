@@ -1,0 +1,210 @@
+@use "./../styles/mixins" as *;
+
+.form-wrapper {
+	background: #fff;
+	min-height: 100lvh;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	row-gap: 30px;
+	padding: 120px 30px 30px;
+}
+
+.form__title {
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.form__secondary-title {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.form-talk-wrapper {
+	display: flex;
+	gap: 30px;
+}
+
+.talk {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.contact__link {
+	position: relative;
+	color: #000;
+}
+
+.contact__link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	transition: transform 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.contact__link:hover::before {
+	transform: scaleX(1);
+}
+
+.contact__working-hours {
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact__form-container {
+	width: 50%;
+}
+
+.contact__form-container-title {
+	font-size: clamp(2rem, 4vw, 3rem);
+	margin-bottom: 30px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.input-container {
+	@include flex-center;
+	gap: 15px;
+}
+
+.label-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+label {
+	padding-left: 7.5px;
+	font-size: 1rem;
+}
+
+input {
+	font-size: 1rem;
+	padding: 7.5px;
+}
+
+textarea {
+	font-size: 1rem;
+	resize: none;
+	padding: 7.5px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.input-border-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	height: 1px;
+	width: 0;
+	animation-timing-function: var(--cstm-cubic-bezier);
+}
+
+@keyframes animateInputBorderWidth {
+	100% {
+		width: 100%;
+	}
+}
+
+.form__btn {
+	position: relative;
+	z-index: 1;
+	align-self: flex-end;
+	padding: 10px 50px;
+	border: 1px solid #000;
+	font-weight: inherit;
+	transition: color 0.3s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.form__btn:hover {
+	color: #fff;
+}
+
+.form__btn::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	background: #000;
+	height: 100%;
+	width: 0;
+	transition: width 0.3s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.form__btn:hover::before {
+	width: 100%;
+}
+
+.contact__map-title {
+	font-size: clamp(2rem, 4vw, 3rem);
+	padding-top: 120px;
+}
+
+.contact__map-container {
+	display: flex;
+	gap: 30px;
+}
+
+.contact__map {
+	width: 100%;
+	height: 400px;
+}
+
+@media (width <= 1000px) {
+	.form-wrapper {
+		padding: 105px 15px 15px;
+		row-gap: 30px;
+	}
+
+	.input-container {
+		flex-direction: column;
+	}
+
+	.contact__map-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		padding-top: 105px;
+	}
+}
+
+@media (width < 896px) {
+	.contact__map-container {
+		flex-direction: column;
+		gap: 15px;
+	}
+}
+
+@media (width <= 700px) {
+	.form-talk-wrapper {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.talk {
+		width: 100%;
+	}
+
+	.contact__form-container {
+		width: 100%;
+	}
+}

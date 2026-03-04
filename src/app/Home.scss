@@ -1,0 +1,158 @@
+@use "./styles/mixins" as *;
+
+.home-bg-img-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100svh;
+	z-index: -10;
+	overflow: hidden;
+}
+
+.home-bg-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	filter: brightness(0.7);
+	opacity: 0;
+	transition: opacity 1s;
+	animation: animateHomeBgImg 12s linear infinite;
+}
+
+.home-bg-img--active {
+	opacity: 1;
+}
+
+@keyframes animateHomeBgImg {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.05);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+.home-hero {
+	position: relative;
+	height: 100svh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 30px;
+}
+
+.home__secondary-title {
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	color: #fff;
+}
+
+.home__title {
+	color: #fff;
+	font-size: clamp(3rem, 10vw, 6rem);
+	font-weight: 500;
+}
+
+.home-hero__footer {
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	right: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.home-hero__link {
+	position: relative;
+	color: #fff;
+}
+
+.home-hero__link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: var(--scroll-clr);
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	transition: transform 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.home-hero__link:hover::before {
+	transform: scaleX(1);
+}
+
+.home__btn {
+	position: relative;
+	padding: 15px;
+	color: #fff;
+	transition: color 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+
+	&:hover {
+		color: #000;
+	}
+}
+
+.home__btn::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	transition: transform 0.5s;
+	transition-timing-function: var(--cstm-cubic-bezier);
+}
+
+.home__btn:hover::before {
+	transform: scaleX(1);
+}
+
+.home__bottom {
+	background-color: #fff;
+}
+
+@media (width <= 900px) {
+	.home-hero {
+		padding: 0 15px;
+	}
+
+	.home-hero__footer {
+		bottom: 15px;
+		left: 15px;
+		right: 15px;
+		gap: 15px;
+	}
+}

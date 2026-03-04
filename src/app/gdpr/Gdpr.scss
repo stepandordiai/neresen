@@ -1,0 +1,36 @@
+.privacy-policy {
+	background: #fff;
+	padding: 130px 30px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.privacy-policy__container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+	width: 50%;
+}
+
+.privacy-policy__title {
+	font-size: clamp(2rem, 6vw, 3rem);
+}
+
+@media (width <= 1200px) {
+	.privacy-policy__container {
+		width: 75%;
+	}
+}
+
+@media (width <= 900px) {
+	.privacy-policy {
+		padding: 115px 15px 30px;
+	}
+}
+
+@media (width <= 600px) {
+	.privacy-policy__container {
+		width: 100%;
+	}
+}

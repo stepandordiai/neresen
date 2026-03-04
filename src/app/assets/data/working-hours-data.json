@@ -1,0 +1,9 @@
+[
+	{ "name": "Pondělí:", "hours": "8:00 - 17:00" },
+	{ "name": "Úterý:", "hours": "8:00 - 17:00" },
+	{ "name": "Středa:", "hours": "8:00 - 17:00" },
+	{ "name": "Čtvrtek:", "hours": "8:00 - 17:00" },
+	{ "name": "Pátek:", "hours": "8:00 - 17:00" },
+	{ "name": "Sobota:", "hours": "8:00 - 17:00" },
+	{ "name": "Neděle:", "hours": "Zavřeno" }
+]
