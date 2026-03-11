@@ -1,6 +1,6 @@
 "use client";
 
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,6 +41,18 @@ const ProjectSwiper = ({ img }: ProjectSwiperProps) => {
 	function hideSlider() {
 		setSlider(false);
 	}
+
+	useEffect(() => {
+		if (slider) {
+			document.documentElement.style.overflow = "hidden";
+		} else {
+			document.documentElement.style.overflow = "";
+		}
+
+		return () => {
+			document.documentElement.style.overflow = "";
+		};
+	}, [slider]);
 
 	return (
 		<>

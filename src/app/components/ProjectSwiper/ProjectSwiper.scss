@@ -8,7 +8,7 @@
 
 .mySwiper .swiper-slide {
 	opacity: 0.25;
-	transition: all 0.3s;
+	transition: opacity 0.3s;
 }
 
 .mySwiper .swiper-slide-thumb-active {
@@ -47,12 +47,10 @@
 
 .slide {
 	display: none;
-	// TODO:
 	max-height: 100%;
 }
 
 .slide-img {
-	// TODO:
 	object-fit: contain;
 }
 

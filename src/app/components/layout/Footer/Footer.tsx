@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import TextLine from "../../TextLine/TextLine";
 import CopyBtn from "../../CopyBtn/CopyBtn";
-import projectsData from "@/app/assets/data/projects-data.json";
+import projectsData from "@/app/assets/data/projects.json";
 import "./Footer.scss";
 
 // TODO: learn this

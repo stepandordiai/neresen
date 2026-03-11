@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 	description:
 		"Kontaktujte Neresen a.s. – odborníky na stavební a rekonstrukční projekty. Rádi vám pomůžeme s vaším záměrem. Najdete nás v Kolíne, kontaktujte nás telefonicky nebo e-mailem.",
 	alternates: {
-		canonical: "https://www.neresen.cz/kontakt",
+		canonical: "/kontakt",
 	},
 };
 

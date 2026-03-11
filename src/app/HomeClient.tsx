@@ -7,7 +7,7 @@ import Projects from "./components/Projects/Projects";
 import ProjectsMap from "./components/ProjectsMap/ProjectsMap";
 import BtnBorders from "./components/BtnBorders/BtnBorders";
 import Link from "next/link";
-import projects from "@/app/assets/data/projects-data.json";
+import projects from "@/app/assets/data/projects.json";
 import "./Home.scss";
 
 function HomeClient() {

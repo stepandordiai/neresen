@@ -1,9 +1,9 @@
+import { Metadata } from "next";
+import projects from "@/app/assets/data/projects.json";
+import { notFound } from "next/navigation";
 import Container from "../../components/Container/Container";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
-import { notFound } from "next/navigation";
-import projects from "@/app/assets/data/projects-data.json";
-import { Metadata } from "next";
 import "./ProjectPage.scss";
 
 export async function generateMetadata({
@@ -11,7 +11,6 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-	const baseUrl = "https://www.neresen.cz";
 	const { id } = await params;
 	const project = projects.find((project) => project.id === id);
 
@@ -26,15 +25,15 @@ export async function generateMetadata({
 		title: `${project.name} | Neresen`,
 		description: project.seoDesc,
 		alternates: {
-			canonical: `${baseUrl}/projekty/${id}`,
+			canonical: `/projekty/${id}`,
 		},
 	};
 }
 
 // TODO: learn this
 export async function generateStaticParams() {
-	return projects.map((product) => ({
-		id: product.id,
+	return projects.map((project) => ({
+		id: project.id,
 	}));
 }
 
@@ -54,7 +53,6 @@ export default async function ProjectPage({
 	const {
 		name,
 		details,
-		seoDesc,
 		location,
 		accommodation,
 		constructionDesign,
@@ -65,56 +63,48 @@ export default async function ProjectPage({
 	} = project;
 
 	return (
-		<>
-			{/* <Helmet>
-				<meta name="description" content={seoDesc} />
-				<title>{name} | Neresen</title>
-				<link
-					rel="canonical"
-					href={`https://www.neresen.cz/project-page/${id}`}
+		<main>
+			<Container>
+				<PageTitle
+					title={name}
+					previousLinkTitle="Realizace"
+					hashPath="#project-page"
+					image={img[0]}
+					address={address}
+					addressLink={addressLink}
+					inProcess={inProcess}
 				/>
-			</Helmet> */}
-			<main>
-				<Container>
-					<PageTitle
-						title={name}
-						previousLinkTitle="Realizace"
-						hashPath="#project-page"
-						image={img[0]}
-						address={address}
-						addressLink={addressLink}
-						inProcess={inProcess}
-					/>
-					<div className="project-page" id="project-page">
-						<ProjectSwiper img={img} />
-						<div className="project-page__info">
-							<p className="project-page__title">{name}</p>
-							{details && <p>{details}</p>}
-							{location && (
-								<div>
-									<span>Lokalita</span>
-									<p>{location}</p>
-								</div>
-							)}
-							{accommodation && (
-								<div>
-									<span>Ubytování</span>
-									<p>{accommodation}</p>
-								</div>
-							)}
-							{constructionDesign && (
-								<div>
-									<span>Stavební provedení</span>
-									<p>{constructionDesign}</p>
-								</div>
-							)}
-							<a className="project-page__link" href="tel:+420773802166">
-								Kontaktujte nás
-							</a>
-						</div>
+				<div className="project-page" id="project-page">
+					<ProjectSwiper img={img} />
+					<div className="project-page__info">
+						<h2 className="project-page__title">{name}</h2>
+						{details && <p>{details}</p>}
+						{location && (
+							<div>
+								<h3 className="project-page__details-title">Lokalita</h3>
+								<p>{location}</p>
+							</div>
+						)}
+						{accommodation && (
+							<div>
+								<h3 className="project-page__details-title">Ubytování</h3>
+								<p>{accommodation}</p>
+							</div>
+						)}
+						{constructionDesign && (
+							<div>
+								<h3 className="project-page__details-title">
+									Stavební provedení
+								</h3>
+								<p>{constructionDesign}</p>
+							</div>
+						)}
+						<a className="project-page__link" href="tel:+420773802166">
+							Kontaktujte nás
+						</a>
 					</div>
-				</Container>
-			</main>
-		</>
+				</div>
+			</Container>
+		</main>
 	);
 }

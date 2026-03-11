@@ -4,5 +4,5 @@
 
 ## Tech stack
 
-- React (JavaScript)
+- Next.js (TypeScript)
 - SCSS

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 	description:
 		"Neresen a.s. - specialisté na výstavbu a rekonstrukce budov v ČR. Kompletní služby od návrhu po realizaci pro soukromé i veřejné projekty.",
 	alternates: {
-		canonical: "https://www.neresen.cz/",
+		canonical: "/",
 	},
 };
 

@@ -1,4 +1,5 @@
 import { Montserrat } from "next/font/google";
+import type { Metadata } from "next";
 import Header from "./components/layout/Header/Header";
 import ScrollToTop from "./utils/ScrollToTop";
 import Footer from "./components/layout/Footer/Footer";
@@ -10,6 +11,10 @@ const montserrat = Montserrat({
 	weight: ["400", "500", "600"],
 	subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+	metadataBase: new URL("https://www.neresen.cz"),
+};
 
 export default function RootLayout({
 	children,

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	title: "Zásady ochrany osobních údajů | Neresen",
 	description: "",
 	alternates: {
-		canonical: "https://www.neresen.cz/gdpr",
+		canonical: "/gdpr",
 	},
 };
 
