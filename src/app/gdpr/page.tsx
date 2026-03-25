@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageTitle from "../components/PageTitle/PageTitle";
 import Container from "../components/Container/Container";
-import "./PrivacyPolicy.scss";
+import "./Gdpr.scss";
 
 export const metadata: Metadata = {
 	title: "Zásady ochrany osobních údajů | Neresen",
