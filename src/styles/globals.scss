@@ -12,11 +12,12 @@ body {
 
 body {
 	font-family: var(--font-montserrat);
-	background: #000;
 	color: #000;
+	background: #fff;
 	//
 	overflow-x: hidden;
 	//
+	padding-top: 80px;
 }
 
 .body--hidden {
@@ -26,4 +27,17 @@ body {
 #root {
 	display: flex;
 	flex-direction: column;
+}
+
+.section {
+	padding-top: 110px;
+}
+
+.section__title {
+	font-size: clamp(1.25rem, 4vw, 2.5rem);
+	font-weight: 500;
+}
+
+.section__desc {
+	font-size: 1.25rem;
 }

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import projects from "@/app/assets/data/projects.json";
+import projects from "@/data/projects.json";
 import { notFound } from "next/navigation";
-import Container from "../../components/Container/Container";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import ProjectSwiper from "../../components/ProjectSwiper/ProjectSwiper";
+import Container from "@/components/Container/Container";
+import PageTitle from "@/components/PageTitle/PageTitle";
+import ProjectSwiper from "@/components/ProjectSwiper/ProjectSwiper";
 import "./ProjectPage.scss";
 
 export async function generateMetadata({

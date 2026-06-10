@@ -1,6 +1,5 @@
 export const handleHeaderMode = () => {
 	const homeWrapper = document.querySelector(".js-home-hero");
-	const projects = document.querySelector(".js-projects");
 	const pageTitle = document.querySelector(".js-page-title");
 	const footer = document.querySelector(".js-footer");
 
@@ -28,17 +27,6 @@ export const handleHeaderMode = () => {
 	if (homeWrapper) {
 		const homeWrapperRect = homeWrapper.getBoundingClientRect();
 		if (homeWrapperRect.top <= 45 && homeWrapperRect.bottom >= 45) {
-			rootElement.style.setProperty("--scroll-clr", "#fff");
-			rootElement.style.setProperty("--scroll-bg-clr", "#000");
-			customDivider.style.backgroundColor = "rgba(255, 255, 255, 0.25)";
-			customDividerInner.style.backgroundColor = "#fff";
-			logoIcon.src = "/logo/mountain-white.png";
-		}
-	}
-
-	if (projects) {
-		const projectsRect = projects.getBoundingClientRect();
-		if (projectsRect.top <= 45 && projectsRect.bottom >= 45) {
 			rootElement.style.setProperty("--scroll-clr", "#fff");
 			rootElement.style.setProperty("--scroll-bg-clr", "#000");
 			customDivider.style.backgroundColor = "rgba(255, 255, 255, 0.25)";

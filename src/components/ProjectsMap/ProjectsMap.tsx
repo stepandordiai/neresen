@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import TextLine from "../TextLine/TextLine";
-import { Project } from "@/app/interfaces/project";
+import { Project } from "@/interfaces/project";
 import "./ProjectsMap.scss";
 
 declare global {

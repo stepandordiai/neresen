@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import PageTitle from "../components/PageTitle/PageTitle";
-import Container from "../components/Container/Container";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import "./Gdpr.scss";
 
 export const metadata: Metadata = {

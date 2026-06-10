@@ -1,10 +1,10 @@
 import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
-import Header from "./components/layout/Header/Header";
-import ScrollToTop from "./utils/ScrollToTop";
-import Footer from "./components/layout/Footer/Footer";
+import Header from "../components/layout/Header/Header";
+import ScrollToTop from "../utils/ScrollToTop";
+import Footer from "../components/layout/Footer/Footer";
 import Script from "next/script";
-import "./styles/globals.scss";
+import "@/styles/globals.scss";
 
 const montserrat = Montserrat({
 	variable: "--font-montserrat",

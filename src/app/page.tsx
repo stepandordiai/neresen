@@ -1,4 +1,4 @@
-import Container from "./components/Container/Container";
+import Container from "../components/Container/Container";
 import HomeClient from "./HomeClient";
 import type { Metadata } from "next";
 import "./Home.scss";

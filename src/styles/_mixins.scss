@@ -52,8 +52,8 @@
 }
 
 @mixin glass-effect {
-	-webkit-backdrop-filter: blur(15px);
-	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(30px);
+	backdrop-filter: blur(30px);
 }
 
 @mixin bg-clr-text {

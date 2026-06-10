@@ -1,7 +1,7 @@
-import PageTitle from "../components/PageTitle/PageTitle";
-import TextLine from "../components/TextLine/TextLine";
-import Container from "../components/Container/Container";
-import CopyBtn from "../components/CopyBtn/CopyBtn";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import TextLine from "../../components/TextLine/TextLine";
+import Container from "../../components/Container/Container";
+import CopyBtn from "../../components/CopyBtn/CopyBtn";
 import ContactClient from "./ContactClient";
 import type { Metadata } from "next";
 import "./Contact.scss";
@@ -19,11 +19,11 @@ export default function Contact() {
 	return (
 		<main className="contact">
 			<Container>
-				<PageTitle
+				{/* <PageTitle
 					title="Kontakt"
 					hashPath="#form-wrapper"
 					image="/projects-img/project6/01-c.jpg"
-				/>
+				/> */}
 				<div className="form-wrapper" id="form-wrapper">
 					<div>
 						<TextLine>
