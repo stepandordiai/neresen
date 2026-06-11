@@ -81,7 +81,7 @@ function HomeClient() {
 					</video> */}
 					<img
 						className="home-bg-video"
-						src="/projects-img/project11/01-c.jpg"
+						src="/projects-img/project11/01.jpg"
 						alt=""
 					/>
 					<div>
