@@ -9,6 +9,7 @@ import BtnBorders from "../components/BtnBorders/BtnBorders";
 import Link from "next/link";
 import projects from "@/data/projects.json";
 import "./Home.scss";
+import ContactUs from "@/components/ContactUs/ContactUs";
 
 const data = [
 	{ title: "Karanice", time: 10000 },
@@ -75,9 +76,14 @@ function HomeClient() {
 
 			<div>
 				<section className="home-hero js-home-hero">
-					<video className="home-bg-video" autoPlay playsInline muted loop>
+					{/* <video className="home-bg-video" autoPlay playsInline muted loop>
 						<source src="/video.mp4" />
-					</video>
+					</video> */}
+					<img
+						className="home-bg-video"
+						src="/projects-img/project11/01-c.jpg"
+						alt=""
+					/>
 					<div>
 						<h1 className="hero__heading">
 							<TextLine>
@@ -133,6 +139,7 @@ function HomeClient() {
 				</section>
 				<div style={{ background: "#fff" }} className="home__bottom">
 					<About />
+					<ContactUs />
 					<Projects projects={projects} />
 					<ProjectsMap projects={projects} />
 				</div>

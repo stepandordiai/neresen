@@ -20,18 +20,6 @@ const Header = () => {
 		setIsMenuOpen((prev) => !prev);
 
 		document.body.classList.toggle("body--hidden");
-
-		document.querySelectorAll(".menu__link").forEach((link, index) => {
-			setTimeout(() => {
-				link.classList.toggle("menu__link--active");
-			}, 100 * index);
-		});
-
-		document.querySelectorAll(".text-line-opac").forEach((link, index) => {
-			setTimeout(() => {
-				link.classList.toggle("text-line-opac--active");
-			}, 100 * index);
-		});
 	}
 
 	// menu
@@ -73,7 +61,7 @@ const Header = () => {
 					<Link onClick={closeMenu} href="/" className="header__logo">
 						<img
 							className="header__logo-icon js-logo-icon"
-							src="/logo/mountain-white.png"
+							src="/logo/mountain-black.png"
 							alt="Neresen logo"
 						/>
 						<span className="header__logo-name">Neresen</span>
@@ -83,7 +71,7 @@ const Header = () => {
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
-							gap: "30px",
+							gap: "0.75rem",
 						}}
 					>
 						<nav className="nav">

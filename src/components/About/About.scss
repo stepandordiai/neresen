@@ -12,7 +12,6 @@
 }
 
 .about__details {
-	// font-size: clamp(1rem, 2vw, 1.5rem);
 	font-size: 18px;
 }
 
@@ -20,6 +19,7 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	padding: 110px 0;
 
 	div {
 		& > *:nth-child(1) {
@@ -48,6 +48,12 @@
 	}
 }
 
+@media screen and (width < 1000px) {
+	.why-us-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 @media (width <= 900px) {
 	.about {
 		padding: 105px 15px;
@@ -56,5 +62,11 @@
 	.about-stats {
 		flex-direction: column;
 		row-gap: 50px;
+	}
+}
+
+@media screen and (width < 700px) {
+	.why-us-container {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }

@@ -1,5 +1,5 @@
 .about-us {
-	padding: 2rem;
+	padding: 110px 2rem 2rem;
 }
 
 .main__title {
@@ -14,7 +14,14 @@
 
 .our-team-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 400px));
+	gap: 1rem;
 	margin-top: 30px;
+	justify-content: center;
+}
+
+@media (width <= 700px) {
+	.about-us {
+		padding: 110px 0.75rem 2rem;
+	}
 }

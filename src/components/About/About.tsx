@@ -69,7 +69,7 @@ const About = () => {
 	return (
 		<section className="about" id="o-nas">
 			<TextLine>
-				<h2 className="about__title">Kdo jsme</h2>
+				<h2 className="section__title">Kdo jsme</h2>
 			</TextLine>
 			<div className="about__details">
 				{aboutText.split(" ").map((word, index) => {
@@ -108,7 +108,7 @@ const About = () => {
 				</div>
 			</div>
 			<div>
-				<h3 className="about__title">Proč Neresen</h3>
+				<h3 className="section__title">Proč Neresen</h3>
 				<div className="why-us-container">
 					{whyUs.map((txt, i) => {
 						return <div key={i}>{txt}</div>;

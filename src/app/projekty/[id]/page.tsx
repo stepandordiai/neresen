@@ -17,7 +17,6 @@ export async function generateMetadata({
 	if (!project) {
 		return {
 			title: `404`,
-			description: "",
 		};
 	}
 
@@ -65,7 +64,7 @@ export default async function ProjectPage({
 	return (
 		<main>
 			<Container>
-				<PageTitle
+				{/* <PageTitle
 					title={name}
 					previousLinkTitle="Realizace"
 					hashPath="#project-page"
@@ -73,7 +72,7 @@ export default async function ProjectPage({
 					address={address}
 					addressLink={addressLink}
 					inProcess={inProcess}
-				/>
+				/> */}
 				<div className="project-page" id="project-page">
 					<ProjectSwiper img={img} />
 					<div className="project-page__info">
@@ -99,7 +98,7 @@ export default async function ProjectPage({
 								<p>{constructionDesign}</p>
 							</div>
 						)}
-						<a className="project-page__link" href="tel:+420773802166">
+						<a className="project-page__link-btn" href="tel:+420773802166">
 							Kontaktujte nás
 						</a>
 					</div>
