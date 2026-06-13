@@ -1,3 +1,5 @@
+"use client";
+
 import TextLine from "../TextLine/TextLine";
 import React from "react";
 import "./About.scss";
