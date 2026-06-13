@@ -17,7 +17,12 @@ const whyUs = [
 
 import { useEffect, useState, useRef } from "react";
 
-const Counter = ({ value, duration = 2000 }) => {
+type CounterProps = {
+	value: string;
+	duration?: number;
+};
+
+const Counter = ({ value, duration = 2000 }: CounterProps) => {
 	const [count, setCount] = useState(0);
 	const [started, setStarted] = useState(false);
 	const ref = useRef(null);

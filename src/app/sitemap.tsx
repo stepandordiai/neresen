@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import projects from "@/app/assets/data/projects.json";
+import projects from "@/data/projects.json";
 
 const pages = ["", "/kontakt", "/projekty", "/gdpr"];
 
