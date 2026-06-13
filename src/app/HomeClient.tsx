@@ -11,7 +11,7 @@ export default function HomeClient() {
 		<div>
 			<section className="home-hero js-home-hero">
 				<video className="home-bg-video" autoPlay playsInline muted loop>
-					<source src="/hero.mp4" />
+					<source src="/hero-c.mp4" />
 				</video>
 
 				<div>
