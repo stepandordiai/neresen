@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import projects from "@/data/projects.json";
 
-const pages = ["", "/kontakt", "/projekty", "/gdpr"];
+const pages = ["", "/o-nas", "/kontakt", "/projekty", "/gdpr"];
 
 const BASE_URL = "https://www.neresen.cz";
 

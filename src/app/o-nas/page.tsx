@@ -1,20 +1,15 @@
-import TextLine from "@/components/TextLine/TextLine";
+import members from "@/data/members.json";
 import "./styles.scss";
+import { Metadata } from "next";
 
-const members = [
-	{
-		name: "Viktor Tomyshynets",
-		position: "Jednatel",
+export const metadata: Metadata = {
+	title: "O nás | Neresen a.s. – Bytové domy a domovy pro seniory",
+	description:
+		"Jsme Neresen a.s. – od roku 2013 realizujeme bytové domy a domovy pro seniory po celé České republice. Stavíme s odpovědností, flexibilitou a důrazem na kvalitu.",
+	alternates: {
+		canonical: "/o-nas",
 	},
-	{
-		name: "Kristián Jankó",
-		position: "Hlavní architekt",
-	},
-	{
-		name: "Matej Kurty",
-		position: "Vedoucí projektu",
-	},
-];
+};
 
 export default function AboutUs() {
 	return (
@@ -50,7 +45,7 @@ export default function AboutUs() {
 				<div className="our-team-grid">
 					{members.map((m, i) => {
 						return (
-							<div>
+							<div key={i}>
 								<div
 									style={{ aspectRatio: "1/1", background: "rgba(0,0,0, 0.1)" }}
 								></div>
@@ -59,6 +54,41 @@ export default function AboutUs() {
 							</div>
 						);
 					})}
+				</div>
+			</section>
+			<section className="section">
+				<h2 className="section__title">Naše milníky</h2>
+				<div className="milestones-container">
+					<div className="milestone">
+						<p>2013</p>
+						<p>Založení společnosti Neresen a.s. Start s jasnou vizí.</p>
+					</div>
+					<div className="milestone">
+						<p>2015</p>
+						<p>První úspěšně dokončené projekty bytových domů.</p>
+					</div>
+					<div className="milestone">
+						<p>2017</p>
+						<p>Vstup do segmentu domovů pro seniory.</p>
+					</div>
+					<div className="milestone">
+						<p>2019</p>
+						<p>Expanze do celé České republiky. 20+ projektů.</p>
+					</div>
+					<div className="milestone">
+						<p>2021</p>
+						<p>Přes 30 realizovaných projektů. Více než 70 000 m².</p>
+					</div>
+					<div className="milestone">
+						<p>2023</p>
+						<p>40+ projektů. Celková plocha překračuje 100 000 m².</p>
+					</div>
+					<div className="milestone">
+						<p>2025</p>
+						<p>27 projektů v aktivní realizaci. Stále rosteme.</p>
+					</div>
+					<div className="milestone"></div>
+					<div className="milestone"></div>
 				</div>
 			</section>
 		</main>
