@@ -4,6 +4,7 @@ import Header from "../components/layout/Header/Header";
 import ScrollToTop from "../utils/ScrollToTop";
 import Footer from "../components/layout/Footer/Footer";
 import Script from "next/script";
+import { BASE_URL } from "@/lib/constants";
 import "@/styles/globals.scss";
 
 const montserrat = Montserrat({
@@ -13,7 +14,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://www.neresen.cz"),
+	metadataBase: new URL(BASE_URL),
 };
 
 export default function RootLayout({

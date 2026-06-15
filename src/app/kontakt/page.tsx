@@ -1,15 +1,14 @@
-import PageTitle from "../../components/PageTitle/PageTitle";
+import type { Metadata } from "next";
 import TextLine from "../../components/TextLine/TextLine";
 import Container from "../../components/Container/Container";
 import CopyBtn from "../../components/CopyBtn/CopyBtn";
 import ContactClient from "./ContactClient";
-import type { Metadata } from "next";
 import "./Contact.scss";
 
 export const metadata: Metadata = {
-	title: "Kontakt | Neresen",
+	title: "Kontakt | Neresen a.s. – Bytové domy a domovy pro seniory",
 	description:
-		"Kontaktujte Neresen a.s. – odborníky na stavební a rekonstrukční projekty. Rádi vám pomůžeme s vaším záměrem. Najdete nás v Kolíne, kontaktujte nás telefonicky nebo e-mailem.",
+		"Kontaktujte Neresen a.s. a získejte konzultaci a cenovou nabídku zdarma. Jsme k dispozici Po-So 8:00-17:00. Napište nám nebo zavolejte.",
 	alternates: {
 		canonical: "/kontakt",
 	},
@@ -19,11 +18,6 @@ export default function Contact() {
 	return (
 		<main className="contact">
 			<Container>
-				{/* <PageTitle
-					title="Kontakt"
-					hashPath="#form-wrapper"
-					image="/projects-img/project6/01-c.jpg"
-				/> */}
 				<div className="form-wrapper" id="form-wrapper">
 					<div>
 						<TextLine>

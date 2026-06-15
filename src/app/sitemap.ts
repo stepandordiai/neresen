@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
 import projects from "@/data/projects.json";
+import { BASE_URL } from "@/lib/constants";
 
 const pages = ["", "/o-nas", "/kontakt", "/projekty", "/gdpr"];
-
-const BASE_URL = "https://www.neresen.cz";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
