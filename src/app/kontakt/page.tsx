@@ -6,7 +6,7 @@ import ContactClient from "./ContactClient";
 import "./Contact.scss";
 
 export const metadata: Metadata = {
-	title: "Kontakt | Neresen a.s. – Bytové domy a domovy pro seniory",
+	title: "Kontakt – Bytové domy a domovy pro seniory",
 	description:
 		"Kontaktujte Neresen a.s. a získejte konzultaci a cenovou nabídku zdarma. Jsme k dispozici Po-So 8:00-17:00. Napište nám nebo zavolejte.",
 	alternates: {

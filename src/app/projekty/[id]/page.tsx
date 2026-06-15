@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import projects from "@/data/projects.json";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container/Container";
-import PageTitle from "@/components/PageTitle/PageTitle";
 import ProjectSwiper from "@/components/ProjectSwiper/ProjectSwiper";
 import "./ProjectPage.scss";
 
@@ -21,8 +20,8 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: `${project.name} | Neresen`,
-		description: project.seoDesc,
+		title: `${project.name}`,
+		description: `${project.name} – projekt společnosti Neresen a.s. Komplexní realizace bytových domů a domovů pro seniory po celé České republice. Od pozemku po klíče.`,
 		alternates: {
 			canonical: `/projekty/${id}`,
 		},
@@ -49,30 +48,12 @@ export default async function ProjectPage({
 		return notFound();
 	}
 
-	const {
-		name,
-		details,
-		location,
-		accommodation,
-		constructionDesign,
-		img,
-		address,
-		addressLink,
-		inProcess,
-	} = project;
+	const { name, details, location, accommodation, constructionDesign, img } =
+		project;
 
 	return (
 		<main>
 			<Container>
-				{/* <PageTitle
-					title={name}
-					previousLinkTitle="Realizace"
-					hashPath="#project-page"
-					image={img[0]}
-					address={address}
-					addressLink={addressLink}
-					inProcess={inProcess}
-				/> */}
 				<div className="project-page" id="project-page">
 					<ProjectSwiper img={img} />
 					<div className="project-page__info">

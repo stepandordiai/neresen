@@ -4,8 +4,9 @@ import { Metadata } from "next";
 import "./styles.scss";
 
 export const metadata: Metadata = {
-	title: "",
-	description: "",
+	title: "Projekty – Bytové domy a domovy pro seniory",
+	description:
+		"Prohlédněte si realizované projekty Neresen a.s. – bytové domy a domovy pro seniory po celé České republice. Komplexní výstavba od pozemku po klíče.",
 	alternates: {
 		canonical: "/projekty",
 	},

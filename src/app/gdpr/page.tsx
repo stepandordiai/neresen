@@ -4,8 +4,9 @@ import Container from "../../components/Container/Container";
 import "./Gdpr.scss";
 
 export const metadata: Metadata = {
-	title: "Zásady ochrany osobních údajů | Neresen",
-	description: "",
+	title: "Zásady ochrany osobních údajů",
+	description:
+		"Informace o zpracování osobních údajů společností Neresen a.s. dle GDPR. Zjistěte, jaké údaje shromažďujeme, jak je chráníme a jaká máte práva.",
 	alternates: {
 		canonical: "/gdpr",
 	},

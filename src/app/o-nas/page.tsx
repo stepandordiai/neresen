@@ -3,7 +3,7 @@ import "./styles.scss";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "O nás | Neresen a.s. – Bytové domy a domovy pro seniory",
+	title: "O nás – Bytové domy a domovy pro seniory",
 	description:
 		"Jsme Neresen a.s. – od roku 2013 realizujeme bytové domy a domovy pro seniory po celé České republice. Stavíme s odpovědností, flexibilitou a důrazem na kvalitu.",
 	alternates: {

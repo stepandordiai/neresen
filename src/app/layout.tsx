@@ -15,6 +15,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
+	title: {
+		template: "%s | Neresen a.s.",
+		default: "Neresen a.s. – Bytové domy a domovy pro seniory",
+	},
 };
 
 export default function RootLayout({
