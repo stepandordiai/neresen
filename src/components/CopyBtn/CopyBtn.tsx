@@ -3,30 +3,34 @@
 import { useState } from "react";
 import "./CopyBtn.scss";
 
-const CopyBtn = ({ txt = "" }) => {
-	const [btnTxtCopied, setBtnTxtCopied] = useState(false);
+type CopyBtnProps = {
+	value: string;
+};
 
-	const handleCopy = (value: string) => {
-		// Save value in clipboard
-		navigator.clipboard.writeText(value);
+export default function CopyBtn({ value }: CopyBtnProps) {
+	const [btnValueCopied, setBtnValueCopied] = useState(false);
 
-		setBtnTxtCopied(true);
-
-		setTimeout(() => {
-			setBtnTxtCopied(false);
-		}, 1500);
+	// TODO: learn this
+	// navigator.clipboard.writeText() is async
+	const handleCopy = async (value: string) => {
+		try {
+			await navigator.clipboard.writeText(value);
+			setBtnValueCopied(true);
+			setTimeout(() => setBtnValueCopied(false), 2000);
+		} catch (err) {
+			console.error("Copy failed:", err);
+		}
 	};
 
 	return (
 		<button
-			onClick={() => handleCopy(txt)}
-			className={`copy-btn ${btnTxtCopied ? "copy-btn--copied" : ""}`.trim()}
-			disabled={btnTxtCopied}
+			type="button"
+			onClick={() => handleCopy(value)}
+			className={`copy-btn ${btnValueCopied ? "copy-btn--copied" : ""}`.trim()}
+			disabled={btnValueCopied}
 			title="Kliknutím zkopírujete"
 		>
-			{btnTxtCopied ? "Zkopírováno" : txt}
+			{btnValueCopied ? "Zkopírováno" : value}
 		</button>
 	);
-};
-
-export default CopyBtn;
+}

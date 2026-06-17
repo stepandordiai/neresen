@@ -56,18 +56,32 @@
 	margin-bottom: 15px;
 }
 
-.footer__working-hours-wrapper {
-	// width: min(100%, 400px);
-}
-
 .footer__working-hours {
+	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	font-weight: 500;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: #000;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.5s;
+		transition-timing-function: var(--cstm-cubic-bezier);
+	}
 }
 
 .footer__working-hours--active {
-	text-decoration: underline;
+	&::before {
+		transform: scaleX(1);
+	}
 }
 
 .footer__nav {
@@ -78,7 +92,8 @@
 
 .footer__nav-link {
 	position: relative;
-	color: #000000;
+	color: #000;
+	font-weight: 500;
 }
 
 .footer__nav-link::before {
@@ -87,8 +102,8 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 1px;
-	background: #fff;
+	height: 2px;
+	background: #000000;
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.5s;
@@ -118,7 +133,8 @@
 
 .creator__link {
 	position: relative;
-	color: #000000;
+	color: #000;
+	font-weight: 500;
 }
 
 .creator__link::before {
@@ -127,8 +143,8 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 1px;
-	background: #000000;
+	height: 2px;
+	background: #000;
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.5s;

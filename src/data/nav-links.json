@@ -2,6 +2,5 @@
 	{ "id": 1, "name": "Úvod", "path": "/" },
 	{ "id": 2, "name": "O nás", "path": "/o-nas" },
 	{ "id": 3, "name": "Projekty", "path": "/projekty" },
-	{ "id": 4, "name": "Mapa projektu", "path": "/#mapa-projektu" },
 	{ "id": 5, "name": "Kontakt", "path": "/kontakt" }
 ]

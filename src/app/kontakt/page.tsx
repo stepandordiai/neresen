@@ -4,6 +4,7 @@ import Container from "../../components/Container/Container";
 import CopyBtn from "../../components/CopyBtn/CopyBtn";
 import ContactClient from "./ContactClient";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import { COMPANY_CODE } from "@/lib/constants";
 import "./Contact.scss";
 
 export const metadata: Metadata = {
@@ -23,73 +24,67 @@ export default function Contact() {
 			<Container>
 				<div className="form-wrapper" id="form-wrapper">
 					<div>
-						<TextLine>
-							<h2 className="form__title">Kontaktní údaje</h2>
-						</TextLine>
+						<h2 className="form__title">
+							<TextLine>Kontaktní údaje</TextLine>
+						</h2>
 						<br />
-						<TextLine>
-							<p>Získejte cenovou nabídku a konzultace zdarma</p>
-						</TextLine>
+						<p>
+							<TextLine>Získejte cenovou nabídku a konzultace zdarma</TextLine>
+						</p>
 					</div>
 					<div className="form-talk-wrapper">
 						<div className="talk">
 							<div>
-								<TextLine>
-									<p className="form__secondary-title">Telefonní číslo</p>
-								</TextLine>
+								<p className="form__secondary-title">
+									<TextLine>Telefonní číslo</TextLine>
+								</p>
 								<br />
-								<TextLine>
-									<a className="contact__link" href="tel:+420773802166">
-										+420 773 802 166
-									</a>
-								</TextLine>
+								<a className="contact__link" href="tel:+420773802166">
+									+420 773 802 166
+								</a>
 							</div>
 							<div>
-								<TextLine>
-									<p className="form__secondary-title">E-mail</p>
-								</TextLine>
+								<p className="form__secondary-title">
+									<TextLine>E-mail</TextLine>
+								</p>
 								<br />
-								<TextLine>
-									<a className="contact__link" href="mailto:info@neresen.cz">
-										info@neresen.cz
-									</a>
-								</TextLine>
+								<a className="contact__link" href="mailto:info@neresen.cz">
+									info@neresen.cz
+								</a>
 							</div>
 							<div>
-								<TextLine>
-									<p className="form__secondary-title">Pracovní doba</p>
-								</TextLine>
+								<p className="form__secondary-title">
+									<TextLine>Pracovní doba</TextLine>
+								</p>
 								<div style={{ display: "flex", flexDirection: "column" }}>
-									<TextLine>
-										<p className="contact__working-hours">
-											<span>Pondělí - Sobota:</span>
-											<span>8:00 - 17:00</span>
-										</p>
-									</TextLine>
-									<TextLine>
-										<p className="contact__working-hours">
-											<span>Neděle:</span>
-											<span>Zavřeno</span>
-										</p>
-									</TextLine>
+									<p className="contact__working-hours">
+										<span>
+											<TextLine>Pondělí - Sobota</TextLine>
+										</span>
+										<span>
+											<TextLine>8:00 - 17:00</TextLine>
+										</span>
+									</p>
+									<p className="contact__working-hours">
+										<span>
+											<TextLine>Neděle</TextLine>
+										</span>
+										<span>
+											<TextLine>Zavřeno</TextLine>
+										</span>
+									</p>
 								</div>
 							</div>
 							<div>
-								<TextLine>
-									<p className="form__secondary-title">IČO</p>
-								</TextLine>
+								<p className="form__secondary-title">IČO</p>
 								<br />
-								<TextLine>
-									<CopyBtn txt="01458965" />
-								</TextLine>
+								<CopyBtn value={COMPANY_CODE} />
 							</div>
 						</div>
 						<div className="contact__form-container">
-							<TextLine>
-								<h2 className="contact__form-container-title">
-									Kontaktní formulář
-								</h2>
-							</TextLine>
+							<h2 className="contact__form-container-title">
+								<TextLine>Kontaktní formulář</TextLine>
+							</h2>
 							<ContactClient />
 						</div>
 					</div>

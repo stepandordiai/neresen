@@ -7,7 +7,7 @@
 	justify-content: flex-start;
 	flex-direction: column;
 	row-gap: 30px;
-	padding: 120px 30px 30px;
+	padding: 2rem;
 }
 
 .form__title {
@@ -173,7 +173,7 @@ textarea {
 
 @media (width <= 1000px) {
 	.form-wrapper {
-		padding: 105px 15px 15px;
+		padding: 1rem;
 		row-gap: 30px;
 	}
 

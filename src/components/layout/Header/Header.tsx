@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import linksData from "@/data/links-data.json";
+import navLinks from "@/data/nav-links.json";
 import Link from "next/link";
 import "./Header.scss";
 
@@ -75,13 +75,13 @@ const Header = () => {
 						}}
 					>
 						<nav className="nav">
-							{linksData.map((link) => {
-								return link.path.includes("#") ? (
-									<Link key={link.id} className="nav__link" href={link.path}>
-										{link.name}
-									</Link>
-								) : (
-									<Link key={link.id} className="nav__link" href={link.path}>
+							{navLinks.map((link) => {
+								return (
+									<Link
+										key={link.id}
+										className={`nav__link ${pathname === link.path ? "nav__link--active" : ""}`}
+										href={link.path}
+									>
 										{link.name}
 									</Link>
 								);
@@ -114,21 +114,12 @@ const Header = () => {
 				hidden={!isMenuOpen}
 			>
 				<div className="menu__nav">
-					{linksData.map((link) => {
-						return link.path.includes("#") ? (
-							<Link
-								key={link.id}
-								className="nav__link menu-nav__link"
-								onClick={closeMenu}
-								href={link.path}
-							>
-								{link.name}
-							</Link>
-						) : (
+					{navLinks.map((link) => {
+						return (
 							<Link
 								key={link.id}
 								onClick={closeMenu}
-								className="nav__link menu-nav__link"
+								className={`nav__link menu-nav__link ${pathname === link.path ? "nav__link--active" : ""}`}
 								href={link.path}
 							>
 								{link.name}

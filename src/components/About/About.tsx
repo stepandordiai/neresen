@@ -4,7 +4,7 @@ import TextLine from "../TextLine/TextLine";
 import React from "react";
 import "./About.scss";
 
-const aboutText = `Neresen a.s. je česká developerská společnost s více než desetiletou zkušeností v oblasti výstavby a rekonstrukcí. Společnost byla založena v roce 2013 Viktorem Tomyšyncem s jasnou vizí: realizovat projekty zodpovědně, flexibilně a kreativně.  Za dobu naší existence jsme dokončili více než 40 projektů o celkové ploše přes 100 000 m². Dnes máme v realizaci dalších 27 projektů rozmístěných po celé České republice.  Tým Neresen tvoří 10 zkušených odborníků — architektů, projektových manažerů a stavebních inženýrů, kteří sdílí společné hodnoty: odpovědnost ke klientům, flexibilitu při řešení výzev a kreativitu při hledání nejlepších řešení.  Naší silou není jen stavební know-how. Je to komplexní přístup — od vyhledání vhodného pozemku, přes projektovou dokumentaci, získání stavebních povolení, až po samotnou realizaci a předání klíčů. Klient s námi nekomunikuje se třemi různými firmami — vše zajistíme my.  Pracujeme pro soukromé investory, municipality i nadace. Specializujeme se na dva klíčové segmenty: rezidenční výstavbu a péči o seniory — dvě oblasti, kde záleží na každém detailu.`;
+const aboutText = ``;
 
 const whyUs = [
 	"Komplexní přístup — od pozemku po klíče. Jeden partner pro celý projekt.",
@@ -79,46 +79,73 @@ const About = () => {
 				<TextLine>Kdo jsme</TextLine>
 			</h2>
 			<div className="about__details">
-				{aboutText.split(" ").map((word, index) => {
-					return (
-						<React.Fragment key={index}>
-							<TextLine>{word}</TextLine>
-							<span> </span>
-						</React.Fragment>
-					);
-				})}
+				<p>
+					<TextLine>
+						Neresen a.s. je česká developerská společnost s více než desetiletou
+						zkušeností v oblasti výstavby a rekonstrukcí. Společnost byla
+						založena v roce 2013 Viktorem Tomyšyncem s jasnou vizí: realizovat
+						projekty zodpovědně, flexibilně a kreativně. Za dobu naší existence
+						jsme dokončili více než 40 projektů o celkové ploše přes 100 000 m².
+						Dnes máme v realizaci dalších 27 projektů rozmístěných po celé České
+						republice. Tým Neresen tvoří 10 zkušených odborníků — architektů,
+						projektových manažerů a stavebních inženýrů, kteří sdílí společné
+						hodnoty: odpovědnost ke klientům, flexibilitu při řešení výzev a
+						kreativitu při hledání nejlepších řešení. Naší silou není jen
+						stavební know-how. Je to komplexní přístup — od vyhledání vhodného
+						pozemku, přes projektovou dokumentaci, získání stavebních povolení,
+						až po samotnou realizaci a předání klíčů. Klient s námi nekomunikuje
+						se třemi různými firmami — vše zajistíme my. Pracujeme pro soukromé
+						investory, municipality i nadace. Specializujeme se na dva klíčové
+						segmenty: rezidenční výstavbu a péči o seniory — dvě oblasti, kde
+						záleží na každém detailu.
+					</TextLine>
+				</p>
 			</div>
 			<div className="about-stats">
 				<div>
 					<p>
 						<Counter value="40" /> +
 					</p>
-					<p>Realizovaných projektů</p>
+					<p>
+						<TextLine>Realizovaných projektů</TextLine>
+					</p>
 				</div>
 				<div>
 					<p>
 						<Counter value="27" />
 					</p>
-					<p>Projektů v realizaci</p>
+					<p>
+						<TextLine>Projektů v realizaci</TextLine>
+					</p>
 				</div>
 				<div>
 					<p>
 						<Counter value="100000" duration={5000000} /> m²
 					</p>
-					<p>Celková plocha realizovaných staveb</p>
+					<p>
+						<TextLine>Celková plocha realizovaných staveb</TextLine>
+					</p>
 				</div>
 				<div>
 					<p>
 						<Counter value="12" /> let
 					</p>
-					<p>Zkušeností na trhu (od roku 2013)</p>
+					<p>
+						<TextLine>Zkušeností na trhu (od roku 2013)</TextLine>
+					</p>
 				</div>
 			</div>
 			<div>
-				<h3 className="section__title">Proč Neresen</h3>
+				<h3 className="section__title">
+					<TextLine>Proč Neresen</TextLine>
+				</h3>
 				<div className="why-us-container">
 					{whyUs.map((txt, i) => {
-						return <div key={i}>{txt}</div>;
+						return (
+							<p key={i}>
+								<TextLine>{txt}</TextLine>
+							</p>
+						);
 					})}
 				</div>
 			</div>

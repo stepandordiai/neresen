@@ -5,6 +5,7 @@ import Container from "@/components/Container/Container";
 import ProjectSwiper from "@/components/ProjectSwiper/ProjectSwiper";
 import "./ProjectPage.scss";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import TextLine from "@/components/TextLine/TextLine";
 
 export async function generateMetadata({
 	params,
@@ -64,26 +65,42 @@ export default async function ProjectPage({
 				<div className="project-page" id="project-page">
 					<ProjectSwiper img={img} />
 					<div className="project-page__info">
-						<h2 className="project-page__title">{name}</h2>
-						{details && <p>{details}</p>}
+						<h1 className="project-page__title">
+							<TextLine>{name}</TextLine>
+						</h1>
+						{details && (
+							<p>
+								<TextLine>{details}</TextLine>
+							</p>
+						)}
 						{location && (
 							<div>
-								<h3 className="project-page__details-title">Lokalita</h3>
-								<p>{location}</p>
+								<h2 className="project-page__details-title">
+									<TextLine>Lokalita</TextLine>
+								</h2>
+								<p>
+									<TextLine>{location}</TextLine>
+								</p>
 							</div>
 						)}
 						{accommodation && (
 							<div>
-								<h3 className="project-page__details-title">Ubytování</h3>
-								<p>{accommodation}</p>
+								<h2 className="project-page__details-title">
+									<TextLine>Ubytování</TextLine>
+								</h2>
+								<p>
+									<TextLine>{accommodation}</TextLine>
+								</p>
 							</div>
 						)}
 						{constructionDesign && (
 							<div>
-								<h3 className="project-page__details-title">
-									Stavební provedení
-								</h3>
-								<p>{constructionDesign}</p>
+								<h2 className="project-page__details-title">
+									<TextLine>Stavební provedení</TextLine>
+								</h2>
+								<p>
+									<TextLine>{constructionDesign}</TextLine>
+								</p>
 							</div>
 						)}
 						<a className="project-page__link-btn" href="tel:+420773802166">

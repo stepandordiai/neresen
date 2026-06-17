@@ -1,6 +1,6 @@
 .project-page {
 	background: #fff;
-	padding: 130px 30px 30px;
+	padding: 2rem 30px 30px;
 	display: flex;
 	gap: 30px;
 }
@@ -71,7 +71,7 @@
 @media (width <= 900px) {
 	.project-page {
 		flex-direction: column;
-		padding: 115px 15px 30px;
+		padding: 1rem 15px 30px;
 	}
 
 	.project-page__info {

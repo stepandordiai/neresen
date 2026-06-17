@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import { Metadata } from "next";
 import Container from "../../components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import "./Gdpr.scss";
@@ -18,11 +17,6 @@ export default function PrivacyPolicy() {
 		<main>
 			<Breadcrumbs links={[{ label: "GDPR" }]} />
 			<Container>
-				<PageTitle
-					title="Zásady ochrany osobních údajů"
-					hashPath="#osobní-údaje"
-					image="/projects-img/project12/01-c.png"
-				/>
 				<div className="privacy-policy" id="osobní-údaje">
 					<div className="privacy-policy__container">
 						<div>

@@ -1,9 +1,13 @@
+"use client";
+
 import workingHours from "@/data/working-hours.json";
-import linksData from "@/data/links-data.json";
+import navLinks from "@/data/nav-links.json";
 import { Fragment } from "react";
 import Link from "next/link";
 import TextLine from "@/components/TextLine/TextLine";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
+import { usePathname } from "next/navigation";
+import { COMPANY_CODE } from "@/lib/constants";
 import "./Footer.scss";
 
 // TODO: learn this
@@ -16,6 +20,8 @@ const getWeekday = (index: number) => {
 const today = (new Date().getDay() + 6) % 7;
 
 const Footer = () => {
+	const pathname = usePathname();
+
 	return (
 		<footer className="footer js-footer">
 			<div className="grid-item">
@@ -54,14 +60,14 @@ const Footer = () => {
 					<TextLine>Navigace</TextLine>
 				</div>
 				<div className="footer__nav">
-					{linksData.map((link) => {
-						return link.path.includes("#") ? (
-							<Link key={link.id} className="footer__nav-link" href={link.path}>
-								<TextLine>{link.name}</TextLine>
-							</Link>
-						) : (
-							<Link key={link.id} className="footer__nav-link" href={link.path}>
-								<TextLine>{link.name}</TextLine>
+					{navLinks.map((link) => {
+						return (
+							<Link
+								key={link.id}
+								className={`footer__nav-link ${pathname === link.path ? "footer__nav-link--active" : ""}`}
+								href={link.path}
+							>
+								{link.name}
 							</Link>
 						);
 					})}
@@ -88,19 +94,12 @@ const Footer = () => {
 				</Link>
 			</div>
 			<div className="footer-top__container grid-item">
+				<TextLine>Neresen a.s.</TextLine>
 				<div>
-					<div className="footer__nav-title">
-						<TextLine>Neresen a.s.</TextLine>
-					</div>
-				</div>
-				<div>
-					<div className="footer__nav-title">
-						<TextLine>IČO</TextLine>
-					</div>
-					<CopyBtn txt="01458965" />
+					<span>IČO </span>
+					<CopyBtn value={COMPANY_CODE} />
 				</div>
 			</div>
-			{/* <div className="footer__custom-divider"></div> */}
 			<div className="grid-item">
 				<p>&copy; 2025&ndash;{new Date().getFullYear()} Neresen a.s.</p>
 				<p>Všechna práva vyhrazena.</p>

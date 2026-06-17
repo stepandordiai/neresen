@@ -1,7 +1,7 @@
 @use "@/styles/mixins" as *;
 
 .section {
-	padding: 110px 2rem 0;
+	padding: 2rem 2rem 2rem;
 }
 
 .project-page-list {
@@ -287,7 +287,7 @@
 
 @media (width <= 900px) {
 	.projects {
-		padding: 120px 15px 30px;
+		padding: 1rem 1rem 30px;
 	}
 
 	.projects-grid {
@@ -297,7 +297,7 @@
 
 @media (width <= 700px) {
 	.section {
-		padding: 110px 0.75rem 0;
+		padding: 1rem;
 	}
 
 	.project-page-item {
