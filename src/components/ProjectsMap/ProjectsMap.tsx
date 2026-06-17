@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import TextLine from "../TextLine/TextLine";
+import TextLine from "@/components/TextLine/TextLine";
 import { Project } from "@/interfaces/project";
 import "./ProjectsMap.scss";
 

@@ -25,11 +25,11 @@
 .container {
 	width: 40%;
 	height: 100%;
-	padding: 15px;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 2px;
 	overflow-y: auto;
+	background: rgba(0, 0, 0, 0.1);
 }
 
 .info-container {
@@ -37,15 +37,13 @@
 	column-gap: 7.5px;
 	height: 100px;
 	background: #fff;
-	border: 1px solid #000;
 	padding: 7.5px;
 	cursor: pointer;
 	flex-shrink: 0;
 	transition: all 0.25s;
 
 	&:hover {
-		background: #000;
-		color: #fff;
+		background: rgba(0, 0, 0, 0.1);
 	}
 
 	img {
