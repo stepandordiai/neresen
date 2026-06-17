@@ -1,12 +1,18 @@
-import workingHoursData from "@/data/working-hours-data.json";
+import workingHours from "@/data/working-hours.json";
 import linksData from "@/data/links-data.json";
-import React from "react";
+import { Fragment } from "react";
 import Link from "next/link";
-import TextLine from "../../TextLine/TextLine";
-import CopyBtn from "../../CopyBtn/CopyBtn";
+import TextLine from "@/components/TextLine/TextLine";
+import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import "./Footer.scss";
 
 // TODO: learn this
+const MONDAY_DATE = new Date(2024, 0, 1);
+const getWeekday = (index: number) => {
+	const date = new Date(MONDAY_DATE);
+	date.setDate(MONDAY_DATE.getDate() + index);
+	return new Intl.DateTimeFormat("cs-CZ", { weekday: "long" }).format(date);
+};
 const today = (new Date().getDay() + 6) % 7;
 
 const Footer = () => {
@@ -29,16 +35,16 @@ const Footer = () => {
 					</p>
 				</div>
 				<div style={{ display: "flex", flexDirection: "column", gap: "7.5px" }}>
-					{workingHoursData.map((day, i) => {
+					{workingHours.map((h, i) => {
 						return (
-							<React.Fragment key={i}>
+							<Fragment key={i}>
 								<div
 									className={`footer__working-hours ${today === i ? "footer__working-hours--active" : ""}`.trim()}
 								>
-									<p>{day.name}</p>
-									<p>{day.hours}</p>
+									<span>{getWeekday(i)}</span>
+									<span>{h}</span>
 								</div>
-							</React.Fragment>
+							</Fragment>
 						);
 					})}
 				</div>
@@ -61,24 +67,6 @@ const Footer = () => {
 					})}
 				</div>
 			</div>
-			{/* <div className="grid-item"> */}
-			{/* <div className="footer__nav-title"> */}
-			{/* <TextLine>Naše projekty</TextLine> */}
-			{/* </div> */}
-			{/* <div className="footer__nav">
-					{projects.map(({ name, id }) => {
-						return (
-							<Link
-								key={id}
-								className="footer__nav-link"
-								href={`/projekty/${id}`}
-							>
-								<TextLine>{name}</TextLine>
-							</Link>
-						);
-					})}
-				</div> */}
-			{/* </div> */}
 			<div className="footer-top__container grid-item">
 				<div>
 					<div className="footer__nav-title">
