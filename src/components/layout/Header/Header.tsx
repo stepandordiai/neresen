@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import navLinks from "@/data/nav-links.json";
 import Link from "next/link";
 import "./Header.scss";
@@ -10,6 +10,7 @@ const Header = () => {
 	const pathname = usePathname();
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [headerHidden, setHeaderHidden] = useState(false);
 
 	// FIXME:
 	useEffect(() => {
@@ -54,9 +55,24 @@ const Header = () => {
 		return () => document.removeEventListener("keydown", closeMenuOnEsc);
 	}, []);
 
+	// TODO: learn this
+	const prevScrollY = useRef(0);
+
+	useEffect(() => {
+		const handleHeader = () => {
+			const scrollY = window.scrollY;
+			setHeaderHidden(scrollY > prevScrollY.current && scrollY > 100);
+			prevScrollY.current = scrollY;
+		};
+
+		window.addEventListener("scroll", handleHeader);
+
+		return () => window.removeEventListener("scroll", handleHeader);
+	}, []);
+
 	return (
 		<>
-			<header className="header">
+			<header className={`header ${headerHidden ? "header--hidden" : ""}`}>
 				<div className="header-inner">
 					<Link onClick={closeMenu} href="/" className="header__logo">
 						<img

@@ -1,4 +1,4 @@
-@use "./../../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .header {
 	position: fixed;
@@ -6,7 +6,11 @@
 	right: 0;
 	left: 0;
 	z-index: 110;
-	transition: all 0.5s;
+	transition: all 0.3s;
+
+	&--hidden {
+		transform: translateY(-80px);
+	}
 }
 
 .header-inner {
