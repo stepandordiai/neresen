@@ -2,6 +2,7 @@ import TextLine from "@/components/TextLine/TextLine";
 import ProjectsClient from "./ProjectsClient";
 import { Metadata } from "next";
 import "./styles.scss";
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 
 export const metadata: Metadata = {
 	title: "Projekty – Bytové domy a domovy pro seniory",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Projects() {
 	return (
 		<div>
+			<Breadcrumbs links={[{ label: "Projekty" }]} />
 			<main className="projects-page">
 				<section className="section" style={{ background: "#fff" }}>
 					<div className="projects__title-wrapper">

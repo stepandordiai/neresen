@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import "./Gdpr.scss";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
 	return (
 		<main>
+			<Breadcrumbs links={[{ label: "GDPR" }]} />
 			<Container>
 				<PageTitle
 					title="Zásady ochrany osobních údajů"

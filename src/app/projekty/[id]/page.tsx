@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Container from "@/components/Container/Container";
 import ProjectSwiper from "@/components/ProjectSwiper/ProjectSwiper";
 import "./ProjectPage.scss";
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({
 	params,
@@ -54,6 +55,12 @@ export default async function ProjectPage({
 	return (
 		<main>
 			<Container>
+				<Breadcrumbs
+					links={[
+						{ label: "Projekty", href: "/projekty" },
+						{ label: project.name },
+					]}
+				/>
 				<div className="project-page" id="project-page">
 					<ProjectSwiper img={img} />
 					<div className="project-page__info">

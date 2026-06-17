@@ -3,6 +3,7 @@ import TextLine from "../../components/TextLine/TextLine";
 import Container from "../../components/Container/Container";
 import CopyBtn from "../../components/CopyBtn/CopyBtn";
 import ContactClient from "./ContactClient";
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import "./Contact.scss";
 
 export const metadata: Metadata = {
@@ -17,6 +18,8 @@ export const metadata: Metadata = {
 export default function Contact() {
 	return (
 		<main className="contact">
+			<Breadcrumbs links={[{ label: "Kontakt" }]} />
+
 			<Container>
 				<div className="form-wrapper" id="form-wrapper">
 					<div>
