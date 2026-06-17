@@ -9,25 +9,6 @@ import "./Footer.scss";
 // TODO: learn this
 const today = (new Date().getDay() + 6) % 7;
 
-interface Project {
-	id: string;
-	name: string;
-	details: string;
-	seoDesc: string;
-	location: string;
-	accomodation?: string;
-	constructionDesign: string;
-	img: string[];
-	type: string;
-	position?: {
-		lat: number;
-		lon: number;
-	};
-	address?: string;
-	addressLink?: string;
-	inProcess?: boolean;
-}
-
 const Footer = () => {
 	return (
 		<footer className="footer js-footer">
@@ -43,20 +24,20 @@ const Footer = () => {
 			</div>
 			<div className="footer__working-hours-wrapper grid-item">
 				<div className="footer__nav-title">
-					<TextLine>Pracovní doba</TextLine>
+					<p>
+						<TextLine>Pracovní doba</TextLine>
+					</p>
 				</div>
 				<div style={{ display: "flex", flexDirection: "column", gap: "7.5px" }}>
 					{workingHoursData.map((day, i) => {
 						return (
 							<React.Fragment key={i}>
-								<TextLine>
-									<div
-										className={`footer__working-hours ${today === i ? "footer__working-hours--active" : ""}`.trim()}
-									>
-										<p>{day.name}</p>
-										<p>{day.hours}</p>
-									</div>
-								</TextLine>
+								<div
+									className={`footer__working-hours ${today === i ? "footer__working-hours--active" : ""}`.trim()}
+								>
+									<p>{day.name}</p>
+									<p>{day.hours}</p>
+								</div>
 							</React.Fragment>
 						);
 					})}
@@ -104,16 +85,12 @@ const Footer = () => {
 						<TextLine>Kontaktní údaje</TextLine>
 					</div>
 					<div className="footer__nav">
-						<TextLine>
-							<a className="footer__nav-link" href="tel:+420773802166">
-								+420 773 802 166
-							</a>
-						</TextLine>
-						<TextLine>
-							<a className="footer__nav-link" href="mailto:info@neresen.cz">
-								info@neresen.cz
-							</a>
-						</TextLine>
+						<a className="footer__nav-link" href="tel:+420773802166">
+							+420 773 802 166
+						</a>
+						<a className="footer__nav-link" href="mailto:info@neresen.cz">
+							info@neresen.cz
+						</a>
 					</div>
 				</div>
 			</div>
@@ -132,32 +109,26 @@ const Footer = () => {
 					<div className="footer__nav-title">
 						<TextLine>IČO</TextLine>
 					</div>
-					<TextLine>
-						<CopyBtn txt="01458965" />
-					</TextLine>
+					<CopyBtn txt="01458965" />
 				</div>
 			</div>
 			{/* <div className="footer__custom-divider"></div> */}
 			<div className="grid-item">
-				<TextLine>
-					<p>&copy; 2025&ndash;{new Date().getFullYear()} Neresen a.s.</p>
-					<p>Všechna práva vyhrazena.</p>
-				</TextLine>
+				<p>&copy; 2025&ndash;{new Date().getFullYear()} Neresen a.s.</p>
+				<p>Všechna práva vyhrazena.</p>
 			</div>
 			<div className="grid-item">
-				<TextLine>
-					<p>
-						Website created by{" "}
-						<a
-							className="creator__link"
-							href="https://www.heeeyooo.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							heeeyooo studio
-						</a>
-					</p>
-				</TextLine>
+				<p>
+					Website created by{" "}
+					<a
+						className="creator__link"
+						href="https://www.heeeyooo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						heeeyooo studio
+					</a>
+				</p>
 			</div>
 		</footer>
 	);

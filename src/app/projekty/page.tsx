@@ -1,8 +1,8 @@
 import TextLine from "@/components/TextLine/TextLine";
 import ProjectsClient from "./ProjectsClient";
 import { Metadata } from "next";
-import "./styles.scss";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import "./styles.scss";
 
 export const metadata: Metadata = {
 	title: "Projekty – Bytové domy a domovy pro seniory",
@@ -20,15 +20,15 @@ export default function Projects() {
 			<main className="projects-page">
 				<section className="section" style={{ background: "#fff" }}>
 					<div className="projects__title-wrapper">
-						<TextLine>
-							<h2 className="projects__title">Naše projekty</h2>
-						</TextLine>
-						<TextLine>
-							<p className="projects__secondary-title">
+						<h2 className="projects__title">
+							<TextLine>Naše projekty</TextLine>
+						</h2>
+						<p className="projects__secondary-title">
+							<TextLine>
 								Bytové domy a domovy pro seniory realizované po celé České
 								republice.
-							</p>
-						</TextLine>
+							</TextLine>
+						</p>
 					</div>
 					<ProjectsClient />
 				</section>

@@ -3,39 +3,42 @@
 import { useEffect, useRef } from "react";
 import "./TextLine.scss";
 
-// TextLine is a component for creating animation effect for text (translating up)
-
 type TextLineProps = {
-	children: React.ReactNode;
+	children: string;
 };
 
 const TextLine = ({ children }: TextLineProps) => {
-	const textLine = useRef<HTMLDivElement>(null);
+	const containerRef = useRef<HTMLSpanElement>(null);
 
 	useEffect(() => {
 		const handleTextLine = () => {
-			if (textLine.current) {
-				const textLineRect = textLine.current.getBoundingClientRect().top;
-				if (textLineRect < window.innerHeight) {
-					textLine.current.style.animation = "translateTextLine 1s forwards";
+			if (containerRef.current) {
+				const top = containerRef.current.getBoundingClientRect().top;
+				if (top < window.innerHeight) {
+					containerRef.current
+						.querySelectorAll<HTMLElement>(".text-line__word")
+						.forEach((word, i) => {
+							word.style.animation = `translateTextLine 1s ${i * 0.05}s forwards`;
+						});
 				}
 			}
 		};
 
 		handleTextLine();
-
 		document.addEventListener("scroll", handleTextLine);
-
 		return () => document.removeEventListener("scroll", handleTextLine);
 	}, []);
 
+	const words = children.split(" ");
+
 	return (
-		<div className="text-line-container">
-			{/* TODO: */}
-			<div ref={textLine} className="text-line">
-				{children}
-			</div>
-		</div>
+		<span ref={containerRef} className="text-line-container">
+			{words.map((word, i) => (
+				<span key={i} className="text-line__word-wrapper">
+					<span className="text-line__word">{word}</span>
+				</span>
+			))}
+		</span>
 	);
 };
 

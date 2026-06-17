@@ -100,9 +100,9 @@ const ProjectsMap = ({ projects }: ProjectsMapProps) => {
 
 	return (
 		<section className="projects-map" id="mapa-projektu">
-			<TextLine>
-				<h2 className="projects-map__title">Realizované projekty na mapě</h2>
-			</TextLine>
+			<h2 className="projects-map__title">
+				<TextLine>Realizované projekty na mapě</TextLine>
+			</h2>
 			<div className="map-container">
 				<div id="map"></div>
 				<div className="container">

@@ -1,14 +1,21 @@
 .text-line-container {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0 0.25em;
+}
+
+.text-line__word-wrapper {
 	display: inline-block;
 	overflow: hidden;
 }
 
-.text-line {
+.text-line__word {
+	display: inline-block;
 	transform: translateY(100%);
 }
 
 @keyframes translateTextLine {
-	100% {
+	to {
 		transform: translateY(0);
 	}
 }

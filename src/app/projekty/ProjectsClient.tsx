@@ -90,23 +90,19 @@ export default function ProjectsClient() {
 										width: "100%",
 									}}
 								>
-									<TextLine>
-										<p className="projects-page-item__title">{project.name}</p>
-									</TextLine>
+									<p className="projects-page-item__title">
+										<TextLine>{project.name}</TextLine>
+									</p>
 									{project.address ? (
-										<TextLine>
-											<a
-												className="project-card__desc"
-												href={project.addressLink}
-												target="_blank"
-											>
-												{project.address}
-											</a>
-										</TextLine>
+										<a
+											className="project-card__desc"
+											href={project.addressLink}
+											target="_blank"
+										>
+											<TextLine>{project.address}</TextLine>
+										</a>
 									) : (
-										<TextLine>
-											<p className="project-card__desc">{project.inProcess}</p>
-										</TextLine>
+										<p className="project-card__desc">{project.inProcess}</p>
 									)}
 									<Link
 										className="projects-page-item__link"

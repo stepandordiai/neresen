@@ -11,15 +11,15 @@ const Projects = ({ projects }: ProjectProps) => {
 	return (
 		<section className="projects js-projects" id="projekty">
 			<div className="projects__title-wrapper">
-				<TextLine>
-					<h2 className="projects__title">Naše projekty</h2>
-				</TextLine>
-				<TextLine>
-					<h3 className="projects__secondary-title">
+				<h2 className="projects__title">
+					<TextLine>Naše projekty</TextLine>
+				</h2>
+				<h3 className="projects__secondary-title">
+					<TextLine>
 						Bytové domy a domovy pro seniory – naše projekty v ČR, hotové i
 						připravované pro kvalitní a pohodlné bydlení.
-					</h3>
-				</TextLine>
+					</TextLine>
+				</h3>
 			</div>
 			<div className="projects-grid">
 				{[...projects].slice(0, 3).map((project) => {
@@ -35,23 +35,19 @@ const Projects = ({ projects }: ProjectProps) => {
 								</Link>
 							</div>
 							<div style={{ display: "flex", flexDirection: "column" }}>
-								<TextLine>
-									<p className="project-card__title">{project.name}</p>
-								</TextLine>
+								<p className="project-card__title">
+									<TextLine>{project.name}</TextLine>
+								</p>
 								{project.address ? (
-									<TextLine>
-										<a
-											className="project-card__desc"
-											href={project.addressLink}
-											target="_blank"
-										>
-											{project.address}
-										</a>
-									</TextLine>
+									<a
+										className="project-card__desc"
+										href={project.addressLink}
+										target="_blank"
+									>
+										<TextLine>{project.address}</TextLine>
+									</a>
 								) : (
-									<TextLine>
-										<p className="project-card__desc">{project.inProcess}</p>
-									</TextLine>
+									<p className="project-card__desc">{project.inProcess}</p>
 								)}
 							</div>
 						</div>

@@ -75,9 +75,9 @@ const Counter = ({ value, duration = 2000 }: CounterProps) => {
 const About = () => {
 	return (
 		<section className="about" id="o-nas">
-			<TextLine>
-				<h2 className="section__title">Kdo jsme</h2>
-			</TextLine>
+			<h2 className="section__title">
+				<TextLine>Kdo jsme</TextLine>
+			</h2>
 			<div className="about__details">
 				{aboutText.split(" ").map((word, index) => {
 					return (
